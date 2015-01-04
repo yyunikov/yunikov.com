@@ -1,0 +1,9 @@
+name: "Yuriy Yunikov"
+description: "Personal Web-Site"
+
+url: "yyunikov.github.io"
+
+markdown: rdiscount
+permalink: pretty
+
+encoding: UTF-8
