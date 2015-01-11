@@ -7,8 +7,7 @@
 
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
 
-  <script src="../bower_components/webcomponentsjs/webcomponents.min.js">
-  </script>
+  <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
 
   <link rel="stylesheet" href="../css/main.css">
 
@@ -24,15 +23,19 @@
 
 <body unresolved>
 
-  <core-scaffold mode="waterfall-tall">
+  <core-scaffold mode="waterfall-tall" on-scroll="handleScroll">
 
     <core-header-panel navigation flex mode="seamed">
 
-      <h3 id="menu-header">Menu</h3>
+      <h3 id="menu-header">Sections</h3>
 
       <core-menu>
-        <core-item label="General"></core-item>
-        <core-item label="Experience"></core-item>
+        <core-item label="General">
+          <a href="#general" target="_self"></a>
+        </core-item>
+        <core-item label="Experience">
+          <a href="#experience" target="_self"></a>
+        </core-item>
       </core-menu>
 
     </core-header-panel>

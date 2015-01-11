@@ -26,6 +26,10 @@ core-toolbar {
 	color: white;
 }
 
+core-item {
+	padding: 12px;
+}
+
 core-header-panel {
 	height: 100%;
 	overflow: auto;
@@ -41,7 +45,7 @@ body /deep/ core-toolbar {
 /** Classes **/
 h3#menu-header {
 	color: black;
-	margin: 12px;
+	margin: 24px;
 }
 
 .header-text {
@@ -57,6 +61,6 @@ h3#menu-header {
 }
 
 .container {
-	width: 80%;
+	width: 60%;
 	margin: 50px;
 }
