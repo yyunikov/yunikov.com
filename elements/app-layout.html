@@ -5,7 +5,7 @@
 <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
 <link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
 
-<polymer-element name="app-layout">
+<polymer-element name="app-layout" attributes="mainTitle subTitle sections">
   <template>
     <link rel="stylesheet" href="../css/app-layout.css">
 
@@ -16,22 +16,21 @@
         <h3 id="menu-header">Sections</h3>
 
         <core-menu>
-          <core-item label="General">
-            <a href="#general" target="_self"></a>
-          </core-item>
-          <core-item label="Experience">
-            <a href="#experience" target="_self"></a>
-          </core-item>
+          <template repeat="{{i in keys(sections)}}">
+            <core-item label="{{sections[i].label}}">
+              <a href="{{sections[i].link}}" target="_self"></a>
+            </core-item>
+          </template>
         </core-menu>
 
       </core-header-panel>
 
       <div tool vertical layout flex class="middle header-text">
-        <h1 fit>Yuriy Yunikov</h1>
+        <h1 fit>{{mainTitle}}</h1>
       </div>
 
       <div tool vertical layout flex class="bottom header-text">
-        <span>Java/Android Software engineer</span>
+        <span>{{subTitle}}</span>
       </div>
       
       <div class="container" layout vertical>
@@ -39,10 +38,24 @@
       </div>
 
     </core-scaffold>
+
+    <style>
+      core-toolbar {
+        background-color: #03a9f4;
+        color: #fff;
+      }
+    </style>
+
   </template>
 
   <script>
     Polymer('app-layout', {
+      mainTitle: 'Title',
+      subTitle: 'Sub Title',
+      sections: [{}],
+      keys: function(input) {
+        return Object.keys(input);
+      },
       scrollHandler: function(event) {
         var scroller = event.detail.target;
         console.log(scroller.scrollTop);
