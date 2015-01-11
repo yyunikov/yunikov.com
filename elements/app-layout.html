@@ -26,11 +26,11 @@
       </core-header-panel>
 
       <div tool vertical layout flex class="middle header-text">
-        <h1 fit>{{mainTitle}}</h1>
+        <h1 fit id="mainTitle">{{mainTitle}}</h1>
       </div>
 
       <div tool vertical layout flex class="bottom header-text">
-        <span>{{subTitle}}</span>
+        <span id="subTitle" hidden?="{{!showSubTitle}}">{{subTitle}}</span>
       </div>
       
       <div class="container" layout vertical>
@@ -58,7 +58,14 @@
       },
       scrollHandler: function(event) {
         var scroller = event.detail.target;
-        console.log(scroller.scrollTop);
+        if (scroller.scrollTop == 0) {
+          console.log($(this.$.mainTitle));
+          $(this.$.mainTitle)[0].style.fontSize='45px';
+          this.showSubTitle = true;
+        } else {
+          $(this.$.mainTitle)[0].style.fontSize='25px';
+          this.showSubTitle = false;
+        }
       }
     });
   </script>
