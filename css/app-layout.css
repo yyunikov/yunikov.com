@@ -28,9 +28,9 @@ core-header-panel {
 }
 
 /** Main toolbar **/
-:host core-toolbar {
-  background-color: #03a9f4;
-  color: #fff;
+core-scaffold::shadow core-toolbar {
+	background-color: #EF5350;
+	color: #fff;
 }
 
 /** Classes **/
