@@ -1,7 +1,14 @@
-  {% include header.html %}
-    
-    <div class="container" layout vertical>
-    	{{ content }}
-    </div>
+<!doctype html>
+<html>
 
-  {% include footer.html %}
+	{% include header.html %}
+
+	<body unresolved>
+
+		<app-layout>{{content}}</app-layout>
+
+	</body>
+
+	{% include footer.html %}
+
+</html>

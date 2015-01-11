@@ -1,0 +1,52 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="../bower_components/core-menu/core-menu.html">
+<link rel="import" href="../bower_components/core-item/core-item.html">
+<link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
+<link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
+
+<polymer-element name="app-layout">
+  <template>
+    <link rel="stylesheet" href="../css/app-layout.css">
+
+    <core-scaffold mode="waterfall-tall" on-scroll="{{scrollHandler}}">
+
+      <core-header-panel navigation flex mode="seamed">
+
+        <h3 id="menu-header">Sections</h3>
+
+        <core-menu>
+          <core-item label="General">
+            <a href="#general" target="_self"></a>
+          </core-item>
+          <core-item label="Experience">
+            <a href="#experience" target="_self"></a>
+          </core-item>
+        </core-menu>
+
+      </core-header-panel>
+
+      <div tool vertical layout flex class="middle header-text">
+        <h1 fit>Yuriy Yunikov</h1>
+      </div>
+
+      <div tool vertical layout flex class="bottom header-text">
+        <span>Java/Android Software engineer</span>
+      </div>
+      
+      <div class="container" layout vertical>
+        <content></content> 
+      </div>
+
+    </core-scaffold>
+  </template>
+
+  <script>
+    Polymer('app-layout', {
+      scrollHandler: function(event) {
+        var scroller = event.detail.target;
+        console.log(scroller.scrollTop);
+      }
+    });
+  </script>
+</polymer-element>

@@ -1,0 +1,52 @@
+h1 {
+	font-size: 45px;
+	font-weight: 300;
+	letter-spacing: -0.01em;
+	margin: 0;
+}
+
+h3 {
+	font-size: 25px;
+	font-weight: 300;
+}
+
+/** Elements **/
+core-toolbar {
+	background: #FFFFFF;
+	color: white;
+}
+
+core-item {
+	padding: 12px;
+}
+
+core-header-panel {
+	height: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch; 
+}
+
+/** Main toolbar **/
+:host core-toolbar {
+  background-color: #03a9f4;
+  color: #fff;
+}
+
+/** Classes **/
+h3#menu-header {
+	color: black;
+	margin: 24px;
+}
+
+.header-text h1 {
+	padding-left: 24px;
+}
+
+.header-text span {
+	padding: 12px 12px 0px;
+}
+
+.container {
+	width: 60%;
+	margin: 50px;
+}
