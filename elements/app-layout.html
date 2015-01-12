@@ -26,11 +26,26 @@
       </core-header-panel>
 
       <div tool vertical layout flex class="middle header-text">
-        <h1 fit id="mainTitle">{{mainTitle}}</h1>
+        <h1 fit id="mainTitle" class="maintitle">{{mainTitle}}</h1>
       </div>
 
-      <div tool vertical layout flex class="bottom header-text">
-        <span id="subTitle" hidden?="{{!showSubTitle}}">{{subTitle}}</span>
+      <div tool horizontal layout flex class="bottom header-text">
+        <div id="subTitle" class="subtitle" hidden?="{{!showSubTitle}}">{{subTitle}}</div>
+
+        <div id="social" class="social-images">
+          <a href="https://plus.google.com/u/0/+YuriyYunikov/" target="_blank">
+            <img src="../images/googleplus.png" alt="Google+">
+          </a>
+          <a href="http://ua.linkedin.com/in/yyunikov/" target="_blank">
+            <img src="../images/linkedin.png" alt="LinkedIn">
+          </a>
+          <a href="https://github.com/yyunikov" target="_blank">
+            <img src="../images/github.png" alt="GitHub">
+          </a>
+          <a href="http://stackoverflow.com/users/1889928/yuriy-yunikov" target="_blank">
+            <img src="../images/stackoverflow.png" alt="StackOverflow">
+          </a>
+        </div>
       </div>
       
       <div class="container" layout vertical>

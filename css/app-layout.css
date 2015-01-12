@@ -39,15 +39,30 @@ h3#menu-header {
 	margin: 24px;
 }
 
-.header-text h1 {
+.header-text .maintitle {
 	padding-left: 24px;
 }
 
-.header-text span {
+.header-text .subtitle {
 	padding: 12px 12px 0px;
 }
 
 .container {
 	width: 60%;
 	margin: 50px;
+}
+
+.social-images {
+	margin-left: auto; 
+	margin-right: 0;
+}
+
+.social-images a {
+	text-decoration: none;
+}
+
+.social-images img {
+	width: 48px; 
+	height: 48px;
+	padding: 0 4px;
 }
