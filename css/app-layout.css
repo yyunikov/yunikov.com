@@ -29,7 +29,7 @@ core-header-panel {
 
 /** Main toolbar **/
 core-scaffold::shadow core-toolbar {
-	background-color: #EF5350;
+	background-color: #F44336;
 	color: #fff;
 }
 
