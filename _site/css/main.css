@@ -1,8 +1,44 @@
-html,body {
+html,
+body {
     height: 100%;
     margin: 0;
     background-color: #F2F2F2;
     font-size: 16px;
     font-weight: 300;
     font-family: 'RobotoDraft', sans-serif;
+}
+
+a {
+	font-size: inherit;
+	text-decoration: none;
+}
+
+p {
+	line-height: 23px;
+}
+
+tr.space-under > td
+{
+  	padding-bottom: 1em;
+}
+
+.icon {
+	width: 24px;
+	height: 24px;
+}
+
+.index-page .contact td {
+	padding-right: 10px;
+}
+
+.index-page .contact tr {
+	padding-bottom: 10px;
+}
+
+.index-page .icon {
+	color: #656565;
+}
+
+.index-page .contact .contact-title {
+	color: #656565;
 }
