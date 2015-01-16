@@ -4,39 +4,84 @@ layout: default
 ---
 <div class="index-page">
 	<app-card id="general">
-		<table class="contact">
-			<tr class="space-under">
-				<td>
-					<core-icon icon="icons:mail" class="icon"></core-icon>
-					<span class="contact-title">Email:</span>
-				</td>
-				<td>
-					<a href="mailto:yyunikov@gmail.com">yyunikov@gmail.com</a>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<core-icon src="/images/icon-skype.png" class="icon"></core-icon>
-					<span class="contact-title">Skype:</span>
-				</td>
-				<td>
-					<span>yyunikov</span>
-				</td>
-			</tr>
-		</table>
+		<div horizontal layout flex class="general-info">
+			<table class="contact">
+				<tr class="space-under">
+					<td>
+						<core-icon icon="icons:mail" class="icon"></core-icon>
+						<span class="contact-title">Email:</span>
+					</td>
+					<td>
+						<a href="mailto:yyunikov@gmail.com">yyunikov@gmail.com</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<core-icon src="/images/icon-skype.png" class="icon"></core-icon>
+						<span class="contact-title">Skype:</span>
+					</td>
+					<td>
+						<span>yyunikov</span>
+					</td>
+				</tr>
+			</table>
+			<div class="photo">
+				<img src="/images/photo.jpeg">
+			</div>
+		</div>
+
 	</app-card>
 
 	<app-card id="about">
 		<h2>About Me</h2>
-		<p>I'm a Java software engineer and Android enthusiast with 2+ years of experience interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.</p>
+		<p>I'm a Java software engineer and Android enthusiast with 2+ years of experience interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.
+		Big fan of Open Source, GitHub, StackOverflow and Android.
+		</p>
 	</app-card>
 
 	<app-card id="experience">
 		<h2>Experience</h2>
+		<div class="subsection-heading">
+			<a href="http://www.n-ix.com" target="_blank">Java Software Engineer at N-iX</a>
+			<div class="subsection-heading-subtitle2">August 2013 - Present</div>
+		</div>
+		<div class="subsection-content">
+			Providing IT solutions and development of high quality Java web applications for commercial projects and international customers.
+		</div>
+
+		<div class="subsection-heading">
+			<div>Android Software Engineer</div>
+			<div class="subsection-heading-subtitle2">February 2013 - Present</div>
+		</div>
+		<div class="subsection-content">
+			Development of Android start-ups for Google Play store.
+		</div>
 	</app-card>
 
 	<app-card id="education">
 		<h2>Education</h2>
+		<div class="subsection-heading">
+			<div>
+				<a href="http://www.lp.edu.ua/en" target="_blank">State University 'Lviv Polytechnics'</a>
+			 </div>
+			<div class="subsection-heading-subtitle1">Master's degree with Distinction - Computer Science (Artificial Intelligence Systems)</div>
+			<div class="subsection-heading-subtitle2">2009 - 2014</div>
+		</div>
+		<div class="subsection-content">
+			Learning computer sciences, programming languages, databases, information systems, algorithms, networking, operation systems and other.
+		</div>
+
+		<div class="subsection-heading">
+			<a href="http://academy.eleks.com/" target="_blank">Eleks Software Academy</a>
+			<div class="subsection-heading-subtitle1">Java</div>
+			<div class="subsection-heading-subtitle2">June 2013 - July 2013</div>
+		</div>
+
+		<div class="subsection-heading">
+			<div>Lviv Linguistic Gymnasium</div>
+			<div class="subsection-heading-subtitle1">Basic Education, English specialized</div>
+			<div class="subsection-heading-subtitle2">1999 - 2009</div>
+		</div>
 	</app-card>
 
 	<app-card id="applications">
@@ -45,6 +90,24 @@ layout: default
 
 	<app-card id="certificates">
 		<h2>Certificates</h2>
+		<div class="subsection-heading">
+			<a href="https://www.coursera.org/signature/certificate/BQVF8HFT8L" target="_blank">Programming Mobile Applications for Android Handheld Systems</a>
+		</div>
+		<div class="subsection-heading">
+			<a href="https://www.coursera.org/signature/certificate/RFN9QY4KQG" target="_blank">Pattern-Oriented Software Architectures: Programming Mobile Services for Android Handheld Systems</a>
+		</div>
+		<div class="subsection-heading">
+			<a href="https://www.coursera.org/signature/certificate/77RMF4244C" target="_blank">Programming Cloud Services for Android Handheld Systems</a>
+		</div>
+		<div class="subsection-heading">
+			<a href="https://s3.amazonaws.com/edu-cert.10gen.com/downloads/9106231dfefe41388ecee55849be30a3/Certificate.pdf" target="_blank">M101J: MongoDB for Java Developers</a>
+		</div>
+		<div class="subsection-heading">
+			<a href="https://drive.google.com/file/d/0B3CCkpLWULkUenVRck1jWUNvMFRneWg5dDlBZXFINWF2YldV/edit?usp=sharing" target="_blank">Google AdMob Student App Challenge 2014 Participant</a>
+		</div>
+		<div class="subsection-heading">
+			<a href="https://drive.google.com/file/d/0B3CCkpLWULkUdnowc282WXpxNzA/view?usp=sharing" target="_blank">Google Analytics Academy: Mobile App Analytics Fundamentals</a>
+		</div>
 	</app-card>
 
 </div>
