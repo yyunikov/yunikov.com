@@ -74,6 +74,14 @@ tr.space-under > td
 	color: #656565;
 }
 
+.index-page #ghcard-yyunikov-1 {
+	margin-top: 20px;
+}
+
+.index-page #so-card-widget {
+	margin: 0 20px;
+}
+
 .index-page .subsection-heading {
 	margin-top: 20px;
 	padding: 10px 15px;

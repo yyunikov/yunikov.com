@@ -5,28 +5,40 @@ layout: default
 <div class="index-page">
 	<app-card id="general">
 		<div horizontal layout flex class="general-info">
-			<table class="contact">
-				<tr class="space-under">
-					<td>
-						<core-icon icon="icons:mail" class="icon"></core-icon>
-						<span class="contact-title">Email:</span>
-					</td>
-					<td>
-						<a href="mailto:yyunikov@gmail.com">yyunikov@gmail.com</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<core-icon src="/images/icon-skype.png" class="icon"></core-icon>
-						<span class="contact-title">Skype:</span>
-					</td>
-					<td>
-						<span>yyunikov</span>
-					</td>
-				</tr>
-			</table>
+			<div>
+				<table class="contact">
+					<tr class="space-under">
+						<td>
+							<core-icon icon="icons:mail" class="icon"></core-icon>
+							<span class="contact-title">Email:</span>
+						</td>
+						<td>
+							<a href="mailto:yyunikov@gmail.com">yyunikov@gmail.com</a>
+						</td>
+					</tr>
+					<tr class="space-under">
+						<td>
+							<core-icon src="/images/icon-skype.png" class="icon"></core-icon>
+							<span class="contact-title">Skype:</span>
+						</td>
+						<td>
+							<span>yyunikov</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<core-icon icon="icons:room" class="icon"></core-icon>
+							<span class="contact-title">Location:</span>
+						</td>
+						<td>
+							<span>Lviv, Ukraine</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
 			<div class="photo">
-				<img src="/images/photo.jpeg">
+				<img src="/images/photo.jpeg" alt="Yuriy Yunikov">
 			</div>
 		</div>
 	</app-card>
@@ -39,6 +51,10 @@ layout: default
 		<p>
 		Some of the plans for the future are to make a few open source projects, learn Python and algorithms.
 		</p>
+				<div horizontal layout flex class="about-websites">
+			<github-card user="yyunikov"></github-card>
+			<div id="so-card-widget" data-userid="1889928" data-theme="default"></div>
+		</div>
 	</app-card>
 
 	<app-card id="experience">
@@ -114,7 +130,7 @@ layout: default
 		<div class="subsection-heading">
 			<div horizontal layout flex>
 				<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc" target="_blank">
-					<img src="/images/fitcalc.png" class="app-icon"></img>
+					<img src="/images/fitcalc.png" class="app-icon" alt="FitCalc"></img>
 				</a>
 				<div class="app-title">
 					<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc" target="_blank">FitCalc</a>
@@ -129,7 +145,7 @@ layout: default
 		<div class="subsection-heading">
 			<div horizontal layout flex>
 				<a href="https://play.google.com/store/apps/details?id=com.yyunikov.dimblock" target="_blank">
-					<img src="/images/dimblock.png" class="app-icon"></img>
+					<img src="/images/dimblock.png" class="app-icon" alt="Dim Block"></img>
 				</a>
 				<div class="app-title">
 					<a href="https://play.google.com/store/apps/details?id=com.yyunikov.dimblock" target="_blank">Dim Block</a>
@@ -145,7 +161,7 @@ layout: default
 		<div class="subsection-heading">
 				<div horizontal layout flex>
 				<a href="https://play.google.com/store/apps/details?id=com.fitness.calculator" target="_blank">
-					<img src="/images/fitnesscalculator.png" class="app-icon"></img>
+					<img src="/images/fitnesscalculator.png" class="app-icon" alt="Fitness Calculator"></img>
 				</a>
 				<div class="app-title">
 					<a href="https://play.google.com/store/apps/details?id=com.fitness.calculator" target="_blank">Fitness Calculator</a>
@@ -157,10 +173,7 @@ layout: default
 			Android application that helps users in calculating optimal parameters for healthy life and good body shape, includes calorie counter, one rep-max and body fat calculator.
 			Available on Google Play (100,000+ downloads).
 		</div>
-
-		
-
-		
+	
 	</app-card>
 
 	<app-card id="certificates">
