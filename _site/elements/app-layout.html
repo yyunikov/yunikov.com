@@ -5,7 +5,7 @@
 <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
 <link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
 
-<polymer-element name="app-layout" attributes="mainTitle subTitle sections">
+<polymer-element name="app-layout" attributes="mainTitle subTitle sections homeIconSrc">
   <template>
     <style type="text/css">
       h1 {
@@ -62,6 +62,11 @@
         padding: 12px 58px 0px;
       }
 
+      .home {
+        margin: 15px 0 15px 20px;
+        cursor: pointer;
+      }
+
       .container {
         width: 60%;
         margin: 50px;
@@ -87,7 +92,12 @@
 
       <core-header-panel navigation flex mode="seamed">
 
-        <h3 id="menu-header">Sections</h3>
+        <a href="/">
+          <div class="home">
+          
+            <img src="{{homeIconSrc}}" alt="Yuriy Yunikov"></img>
+          </div>
+        </a>
 
         <core-menu>
           <template repeat="{{i in keys(sections)}}">
@@ -135,6 +145,7 @@
     Polymer('app-layout', {
       mainTitle: 'Title',
       subTitle: 'Sub Title',
+      homeIconSrc: '../images/yunikov-icon.png',
       sections: [{}],
       keys: function(input) {
         return Object.keys(input);
