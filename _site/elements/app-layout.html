@@ -53,7 +53,7 @@
       }
 
       .header-text .subtitle {
-        padding: 12px 58px 0px;
+        padding: 12px 0px 0px 58px;
       }
 
       .home {
@@ -80,15 +80,47 @@
         height: 48px;
         padding: 0 4px;
       }
+
+      @media screen and (max-width: 1280px) {
+        .container {
+          width: 90%;
+          margin: 20px auto;
+        }
+      }
+
+      @media screen and (max-width: 969px) {
+        .social-images img {
+          width: 32px; 
+          height: 32px;
+          padding: 0 2px;
+          vertical-align: bottom;
+        }
+
+        .social-images {
+          margin-top: auto;
+        }
+      }
+
+      @media screen and (max-width: 620px) {
+        core-scaffold::shadow core-toolbar {
+          height: 60px;
+        }
+
+      }
+
+      @media screen and (max-width: 380px) {
+        .social-images img {
+          display: none;
+        }
+      }
     </style>
 
-    <core-scaffold mode="waterfall-tall" on-scroll="{{scrollHandler}}">
+    <core-scaffold id="scaffold" mode="waterfall-tall" on-scroll="{{scrollHandler}}" responsiveWidth="969px">
 
       <core-header-panel navigation flex mode="seamed">
 
         <a href="/">
           <div class="home">
-          
             <img src="{{homeIconSrc}}" alt="Yuriy Yunikov"></img>
           </div>
         </a>
@@ -96,7 +128,7 @@
         <core-menu>
           <template repeat="{{i in keys(sections)}}">
             <core-item label="{{sections[i].label}}">
-              <a href="{{sections[i].link}}" target="_self"></a>
+              <a href="{{sections[i].link}}" target="_self" on-click="{{linkClicked}}"></a>
             </core-item>
           </template>
         </core-menu>
@@ -135,18 +167,30 @@
       homeIconSrc: '../images/yunikov-icon.png',
       sections: [{}],
       social: [{}],
+      ready: function() {
+        if (screen.width <= 620) {
+          this.subTitle = this.mainTitle;
+          this.mainTitle = "";
+          this.showSubTitle = true;
+        }
+      },
       keys: function(input) {
         return Object.keys(input);
       },
       scrollHandler: function(event) {
-        var scroller = event.detail.target;
-        if (scroller.scrollTop == 0) {
-          $(this.$.mainTitle)[0].style.fontSize='45px';
-          this.showSubTitle = true;
-        } else {
-          $(this.$.mainTitle)[0].style.fontSize='25px';
-          this.showSubTitle = false;
+        if (screen.width > 620) {
+          var scroller = event.detail.target;
+          if (scroller.scrollTop == 0) {
+            $(this.$.mainTitle)[0].style.fontSize='45px';
+            this.showSubTitle = true;
+          } else {
+            $(this.$.mainTitle)[0].style.fontSize='25px';
+            this.showSubTitle = false;
+          }
         }
+      },
+      linkClicked: function() {
+        this.$.scaffold.closeDrawer();
       }
     });
   </script>

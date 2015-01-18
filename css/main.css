@@ -149,3 +149,15 @@ tr.space-under > td
 .index-page .certificates-list li {
 	padding: 5px 0;
 }
+
+@media screen and (max-width: 460px) {
+	.index-page .general-info {
+	  	display: block!important;
+	}
+
+	.index-page .general-info .photo img {
+	  	margin: auto;
+		display: block;
+		padding: 10px;
+	}
+}
