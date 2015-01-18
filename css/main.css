@@ -161,3 +161,13 @@ tr.space-under > td
 		padding: 10px;
 	}
 }
+
+@media screen and (max-width:  550px) {
+	.index-page .about-websites {
+		display: block!important;
+	}
+
+	.index-page .about-websites #so-card-widget {
+		margin: 20px 0;
+	}
+}
