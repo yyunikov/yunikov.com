@@ -5,7 +5,7 @@
 <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
 <link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
 
-<polymer-element name="app-layout" attributes="mainTitle subTitle sections homeIconSrc">
+<polymer-element name="app-layout" attributes="mainTitle subTitle sections social homeIconSrc">
   <template>
     <style type="text/css">
       h1 {
@@ -36,12 +36,6 @@
         height: 100%;
         overflow: auto;
         -webkit-overflow-scrolling: touch; 
-      }
-
-      /** Main toolbar **/
-      core-scaffold::shadow core-toolbar {
-        background-color: #FC6F64;
-        color: #fff;
       }
 
       core-scaffold::shadow core-header-panel::shadow #mainPanel {
@@ -117,18 +111,11 @@
         <div id="subTitle" class="subtitle" hidden?="{{!showSubTitle}}">{{subTitle}}</div>
 
         <div id="social" class="social-images">
-          <a href="https://plus.google.com/u/0/+YuriyYunikov/" target="_blank">
-            <img src="../images/googleplus.png" alt="Google+">
-          </a>
-          <a href="http://ua.linkedin.com/in/yyunikov/" target="_blank">
-            <img src="../images/linkedin.png" alt="LinkedIn">
-          </a>
-          <a href="https://twitter.com/yyunikov" target="_blank">
-            <img src="../images/twitter.png" alt="Twitter">
-          </a>
-          <a href="http://careers.stackoverflow.com/yyunikov" target="_blank">
-            <img src="../images/stackoverflow.png" alt="StackOverflow">
-          </a>
+          <template repeat="{{i in keys(social)}}">
+            <a href="{{social[i].link}}" target="_blank">
+              <img src="{{social[i].img}}" alt="{{social[i].alt}}">
+            </a>
+          </template>
         </div>
       </div>
       
@@ -147,6 +134,7 @@
       subTitle: 'Sub Title',
       homeIconSrc: '../images/yunikov-icon.png',
       sections: [{}],
+      social: [{}],
       keys: function(input) {
         return Object.keys(input);
       },
