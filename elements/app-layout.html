@@ -99,13 +99,16 @@
         .social-images {
           margin-top: auto;
         }
+
+         core-item.core-selected {
+          font-weight: inherit;
+        }
       }
 
       @media screen and (max-width: 620px) {
         core-scaffold::shadow core-toolbar {
           height: 60px;
         }
-
       }
 
       @media screen and (max-width: 380px) {
@@ -127,8 +130,8 @@
 
         <core-menu>
           <template repeat="{{i in keys(sections)}}">
-            <core-item label="{{sections[i].label}}">
-              <a href="{{sections[i].link}}" target="_self" on-click="{{linkClicked}}"></a>
+            <core-item id="item" label="{{sections[i].label}}">
+              <a href="{{sections[i].link}}" on-click="{{linkClicked}}"></a>
             </core-item>
           </template>
         </core-menu>
@@ -189,8 +192,9 @@
           }
         }
       },
-      linkClicked: function() {
+      linkClicked: function(event) {
         this.$.scaffold.closeDrawer();
+        window.history.back(1);
       }
     });
   </script>
