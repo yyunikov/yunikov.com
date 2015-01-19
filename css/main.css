@@ -176,3 +176,7 @@ tr.space-under > td
 		margin: 20px 0;
 	}
 }
+
+@media print {
+  /* insert your style declarations here */
+}

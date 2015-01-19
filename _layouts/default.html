@@ -1,12 +1,16 @@
 <!doctype html>
-<html>
+<html lang="eb">
 
 	<head>
 		{% include header.html %}
   		<link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+  		<link rel="apple-touch-icon" type="image/png" href="yunikov.57.png"><!-- iPhone -->
+		<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="yunikov.72.png"><!-- iPad -->
+		<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="yunikov.114.png"><!-- iPhone4 -->
+		<link rel="icon" type="image/png" href="yunikov.144.png">
 	</head>
 
-	<body unresolved class="default">
+	<body class="default" unresolved>
 
 		<app-layout
 			mainTitle="Yuriy Yunikov"
@@ -17,13 +21,13 @@
 				{'label' :'Education','link' : '#education'},
 				{'label' :'Applications','link' : '#applications'},
 				{'label' :'Certificates','link' : '#certificates'}
-			]",
+			]"
 			social="[
 				{'link' :'https://plus.google.com/u/0/+YuriyYunikov/','img' : '../images/googleplus.png','alt' : 'Google+'},
 				{'link' :'http://ua.linkedin.com/in/yyunikov/','img' : '../images/linkedin.png','alt' : 'LinkedIn'},
 				{'link' :'https://twitter.com/yyunikov','img' : '../images/twitter.png','alt' : 'Twitter'},
 				{'link' :'http://careers.stackoverflow.com/yyunikov','img' : '../images/stackoverflow.png','alt' : 'StackOverflow Careers'}
-			]">
+			]" unresolved>
 
 			{{content}}
 
