@@ -38,9 +38,14 @@ tr.space-under > td
 }
 
 .default app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
-    background-color: #FC6F64;
+    background-color: #33363B;
     color: #fff;
 }
+
+.default app-layout core-scaffold::shadow #headerPanel::shadow #mainPanel {
+	background-color: #DADADA;
+}
+
 
 .index-page .general-info {
   -webkit-flex-align: center;
