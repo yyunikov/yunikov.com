@@ -4,8 +4,9 @@
 <link rel="import" href="../bower_components/core-item/core-item.html">
 <link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
 <link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
 
-<polymer-element name="app-layout" attributes="mainTitle subTitle sections social homeIconSrc">
+<polymer-element name="app-layout" attributes="mainTitle subTitle sections social homeIconSrc menuItem">
   <template>
     <style type="text/css" no-shim>
       h1 {
@@ -28,8 +29,13 @@
         color: white;
       }
 
-      core-item {
+      paper-item {
         padding: 12px;
+      }
+
+      paper-item.core-selected {
+        background-color: #E7E7E7;
+        font-weight: 300;
       }
 
       core-header-panel {
@@ -37,7 +43,6 @@
         overflow: auto;
         -webkit-overflow-scrolling: touch; 
       }
-
 
       /** Classes **/
       h3#menu-header {
@@ -53,9 +58,25 @@
         padding: 12px 0px 0px 58px;
       }
 
+      .home-container {
+        color: #D8554A;
+      }
+
       .home {
-        margin: 15px 0 15px 20px;
+        display: inline-block;
+        margin: 10px 0 0 30px;
         cursor: pointer;
+      }
+
+      .home > img {
+        width: 68px;
+      }
+
+      .home > span {
+        float: right;
+        margin: 15px;
+        font-weight: 600;
+        font-size: 18px;
       }
 
       .container {
@@ -119,17 +140,18 @@
 
       <core-header-panel navigation flex mode="seamed">
 
-        <a href="/">
+        <a class="home-container" href="/">
           <div class="home">
             <img src="{{homeIconSrc}}" alt="Yuriy Yunikov"></img>
+            <span>Yuriy<br/>Yunikov</span>
           </div>
         </a>
 
-        <core-menu>
-          <template repeat="{{i in keys(sections)}}">
-            <core-item id="item" label="{{sections[i].label}}">
-              <a href="{{sections[i].link}}" on-click="{{linkClicked}}"></a>
-            </core-item>
+        <core-menu id="mainMenu" selectedAttribute="" selected="{{menuItem}}">
+          <template repeat="{{section,i in sections}}">
+            <paper-item id="menuItem{{i}}">
+              <span>{{section}}</span>
+            </paper-item>
           </template>
         </core-menu>
 
@@ -165,7 +187,7 @@
       mainTitle: 'Title',
       subTitle: 'Sub Title',
       homeIconSrc: '../images/yunikov-icon.png',
-      sections: [{}],
+      sections: [],
       social: [{}],
       ready: function() {
         if (screen.width <= 620) {
