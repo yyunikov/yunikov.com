@@ -165,10 +165,13 @@ tr.space-under > td
 @media screen and (max-width:  550px) {
 	.index-page .about-websites {
 		display: block!important;
+		text-align: center;
 	}
 
 	.index-page .about-websites #so-card-widget {
-		margin: 20px 0;
+		margin: 20px 20px;
+		width: 210px;
+		display: inline-block;
 	}
 }
 
