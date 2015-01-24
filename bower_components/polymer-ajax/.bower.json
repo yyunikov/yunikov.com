@@ -13,7 +13,6 @@
     "commit": "3b380d97226eb57fb5682be4ff9fde6ef9bf643f"
   },
   "_source": "git://github.com/Polymer/polymer-ajax.git",
-  "_target": "~0.3.0",
-  "_originalSource": "Polymer/polymer-ajax",
-  "_direct": true
+  "_target": "*",
+  "_originalSource": "Polymer/polymer-ajax"
 }
