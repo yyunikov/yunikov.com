@@ -32,12 +32,22 @@
       }
 
       paper-item {
-        padding: 12px;
+        padding: 0;
+      }
+
+      paper-item /deep/ .button-content{
+        padding: 0;
       }
 
       paper-item.core-selected {
         background-color: #E7E7E7;
         font-weight: 300;
+      }
+
+      paper-item .page-link {
+        text-decoration: none;
+        color: #444;
+        padding: 25px;
       }
 
       core-header-panel {
@@ -62,6 +72,7 @@
 
       .home-container {
         color: #7C7C7C;
+        display: block;
       }
 
       .home {
@@ -155,9 +166,11 @@
 
         <core-menu id="mainMenu" selectedAttribute="" selected="{{menuItem}}">
           <template repeat="{{section,i in sections}}">
-            <paper-item id="menuItem{{i}}">
-              <core-icon icon="{{section.icon}}"></core-icon>
-              <span>{{section.title}}</span>
+            <paper-item id="menuItem{{i}}" noink>
+              <a class="page-link" href="{{section.page}}">
+                <core-icon icon="{{section.icon}}"></core-icon>
+                <span>{{section.title}}</span>
+              </a>
             </paper-item>
           </template>
         </core-menu>
@@ -193,14 +206,14 @@
     Polymer('app-layout', {
       mainTitle: 'Title',
       subTitle: 'Sub Title',
-      homeIconSrc: '../images/yunikov-icon.png',
+      homeIconSrc: '/images/yunikov-icon.png',
       sections: [
-        {title: 'Resume', icon: 'icons:assignment'},
-        {title: 'Portfolio', icon: 'icons:work'},
-        {title: 'Applications', icon: 'hardware:smartphone'},
-        {title: 'Blog', icon: 'editor:mode-edit'},
+        {title: 'Resume', icon: 'icons:assignment', page: '/pages/yuriy-yunikov/resume'},
+        {title: 'Portfolio', icon: 'icons:work', page: '/pages/yuriy-yunikov/portfolio'},
+        {title: 'Applications', icon: 'hardware:smartphone', page: '/pages/yuriy-yunikov/applications'},
+        {title: 'Blog', icon: 'editor:mode-edit', page: '/pages/yuriy-yunikov/blog'},
       ],
-      social: [{}],
+      social: [],
       ready: function() {
         if (screen.width <= 620) {
           this.subTitle = this.mainTitle;
@@ -222,10 +235,6 @@
             this.showSubTitle = false;
           }
         }
-      },
-      linkClicked: function(event) {
-        this.$.scaffold.closeDrawer();
-        window.history.back(1);
       }
     });
   </script>

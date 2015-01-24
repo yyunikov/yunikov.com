@@ -7,6 +7,7 @@ body {
     font-weight: 300;
     font-family: 'RobotoDraft', sans-serif;
     color: #444;
+    transition: opacity ease-in 0.2s;
 }
 
 a,
@@ -37,57 +38,76 @@ tr.space-under > td
 	height: 24px;
 }
 
-.default app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
-    background-color: #33363B;
+app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
     color: #fff;
 }
 
-.index-page .general-info {
+.index-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
+    background-color: #DD5B51;
+}
+
+.resume-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
+    background-color: #33363B;
+}
+
+.portfolio-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
+    background-color: #33363B;
+}
+
+.applications-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
+    background-color: #33363B;
+}
+
+.blog-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
+    background-color: #33363B;
+}
+
+.resume-page .general-info {
   -webkit-flex-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
 }
 
-.index-page .contact td {
+.resume-page .contact td {
 	padding-right: 10px;
 }
 
-.index-page .contact tr {
+.resume-page .contact tr {
 	padding-bottom: 10px;
 }
 
-.index-page .icon {
+.resume-page .icon {
 	color: #656565;
 }
 
-.index-page .app-icon {
+.resume-page .app-icon {
 	width: 48px;
 	height: 48px;
 }
 
-.index-page .app-title {
+.resume-page .app-title {
 	margin-left: 15px;
 }
 
-.index-page .photo {
+.resume-page .photo {
 	margin: 0 0 0 auto;
 	padding-right: 20px;
 }
 
-.index-page .contact .contact-title {
+.resume-page .contact .contact-title {
 	color: #656565;
 }
 
-.index-page #ghcard-yyunikov-1 {
+.resume-page #ghcard-yyunikov-1 {
 	margin-top: 20px;
 }
 
-.index-page #so-card-widget {
+.resume-page #so-card-widget {
 	margin: 0 20px;
 }
 
-.index-page .subsection-heading {
+.resume-page .subsection-heading {
 	margin-top: 20px;
 	padding: 10px 15px;
 	background-color: #f3f3f3;
@@ -101,7 +121,7 @@ tr.space-under > td
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.index-page .subsection-content {
+.resume-page .subsection-content {
 	padding: 15px;
 	border: 1px solid #dedede;
 	border-top: none;
@@ -109,53 +129,53 @@ tr.space-under > td
 	border-bottom-right-radius: 5px;
 }
 
-.index-page .subsection-content ul {
+.resume-page .subsection-content ul {
 	padding-left: 25px;
 	margin: 0;
 }
 
-.index-page .projects-label {
+.resume-page .projects-label {
 	margin-top: 20px;
 }
 
-.index-page .project-title {
+.resume-page .project-title {
 	padding-top: 10px;
 }
 
-.index-page .project-subtitle {
+.resume-page .project-subtitle {
 	font-size: 12px;
 	padding-top: 5px;
 	color: #383838;
 }
 
-.index-page .project-description {
+.resume-page .project-description {
 	font-size: 14px;
 	padding-top: 10px;
 	color: #353535;
 }
 
-.index-page .subsection-heading-subtitle1 {
+.resume-page .subsection-heading-subtitle1 {
 	font-size: 14px;
 	padding-top: 10px;
 	color: #353535;
 }
 
-.index-page .subsection-heading-subtitle2 {
+.resume-page .subsection-heading-subtitle2 {
 	font-size: 12px;
 	padding-top: 10px;
 	color: #6F6F6F;
 }
 
-.index-page .certificates-list li {
+.resume-page .certificates-list li {
 	padding: 5px 0;
 }
 
 @media screen and (max-width: 460px) {
-	.index-page .general-info {
+	.resume-page .general-info {
 	  	display: block!important;
 	}
 
-	.index-page .general-info .photo img {
+	.resume-page .general-info .photo img {
 	  	margin: auto;
 		display: block;
 		padding: 10px;
@@ -163,12 +183,12 @@ tr.space-under > td
 }
 
 @media screen and (max-width:  550px) {
-	.index-page .about-websites {
+	.resume-page .about-websites {
 		display: block!important;
 		text-align: center;
 	}
 
-	.index-page .about-websites #so-card-widget {
+	.resume-page .about-websites #so-card-widget {
 		margin: 20px 20px;
 		width: 210px;
 		display: inline-block;
