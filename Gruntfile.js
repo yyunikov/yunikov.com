@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         }
       }
     },
-
+// TODO restore vulcanization when 'Already registered' issues will be fixed
 /*    vulcanize: {
       options: {
         strip: true,

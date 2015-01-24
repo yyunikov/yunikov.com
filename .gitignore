@@ -1,7 +1,7 @@
 .fuse_hidden*
 *.*~
 _site/
-bower_components/
+components/
 node_modules/
 *.vulcanized.html
 *.vulcanized.js
