@@ -1,12 +1,8 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
-<link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
-<link rel="import" href="../bower_components/core-menu/core-menu.html">
-<link rel="import" href="../bower_components/core-item/core-item.html">
-<link rel="import" href="../bower_components/core-icons/hardware-icons.html">
-<link rel="import" href="../bower_components/core-icons/editor-icons.html">
-<link rel="import" href="../bower_components/core-header-panel/core-header-panel.html">
-<link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
-<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/core-icons/hardware-icons.html">
+<link rel="import" href="/bower_components/core-icons/editor-icons.html">
+<link rel="import" href="/bower_components/core-scaffold/core-scaffold.html">
+<link rel="import" href="/bower_components/paper-item/paper-item.html">
 
 <polymer-element name="app-layout" attributes="mainTitle subTitle social menuItem">
   <template>
@@ -70,7 +66,10 @@
         padding: 12px 0px 0px 58px;
       }
 
-      .home-container {
+      .home-container, 
+      .home-container:link,
+      .home-container:visited
+      {
         color: #7C7C7C;
         display: block;
       }
