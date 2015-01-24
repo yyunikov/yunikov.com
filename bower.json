@@ -1,0 +1,26 @@
+{
+  "name": "yunikov.com",
+  "version": "0.0.0",
+  "homepage": "http://yunikov.com",
+  "authors": [
+    "Yuriy Yunikov <yyunikov@gmail.com>"
+  ],
+  "description": "Personal Website",
+  "keywords": [
+    "yuriy",
+    "yunikov",
+    "java",
+    "android"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer-ajax": "Polymer/polymer-ajax#latest",
+    "core-elements": "Polymer/core-elements#latest",
+    "paper-elements": "Polymer/paper-elements#latest"
+  }
+}

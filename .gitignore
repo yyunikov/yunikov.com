@@ -1,3 +1,4 @@
 .fuse_hidden*
 *.*~
 _site/
+bower_components/
