@@ -39,29 +39,50 @@ tr.space-under > td
 }
 
 app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
+	background-color: #33363B;
     color: #fff;
 }
 
-.index-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
-    background-color: #DD5B51;
+.subsection-heading {
+	margin-top: 20px;
+	padding: 10px 15px;
+	background-color: #f3f3f3;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	font-size: 18px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.resume-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
-    background-color: #33363B;
+.subsection-content {
+	padding: 15px;
+	border: 1px solid #dedede;
+	border-top: none;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
-.portfolio-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
-    background-color: #33363B;
+.subsection-content ul {
+	padding-left: 25px;
+	margin: 0;
 }
 
-.applications-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
-    background-color: #33363B;
+.subsection-heading-subtitle1 {
+	font-size: 14px;
+	padding-top: 10px;
+	color: #353535;
 }
 
-.blog-page app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
-    background-color: #33363B;
+.subsection-heading-subtitle2 {
+	font-size: 12px;
+	padding-top: 10px;
+	color: #6F6F6F;
 }
 
+/* Resume page specific */
 .resume-page .general-info {
   -webkit-flex-align: center;
   -ms-flex-align: center;
@@ -81,15 +102,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #656565;
 }
 
-.resume-page .app-icon {
-	width: 48px;
-	height: 48px;
-}
-
-.resume-page .app-title {
-	margin-left: 15px;
-}
-
 .resume-page .photo {
 	margin: 0 0 0 auto;
 	padding-right: 20px;
@@ -105,33 +117,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 
 .resume-page #so-card-widget {
 	margin: 0 20px;
-}
-
-.resume-page .subsection-heading {
-	margin-top: 20px;
-	padding: 10px 15px;
-	background-color: #f3f3f3;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	font-size: 18px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.resume-page .subsection-content {
-	padding: 15px;
-	border: 1px solid #dedede;
-	border-top: none;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
-}
-
-.resume-page .subsection-content ul {
-	padding-left: 25px;
-	margin: 0;
 }
 
 .resume-page .projects-label {
@@ -154,17 +139,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #353535;
 }
 
-.resume-page .subsection-heading-subtitle1 {
-	font-size: 14px;
-	padding-top: 10px;
-	color: #353535;
-}
-
-.resume-page .subsection-heading-subtitle2 {
-	font-size: 12px;
-	padding-top: 10px;
-	color: #6F6F6F;
-}
 
 .resume-page .certificates-list li {
 	padding: 5px 0;
@@ -196,5 +170,14 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 }
 
 @media print {
-  /* insert your style declarations here */
+}
+
+/* Applications page specific */
+.applications-page .app-icon {
+	width: 48px;
+	height: 48px;
+}
+
+.applications-page .app-title {
+	margin-left: 15px;
 }

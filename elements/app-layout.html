@@ -184,9 +184,9 @@
         <div id="subTitle" class="subtitle" hidden?="{{!showSubTitle}}">{{subTitle}}</div>
 
         <div id="social" class="social-images">
-          <template repeat="{{i in keys(social)}}">
-            <a href="{{social[i].link}}" target="_blank">
-              <img src="{{social[i].img}}" alt="{{social[i].alt}}">
+          <template repeat="{{i in social}}">
+            <a href="{{i.link}}" target="_blank">
+              <img src="{{i.img}}" alt="{{i.alt}}">
             </a>
           </template>
         </div>
@@ -212,7 +212,12 @@
         {title: 'Applications', icon: 'hardware:smartphone', page: '/pages/yuriy-yunikov/applications'},
         {title: 'Blog', icon: 'editor:mode-edit', page: '/pages/yuriy-yunikov/blog'},
       ],
-      social: [],
+      social: [
+        {link :'https://plus.google.com/u/0/+YuriyYunikov/',img : '/images/googleplus.png',alt : 'Google+'},
+        {link :'http://ua.linkedin.com/in/yyunikov/',img : '/images/linkedin.png',alt : 'LinkedIn'},
+        {link :'https://twitter.com/yyunikov',img : '/images/twitter.png',alt : 'Twitter'},
+        {link :'http://careers.stackoverflow.com/yyunikov',img : '/images/stackoverflow.png',alt : 'StackOverflow Careers'}
+      ],
       ready: function() {
         if (screen.width <= 620) {
           this.subTitle = this.mainTitle;
