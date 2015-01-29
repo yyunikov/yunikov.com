@@ -1,3 +1,4 @@
+/* General styling */
 html,
 body {
     height: 100%;
@@ -82,12 +83,58 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #6F6F6F;
 }
 
+.border-right {
+	border-right: 1px solid #eee;
+}
+
+/* Index page styling */
+.index-page .summary-header {
+	text-align: center;
+}
+
+.index-page .summary-table {
+	width: 100%;
+	padding: 10px;
+}
+
+.index-page .summary-table .summary-table-section div {
+	padding: 5px;
+}
+
+.index-page .summary-table .summary-table-section div span {
+	font-weight: 300;
+}
+
+.index-page .posts {
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+.index-page .icon {
+	color: #656565;
+}
+
+.index-page #ghcard-yyunikov-1 {
+	margin-top: 20px;
+}
+
+.index-page #so-card-widget {
+	margin: 0 20px;
+}
+
 /* Resume page specific */
 .resume-page .general-info {
   -webkit-flex-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+
+.resume-page .general-info img{
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
 }
 
 .resume-page .contact td {
@@ -111,14 +158,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #656565;
 }
 
-.resume-page #ghcard-yyunikov-1 {
-	margin-top: 20px;
-}
-
-.resume-page #so-card-widget {
-	margin: 0 20px;
-}
-
 .resume-page .projects-label {
 	margin-top: 20px;
 }
@@ -139,6 +178,9 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #353535;
 }
 
+.resume-page .languages-list li {
+	padding: 5px 0;
+}
 
 .resume-page .certificates-list li {
 	padding: 5px 0;
@@ -157,12 +199,12 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 }
 
 @media screen and (max-width:  550px) {
-	.resume-page .about-websites {
+	.index-page .about-websites {
 		display: block!important;
 		text-align: center;
 	}
 
-	.resume-page .about-websites #so-card-widget {
+	.index-page .about-websites #so-card-widget {
 		margin: 20px 20px;
 		width: 210px;
 		display: inline-block;

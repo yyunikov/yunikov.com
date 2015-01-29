@@ -8,9 +8,60 @@ layout: default
 		subTitle="Java/Android Software Engineer"
 		unresolved>
 
-		
+		<app-card id="summary">
+			<table class="summary-table">
 
+				<tr>
+					<th class="summary-table-section border-right">
+						<div>2+ years</div>
+						<div>
+							<core-icon class="icon" icon="icons:work"></core-icon>
+							<span>Commercial Exprience</span>
+						</div>
+					</th>
 
-		
+					<th class="summary-table-section border-right">
+						<div>3</div>
+						<div>
+							<core-icon class="icon" icon="hardware:computer"></core-icon>
+							<span>Java Projects</span>
+						</div>
+					</th>
+
+					<th class="summary-table-section">
+						<div>3</div>
+						<div>
+							<core-icon class="icon" icon="icons:android"></core-icon>
+							<span>Android Applications</span>
+						</div>
+					</th>
+
+				</tr>
+
+			</table>
+		</app-card>
+
+		<app-card id="about">
+			<h2>About Me</h2>
+			<p>I'm a Java software engineer and Android enthusiast interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.
+			Big fan of Open Source, GitHub, StackOverflow and Android.
+			</p>
+			<p>
+			Some of the plans for the future are to make a few open source projects, learn Python and algorithms.
+			</p>
+			<div horizontal layout flex class="about-websites" style="justify-content: center;">
+				<github-card user="yyunikov"></github-card>
+				<div id="so-card-widget" data-userid="1889928" data-theme="default"></div>
+			</div>
+		</app-card>
+
+		<app-card id="recent">
+			<h2>Recent Posts</h2>
+			<div class="posts">
+				No posts yet.
+			</div>
+		</app-card>
 	</app-layout>
 </div>
+
+<script type="text/javascript" src="/js/so-card-widget.js"></script>
