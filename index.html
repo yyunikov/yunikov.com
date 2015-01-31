@@ -57,11 +57,9 @@ layout: default
 
 		<app-card id="recent">
 			<h2>Recent Posts</h2>
-			<div class="posts">
-			  {% for post in site.posts limit: 3 %}
-			    {% include post-preview.html %}
-			  {% endfor %}
-			</div>
+			{% for post in site.posts limit: 3 %}
+				{% include post-preview.html %}
+			{% endfor %}
 		</app-card>
 
 	</app-layout>
