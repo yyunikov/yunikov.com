@@ -1,0 +1,29 @@
+---
+title: {{ site.name }}
+layout: default
+---
+<div class="category-page">
+	<app-layout
+		mainTitle="Yuriy Yunikov"
+		subTitle="Java/Android Software Engineer"
+		menuItem="3"
+		unresolved>
+
+		{% for post in site.categories[page.category_name] %}
+	    <article class="post">
+		      
+		      <h2>
+		      	<a href="{{ post.url }}">{{ post.title }}</a>
+		      	<span>{{ post.date | date_to_string }}</span>
+		      </h2>
+
+		      <div class="entry">
+		        {{ post.content | truncatewords:40}}
+		      </div>
+		      
+		      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+		</article>
+		{% endfor %}
+		
+	</app-layout>
+</div>

@@ -4,6 +4,10 @@ description: "Personal Web-Site"
 exclude: ["node_modules", "README.md", "Gruntfile.js", "package.json"]
 
 markdown: rdiscount
-permalink: pretty
+permalink: /blog/:categories/:year/:month/:day/:title/
 
 encoding: UTF-8
+
+paginate: 5
+
+disqus: yunikovcom

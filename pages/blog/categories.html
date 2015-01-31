@@ -1,0 +1,24 @@
+---
+title: {{ site.name }}
+layout: default
+permalink: /blog/categories/
+---
+<div class="blog-page">
+	<app-layout
+		mainTitle="Yuriy Yunikov"
+		subTitle="Java/Android Software Engineer"
+		menuItem="3"
+		unresolved>
+
+		<app-card>
+			<h2>Categories</h2>
+			{% for category in site.categories %}
+			<div>
+				<a href="/blog/category/{{ category | first }}">{{ category | first }}</a>
+				<span>{{ category | last | size }}</span>
+			</div>
+			{% endfor %}
+		</app-card>
+		
+	</app-layout>
+</div>
