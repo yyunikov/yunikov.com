@@ -16,7 +16,11 @@ a:link,
 a:visited {
 	font-size: inherit;
 	text-decoration: none;
-	color: #3367d6;
+	color: #6477BE;
+}
+
+a:hover{
+    color: #0D2FAE;
 }
 
 p {
@@ -27,6 +31,10 @@ h2 {
 	font-size: 22px;
 	padding-left: 2px;
 	font-weight: 500;
+}
+
+h4 {
+	margin: 5px;
 }
 
 tr.space-under > td
@@ -87,7 +95,22 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	border-right: 1px solid #eee;
 }
 
-/* Index page styling */
+.post {
+	padding-bottom: 8px;
+}
+
+.post .post-read-more {
+	margin: 10px 0;
+}
+
+.post .post-date {
+	font-weight: 400;
+	font-size: 15px;
+	padding-bottom: 15px;
+	color: #888;
+}
+
+/* Index page */
 .index-page .summary-header {
 	text-align: center;
 }
@@ -105,9 +128,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	font-weight: 300;
 }
 
-.index-page .posts {
-}
-
 .index-page .icon {
 	color: #656565;
 }
@@ -120,7 +140,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	margin: 0 20px;
 }
 
-/* Resume page specific */
+/* Resume page */
 .resume-page .general-info {
   -webkit-flex-align: center;
   -ms-flex-align: center;
@@ -183,7 +203,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	padding: 5px 0;
 }
 
-/* Portfolio page specific */
+/* Portfolio page */
 .portfolio-page .portfolio-image {
 }
 
@@ -192,7 +212,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	list-style: none;
 }
 
-/* Applications page specific */
+/* Applications page */
 .applications-page .app-icon {
 	width: 48px;
 	height: 48px;
@@ -200,6 +220,24 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 
 .applications-page .app-title {
 	margin-left: 15px;
+}
+
+/* Blog categories page */
+.blog-categories-page .category {
+	padding: 10px;
+}
+
+.blog-categories-page .category a {
+	display: block;
+}
+
+.blog-categories-page .category a.post-title:first-letter {
+	text-transform: uppercase;
+}
+
+/* Category page */
+.category-page .category h2:first-letter {
+	text-transform: uppercase;
 }
 
 @media screen and (max-width: 460px) {

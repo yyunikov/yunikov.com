@@ -71,6 +71,7 @@
       {
         color: #7C7C7C;
         display: block;
+        padding-bottom: 10px;
       }
 
       .home {
@@ -162,7 +163,7 @@
           </div>
         </a>
 
-        <core-menu id="mainMenu" selectedAttribute="" selected="{{menuItem}}">
+        <core-selector id="mainMenu" selectedAttribute="" selected="{{menuItem}}">
           <template repeat="{{section,i in sections}}">
             <paper-item id="menuItem{{i}}" noink>
               <a class="page-link" href="{{section.page}}">
@@ -171,7 +172,7 @@
               </a>
             </paper-item>
           </template>
-        </core-menu>
+        </core-selector>
 
       </core-header-panel>
 

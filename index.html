@@ -16,7 +16,7 @@ layout: default
 						<div>2+ years</div>
 						<div>
 							<core-icon class="icon" icon="icons:work"></core-icon>
-							<span>Experience</span>
+							<span>Development Experience</span>
 						</div>
 					</th>
 
@@ -59,16 +59,7 @@ layout: default
 			<h2>Recent Posts</h2>
 			<div class="posts">
 			  {% for post in site.posts limit: 3 %}
-			    <article class="post">
-			      
-			      <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-
-			      <div class="entry">
-			        {{ post.content | truncatewords:40}}
-			      </div>
-			      
-			      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-			    </article>
+			    {% include post-preview.html %}
 			  {% endfor %}
 			</div>
 		</app-card>
