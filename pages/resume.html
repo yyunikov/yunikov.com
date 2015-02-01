@@ -15,7 +15,6 @@ permalink: /resume/
 			{'link' :'https://twitter.com/yyunikov','img' : '/images/twitter.png','alt' : 'Twitter'},
 			{'link' :'http://careers.stackoverflow.com/yyunikov','img' : '/images/stackoverflow.png','alt' : 'StackOverflow Careers'}
 		]" unresolved>
-
 	
 		<app-card id="general">
 			<div horizontal layout flex class="general-info">
@@ -30,15 +29,7 @@ permalink: /resume/
 								<span>yyunikov[at]gmail[dot]com</span>
 							</td>
 						</tr>
-						<tr class="space-under">
-							<td>
-								<core-icon src="/images/icon-skype.png" class="icon"></core-icon>
-								<span class="contact-title">Skype:</span>
-							</td>
-							<td>
-								<span>yyunikov</span>
-							</td>
-						</tr>
+
 						<tr>
 							<td>
 								<core-icon icon="icons:room" class="icon"></core-icon>
@@ -54,6 +45,20 @@ permalink: /resume/
 				<div class="photo">
 					<img src="/images/photo.jpeg" alt="Yuriy Yunikov">
 				</div>
+			</div>
+		</app-card>
+
+		<app-card id="about">
+			<h2>About Me</h2>
+			<p>I'm a Java software engineer and Android enthusiast interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.
+			Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.
+			</p>
+			<p>
+			Some of the plans for the future are to make a few open source projects, learn Python and algorithms.
+			</p>
+			<div horizontal layout flex class="about-websites" style="justify-content: center;">
+				<github-card user="yyunikov"></github-card>
+				<div id="so-card-widget" data-userid="1889928" data-theme="default"></div>
 			</div>
 		</app-card>
 
@@ -161,3 +166,5 @@ permalink: /resume/
 	</app-layout>
 
 </div>
+
+<script type="text/javascript" src="/js/so-card-widget.js"></script>

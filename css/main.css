@@ -132,15 +132,15 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #656565;
 }
 
-.index-page #ghcard-yyunikov-1 {
+/* Resume page */
+.resume-page #ghcard-yyunikov-1 {
 	margin-top: 20px;
 }
 
-.index-page #so-card-widget {
+.resume-page #so-card-widget {
 	margin: 0 20px;
 }
 
-/* Resume page */
 .resume-page .general-info {
   -webkit-flex-align: center;
   -ms-flex-align: center;

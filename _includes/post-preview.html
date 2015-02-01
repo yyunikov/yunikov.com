@@ -1,5 +1,7 @@
 <article class="post">
   
+<!-- TODO add back to blog and View on Github buttons -->
+
 	<a href="{{ post.url }}">
 		<h3>{{ post.title }}</h3>
 	</a>
@@ -9,7 +11,7 @@
 	</div>
 
 	<div class="post-entry">
-	{{ post.content | truncatewords:40}}
+	{{ post.content | truncatewords:30}}
 	</div>
 
 	<div class="post-read-more">
