@@ -1,7 +1,6 @@
 .fuse_hidden*
 *.*~
 _site/
-components/
 node_modules/
 *.vulcanized.html
 *.vulcanized.js
