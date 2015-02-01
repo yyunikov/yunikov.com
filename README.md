@@ -4,7 +4,7 @@ Personal website with blog containing the short description of me as a developer
 License
 =================
 
-   Copyright 2014 Yuriy Yunikov
+   Copyright 2015 Yuriy Yunikov
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
