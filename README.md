@@ -1,5 +1,5 @@
 # yyunikov.github.io
-My personal website build using Polymer, Jekyll and Github Pages.
+Personal website with blog containing the short description of me as a developer and my blog posts. Website is built using Polymer framework, Jekyll and Github Pages.
 
 License
 =================
