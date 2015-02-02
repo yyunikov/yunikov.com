@@ -1,5 +1,5 @@
 # yyunikov.github.io
-Personal website with blog containing the short description of me as a developer and my blog posts. Website is built using `Polymer` framework, `Grunt`, `Jekyll` and `Github Pages`.
+Personal website with blog containing the short description of me as a developer and my blog posts. Website is built using [Polymer](https://www.polymer-project.org/) framework, [Grunt](http://gruntjs.com/), [Jekyll](http://jekyllrb.com/) and [Github Pages](https://pages.github.com/).
 
 # Branches
 **dev** - contains the source files for the website
