@@ -61,6 +61,6 @@ module.exports = function(grunt) {
   // Task to run vulcanize and build the jekyll site
   //grunt.registerTask('default', ['vulcanize', 'jekyll:build']);
 
-  grunt.registerTask('default', ['jekyll:build', 'buildcontrol:pages']);
+  grunt.registerTask('build', ['jekyll:build']);
   grunt.registerTask('deploy', ['jekyll:build', 'buildcontrol:pages']);
 };
