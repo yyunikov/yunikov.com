@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+  grunt.loadNpmTasks('grunt-build-control');
+
   // Project configuration.
   grunt.initConfig({
 
@@ -16,6 +18,20 @@ module.exports = function(grunt) {
         }
       }
     },
+    buildcontrol: {
+      options: {
+        dir: '_site',
+        commit: true,
+        push: true,
+        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+      },
+      pages: {
+        options: {
+          remote: 'git@github.com:yyunikov/yyunikov.github.io.git',
+          branch: 'temp'
+        }
+      }
+    }
 // TODO restore vulcanization when 'Already registered' issues will be fixed
 /*    vulcanize: {
       options: {
@@ -45,5 +61,6 @@ module.exports = function(grunt) {
   // Task to run vulcanize and build the jekyll site
   //grunt.registerTask('default', ['vulcanize', 'jekyll:build']);
 
-  grunt.registerTask('default', ['jekyll:build']);
+  grunt.registerTask('default', ['jekyll:build', 'buildcontrol:pages']);
+  grunt.registerTask('deploy', ['jekyll:build', 'buildcontrol:pages']);
 };
