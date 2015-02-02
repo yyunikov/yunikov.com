@@ -28,7 +28,7 @@ module.exports = function(grunt) {
       pages: {
         options: {
           remote: 'git@github.com:yyunikov/yyunikov.github.io.git',
-          branch: 'temp'
+          branch: 'master'
         }
       }
     }

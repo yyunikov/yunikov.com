@@ -1,7 +1,7 @@
 name: "Yuriy Yunikov | Java and Android Software Engineer"
 description: "Personal Web-Site"
 
-exclude: ["node_modules", "README.md", "Gruntfile.js", "package.json"]
+exclude: ["node_modules", "Gruntfile.js", "package.json"]
 
 markdown: rdiscount
 permalink: /blog/:categories/:year/:month/:day/:title/
