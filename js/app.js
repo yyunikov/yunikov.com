@@ -22,12 +22,6 @@ function injectPage(url, opt_addToHistory) {
 
     document.title = doc.title;
 
-    var meta = doc.head.querySelector('meta[itemprop="name"]');
-    if (meta) {
-      var metaContentName = doc.head.querySelector('meta[itemprop="name"]').content;
-      document.head.querySelector('meta[itemprop="name"]').content = metaContentName;
-    }
-
     // Update URL history now that title and URL are set.
     var addToHistory = opt_addToHistory == undefined ? true : opt_addToHistory;
     if (addToHistory) {
@@ -41,7 +35,6 @@ function injectPage(url, opt_addToHistory) {
       location.href = url;
       return;
     }
-
   };
 
   xhr.send();

@@ -137,7 +137,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	margin-top: 20px;
 }
 
-.resume-page #so-card-widget {
+.resume-page /deep/ stackoverflow-card {
 	margin: 0 20px;
 }
 
@@ -258,7 +258,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 		text-align: center;
 	}
 
-	.index-page .about-websites #so-card-widget {
+	.index-page .about-websites /deep/ stackoverflow-card {
 		margin: 20px 20px;
 		width: 210px;
 		display: inline-block;
