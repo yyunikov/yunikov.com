@@ -2,11 +2,12 @@
 title: {{ site.name }}
 layout: default
 ---
-<div class="index-page">
-	<app-layout
+<app-layout
 		mainTitle="Yuriy Yunikov"
 		subTitle="Java/Android Software Engineer"
 		unresolved>
+
+	<div class="index-page">
 
 		<app-card id="summary">
 			<table class="summary-table">
@@ -46,6 +47,6 @@ layout: default
 				{% include post-preview.html %}
 			{% endfor %}
 		</app-card>
+	</div>
 
-	</app-layout>
-</div>
+</app-layout>

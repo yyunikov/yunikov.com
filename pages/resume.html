@@ -3,19 +3,18 @@ title: {{ site.name }}
 layout: default
 permalink: /resume/
 ---
-<div class="resume-page">
+<app-layout
+	mainTitle="Yuriy Yunikov"
+	subTitle="Java/Android Software Engineer"
+	menuItem="0"
+	social="[
+		{'link' :'https://plus.google.com/u/0/+YuriyYunikov/','img' : '/images/googleplus.png','alt' : 'Google+'},
+		{'link' :'http://ua.linkedin.com/in/yyunikov/','img' : '/images/linkedin.png','alt' : 'LinkedIn'},
+		{'link' :'https://twitter.com/yyunikov','img' : '/images/twitter.png','alt' : 'Twitter'},
+		{'link' :'http://careers.stackoverflow.com/yyunikov','img' : '/images/stackoverflow.png','alt' : 'StackOverflow Careers'}
+	]" unresolved>
 
-	<app-layout
-		mainTitle="Yuriy Yunikov"
-		subTitle="Java/Android Software Engineer"
-		menuItem="0"
-		social="[
-			{'link' :'https://plus.google.com/u/0/+YuriyYunikov/','img' : '/images/googleplus.png','alt' : 'Google+'},
-			{'link' :'http://ua.linkedin.com/in/yyunikov/','img' : '/images/linkedin.png','alt' : 'LinkedIn'},
-			{'link' :'https://twitter.com/yyunikov','img' : '/images/twitter.png','alt' : 'Twitter'},
-			{'link' :'http://careers.stackoverflow.com/yyunikov','img' : '/images/stackoverflow.png','alt' : 'StackOverflow Careers'}
-		]" unresolved>
-	
+	<div class="resume-page">
 		<app-card id="general">
 			<div horizontal layout flex class="general-info">
 				<div>
@@ -163,8 +162,7 @@ permalink: /resume/
 			</ul>
 		</app-card>
 
-	</app-layout>
+	</div>
+	<script type="text/javascript" src="/js/so-card-widget.js"></script>
+</app-layout>
 
-</div>
-
-<script type="text/javascript" src="/js/so-card-widget.js"></script>
