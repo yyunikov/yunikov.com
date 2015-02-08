@@ -2,51 +2,44 @@
 title: {{ site.name }}
 layout: default
 ---
-<app-layout
-		mainTitle="Yuriy Yunikov"
-		subTitle="Java/Android Software Engineer"
-		unresolved>
+<div class="index-page">
 
-	<div class="index-page">
+	<app-card id="summary">
+		<table class="summary-table">
 
-		<app-card id="summary">
-			<table class="summary-table">
+			<tr>
+				<th class="summary-table-section border-right">
+					<div>2+ years</div>
+					<div>
+						<core-icon class="icon" icon="icons:work"></core-icon>
+						<span>Development Experience</span>
+					</div>
+				</th>
 
-				<tr>
-					<th class="summary-table-section border-right">
-						<div>2+ years</div>
-						<div>
-							<core-icon class="icon" icon="icons:work"></core-icon>
-							<span>Development Experience</span>
-						</div>
-					</th>
+				<th class="summary-table-section border-right">
+					<div>3</div>
+					<div>
+						<core-icon class="icon" icon="hardware:computer"></core-icon>
+						<span>Java Web Projects</span>
+					</div>
+				</th>
 
-					<th class="summary-table-section border-right">
-						<div>3</div>
-						<div>
-							<core-icon class="icon" icon="hardware:computer"></core-icon>
-							<span>Java Web Projects</span>
-						</div>
-					</th>
+				<th class="summary-table-section">
+					<div>3</div>
+					<div>
+						<core-icon class="icon" icon="icons:android"></core-icon>
+						<span>Android Applications</span>
+					</div>
+				</th>
+			</tr>
 
-					<th class="summary-table-section">
-						<div>3</div>
-						<div>
-							<core-icon class="icon" icon="icons:android"></core-icon>
-							<span>Android Applications</span>
-						</div>
-					</th>
-				</tr>
+		</table>
+	</app-card>
 
-			</table>
-		</app-card>
-
-		<app-card id="recent">
-			<h2>Recent Posts</h2>
-			{% for post in site.posts limit: 3 %}
-				{% include post-preview.html %}
-			{% endfor %}
-		</app-card>
-	</div>
-
-</app-layout>
+	<app-card id="recent">
+		<h2>Recent Posts</h2>
+		{% for post in site.posts limit: 3 %}
+			{% include post-preview.html %}
+		{% endfor %}
+	</app-card>
+</div>

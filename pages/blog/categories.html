@@ -3,23 +3,17 @@ title: {{ site.name }}
 layout: default
 permalink: /blog/categories/
 ---
-<app-layout
-		mainTitle="Yuriy Yunikov"
-		subTitle="Java/Android Software Engineer"
-		menuItem="3"
-		unresolved>
-	<div class="blog-categories-page">
+<div class="blog-categories-page">
 
-		<app-card>
-			<h2>Categories</h2>
-			{% for category in site.categories %}
-			<div class="category">
-				<a href="/blog/category/{{ category | first }}" class="post-title">
-					<h4>{{ category | first }} ({{ category | last | size }})</h4>
-				</a>
-			</div>
-			{% endfor %}
-		</app-card>
-		
-	</div>
-</app-layout>
+	<app-card>
+		<h2>Categories</h2>
+		{% for category in site.categories %}
+		<div class="category">
+			<a href="/blog/category/{{ category | first }}" class="post-title">
+				<h4>{{ category | first }} ({{ category | last | size }})</h4>
+			</a>
+		</div>
+		{% endfor %}
+	</app-card>
+	
+</div>
