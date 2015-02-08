@@ -94,7 +94,7 @@ function injectPage(url, opt_addToHistory) {
   fadeOutContent(document.querySelector('.content-container'));
   setTimeout(function(){
     xhr.send();    
-  }, FADE_DURATION);
+  }, FADE_DURATION - 100);
 }
 
 function ajaxifySite() {
