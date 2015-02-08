@@ -1,4 +1,5 @@
 (function(exports) {
+var FADE_DURATION = 250;
 var appLayout = null;
 var menuItemMap = {
   'resume' : 0,
@@ -6,6 +7,28 @@ var menuItemMap = {
   'applications' : 2,
   'blog' : 3
 };
+
+function fadeInContent(content) {
+    var player = content.animate([
+        {opacity: 0.0, transform: "scale(0.5)"},
+        {opacity: 1.0, transform: "scale(1)"}
+    ], {
+        direction: 'alternate',
+        duration: FADE_DURATION,
+        iterations: 1
+    });
+}
+
+function fadeOutContent(content) {
+    var player = content.animate([
+        {opacity: 1.0, transform: "scale(1)"},
+        {opacity: 0.0, transform: "scale(0.5)"}
+    ], {
+        direction: 'alternate',
+        duration: FADE_DURATION,
+        iterations: 1
+    });
+}
 
 function replaceScriptTagWithRunnableScript(node) {
   var script  = document.createElement('script');
@@ -43,7 +66,7 @@ function injectPage(url, opt_addToHistory) {
     }
 
     var docAppLayout = doc.querySelector('app-layout');
-    
+
     selectAppLayoutMenuItem(appLayout, url);
 
     if (docAppLayout) {
@@ -64,9 +87,14 @@ function injectPage(url, opt_addToHistory) {
       replaceScriptTagWithRunnableScript(node);
     });
 
+    
+    fadeInContent(document.querySelector('.content-container'));
   };
 
-  xhr.send();
+  fadeOutContent(document.querySelector('.content-container'));
+  setTimeout(function(){
+    xhr.send();    
+  }, FADE_DURATION);
 }
 
 function ajaxifySite() {
@@ -106,6 +134,9 @@ function ajaxifySite() {
   });
 
 }
+document.addEventListener('polymer-ready', function(e) {
+  fadeInContent(document.querySelector('.content-container'));
+});
 
 document.addEventListener('DOMContentLoaded', function(e) {
   appLayout = document.querySelector('app-layout');
