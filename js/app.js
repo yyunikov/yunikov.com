@@ -1,5 +1,12 @@
 (function(exports) {
 var appBar = null;
+
+function replaceScriptTagWithRunnableScript(node) {
+  var script  = document.createElement('script');
+  script.text = node.innerHTML;
+  node.parentNode.replaceChild(script, node);
+}
+
 /**
  * Replaces the main content of the page by loading the URL via XHR.
  *
@@ -35,6 +42,18 @@ function injectPage(url, opt_addToHistory) {
       location.href = url;
       return;
     }
+
+    var CONTAINER_SELECTOR = '.content-container';
+    var container = document.querySelector(CONTAINER_SELECTOR);
+    var newDocContainer = doc.querySelector(CONTAINER_SELECTOR);
+    container.innerHTML = newDocContainer.innerHTML;
+
+    // .innerHTML doesn't eval script. Replace <script> in-page with runnable version.
+    var scripts = container.querySelectorAll('script');
+    Array.prototype.forEach.call(scripts, function(node, i) {
+      replaceScriptTagWithRunnableScript(node);
+    });
+
   };
 
   xhr.send();
