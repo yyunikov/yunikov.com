@@ -27,7 +27,9 @@
 
 <link rel="import" href="/elements/app-layout.html" />
 <link rel="import" href="/elements/app-card.html" />
+<link rel="import" href="/elements/stackoverflow-card.html" />
 <link rel="import" href="/elements/github-card.html" />
+<link rel="import" href="/elements/github-gist.html">
   		<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
   		<link rel="apple-touch-icon" type="image/png" href="/images/yunikov.57.png"><!-- iPhone -->
 		<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/images/yunikov.72.png"><!-- iPad -->
@@ -36,172 +38,163 @@
 	</head>
 
 	<body id="main" class="default" unresolved>
+		<app-layout
+			mainTitle="Yuriy Yunikov"
+			subTitle="Java/Android Software Engineer"
+			unresolved>
+			<div class="content-container">
+				<div class="resume-page">
+	<app-card id="general">
+		<div horizontal layout flex class="general-info">
+			<div>
+				<table class="contact">
+					<tr class="space-under">
+						<td>
+							<core-icon icon="icons:mail" class="icon"></core-icon>
+							<span class="contact-title">Email:</span>
+						</td>
+						<td>
+							<span>yyunikov[at]gmail[dot]com</span>
+						</td>
+					</tr>
 
-		<div class="resume-page">
-
-	<app-layout
-		mainTitle="Yuriy Yunikov"
-		subTitle="Java/Android Software Engineer"
-		menuItem="0"
-		social="[
-			{'link' :'https://plus.google.com/u/0/+YuriyYunikov/','img' : '/images/googleplus.png','alt' : 'Google+'},
-			{'link' :'http://ua.linkedin.com/in/yyunikov/','img' : '/images/linkedin.png','alt' : 'LinkedIn'},
-			{'link' :'https://twitter.com/yyunikov','img' : '/images/twitter.png','alt' : 'Twitter'},
-			{'link' :'http://careers.stackoverflow.com/yyunikov','img' : '/images/stackoverflow.png','alt' : 'StackOverflow Careers'}
-		]" unresolved>
-	
-		<app-card id="general">
-			<div horizontal layout flex class="general-info">
-				<div>
-					<table class="contact">
-						<tr class="space-under">
-							<td>
-								<core-icon icon="icons:mail" class="icon"></core-icon>
-								<span class="contact-title">Email:</span>
-							</td>
-							<td>
-								<span>yyunikov[at]gmail[dot]com</span>
-							</td>
-						</tr>
-
-						<tr>
-							<td>
-								<core-icon icon="icons:room" class="icon"></core-icon>
-								<span class="contact-title">Location:</span>
-							</td>
-							<td>
-								<span>Lviv, Ukraine</span>
-							</td>
-						</tr>
-					</table>
-				</div>
-				
-				<div class="photo">
-					<img src="/images/photo.jpeg" alt="Yuriy Yunikov">
-				</div>
+					<tr>
+						<td>
+							<core-icon icon="icons:room" class="icon"></core-icon>
+							<span class="contact-title">Location:</span>
+						</td>
+						<td>
+							<span>Lviv, Ukraine</span>
+						</td>
+					</tr>
+				</table>
 			</div>
-		</app-card>
-
-		<app-card id="about">
-			<h2>About Me</h2>
-			<p>I'm a Java software engineer and Android enthusiast interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.
-			Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.
-			</p>
-			<p>
-			Some of the plans for the future are to make a few open source projects, learn Python and algorithms.
-			</p>
-			<div horizontal layout flex class="about-websites" style="justify-content: center;">
-				<github-card user="yyunikov"></github-card>
-				<div id="so-card-widget" data-userid="1889928" data-theme="default"></div>
+			
+			<div class="photo">
+				<img src="/images/photo.jpeg" alt="Yuriy Yunikov">
 			</div>
-		</app-card>
+		</div>
+	</app-card>
 
-		<app-card id="experience">
-			<h2>Experience</h2>
-			<div class="subsection-heading">
-				<a href="http://www.n-ix.com" target="_blank">Java Software Engineer at N-iX</a>
-				<div class="subsection-heading-subtitle2">August 2013 - Present</div>
+	<app-card id="about">
+		<h2>About Me</h2>
+		<p>I'm a Java software engineer and Android enthusiast interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.
+		Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.
+		</p>
+		<p>
+		Some of the plans for the future are to make a few open source projects, learn Python and algorithms.
+		</p>
+		<div horizontal layout flex class="about-websites" style="justify-content: center;">
+			<github-card user="yyunikov"></github-card>
+			<stackoverflow-card userid="1889928"></stackoverflow-card>
+		</div>
+	</app-card>
+
+	<app-card id="experience">
+		<h2>Experience</h2>
+		<div class="subsection-heading">
+			<a href="http://www.n-ix.com" target="_blank">Java Software Engineer at N-iX</a>
+			<div class="subsection-heading-subtitle2">August 2013 - Present</div>
+		</div>
+		<div class="subsection-content">
+			<div>
+			Providing IT solutions and development of high quality Java web applications for commercial projects and international customers.<br/>
 			</div>
-			<div class="subsection-content">
-				<div>
-				Providing IT solutions and development of high quality Java web applications for commercial projects and international customers.<br/>
-				</div>
-				<div>
-					<div class="projects-label">Projects:</div>
-					<ul>
-						<li>
-							<div class="project-title"><a href="http://www.book2meet.com/en/" target="_blank">Book2Meet</a></div>
-							<div class="project-subtitle">April 2014 - Present</div>
-							<div class="project-description">Book2Meet is the leading player on "meeting" space real-time booking across Europe. The team is highly specialized in meeting handling both online and offline for more complex requirements of the clients. The company already has more than 25 000 spaces in 15 countries.</div>
-						</li>
-						<li>
-							<div class="project-title"><a href="https://www.linkedin.com/company/829225?trk=prof-exp-company-name" target="_blank">RedWage</a></div>
-							<div class="project-subtitle">October 2013 - March 2014</div>
-							<div class="project-description">Portals for companies and business to manage their business expenses using different card programs (RedWage, Ledger, SmartWage, Impact).</div>
-						</li>
-						<li>
-							<div class="project-title">Time Tracker</div>
-							<div class="project-subtitle">August 2013 - October 2013</div>
-							<div class="project-description">Time tracking system used for company internal network</div>
-						</li>
-					</ul>
-				</div>
+			<div>
+				<div class="projects-label">Projects:</div>
+				<ul>
+					<li>
+						<div class="project-title"><a href="http://www.book2meet.com/en/" target="_blank">Book2Meet</a></div>
+						<div class="project-subtitle">April 2014 - Present</div>
+						<div class="project-description">Book2Meet is the leading player on "meeting" space real-time booking across Europe. The team is highly specialized in meeting handling both online and offline for more complex requirements of the clients. The company already has more than 25 000 spaces in 15 countries.</div>
+					</li>
+					<li>
+						<div class="project-title"><a href="https://www.linkedin.com/company/829225?trk=prof-exp-company-name" target="_blank">RedWage</a></div>
+						<div class="project-subtitle">October 2013 - March 2014</div>
+						<div class="project-description">Portals for companies and business to manage their business expenses using different card programs (RedWage, Ledger, SmartWage, Impact).</div>
+					</li>
+					<li>
+						<div class="project-title">Time Tracker</div>
+						<div class="project-subtitle">August 2013 - October 2013</div>
+						<div class="project-description">Time tracking system used for company internal network</div>
+					</li>
+				</ul>
 			</div>
+		</div>
 
-			<div class="subsection-heading">
-				<div>Android Software Engineer</div>
-				<div class="subsection-heading-subtitle2">February 2013 - Present</div>
-			</div>
-			<div class="subsection-content">
-				Development of Android start-ups for Google Play store.
-			</div>
-		</app-card>
+		<div class="subsection-heading">
+			<div>Android Software Engineer</div>
+			<div class="subsection-heading-subtitle2">February 2013 - Present</div>
+		</div>
+		<div class="subsection-content">
+			Development of Android start-ups for Google Play store.
+		</div>
+	</app-card>
 
-		<app-card id="education">
-			<h2>Education</h2>
-			<div class="subsection-heading">
-				<div>
-					<a href="http://www.lp.edu.ua/en" target="_blank">State University 'Lviv Polytechnics'</a>
-				 </div>
-				<div class="subsection-heading-subtitle1">Master's degree with Distinction - Computer Sciences (Artificial Intelligence Systems)</div>
-				<div class="subsection-heading-subtitle2">2009 - 2014</div>
-			</div>
-			<div class="subsection-content">
-				Learning computer sciences, programming languages, databases, information systems, algorithms, networking, operation systems and other.
-			</div>
+	<app-card id="education">
+		<h2>Education</h2>
+		<div class="subsection-heading">
+			<div>
+				<a href="http://www.lp.edu.ua/en" target="_blank">State University 'Lviv Polytechnics'</a>
+			 </div>
+			<div class="subsection-heading-subtitle1">Master's degree with Distinction - Computer Sciences (Artificial Intelligence Systems)</div>
+			<div class="subsection-heading-subtitle2">2009 - 2014</div>
+		</div>
+		<div class="subsection-content">
+			Learning computer sciences, programming languages, databases, information systems, algorithms, networking, operation systems and other.
+		</div>
 
-			<div class="subsection-heading">
-				<a href="http://academy.eleks.com/" target="_blank">Eleks Software Academy</a>
-				<div class="subsection-heading-subtitle1">Java</div>
-				<div class="subsection-heading-subtitle2">June 2013 - July 2013</div>
-			</div>
+		<div class="subsection-heading">
+			<a href="http://academy.eleks.com/" target="_blank">Eleks Software Academy</a>
+			<div class="subsection-heading-subtitle1">Java</div>
+			<div class="subsection-heading-subtitle2">June 2013 - July 2013</div>
+		</div>
 
-			<div class="subsection-heading">
-				<div>Lviv Linguistic Gymnasium</div>
-				<div class="subsection-heading-subtitle1">Basic Education, English specialized</div>
-				<div class="subsection-heading-subtitle2">1999 - 2009</div>
-			</div>
-		</app-card>
+		<div class="subsection-heading">
+			<div>Lviv Linguistic Gymnasium</div>
+			<div class="subsection-heading-subtitle1">Basic Education, English specialized</div>
+			<div class="subsection-heading-subtitle2">1999 - 2009</div>
+		</div>
+	</app-card>
 
 
-		<app-card id="languages">
-			<h2>Languages</h2>
-			<ul class="languages-list">
-				<li>English	</li>
-				<li>Ukrainian</li>
-				<li>Russian</li>
-			</ul>
-		</app-card>
+	<app-card id="languages">
+		<h2>Languages</h2>
+		<ul class="languages-list">
+			<li>English	</li>
+			<li>Ukrainian</li>
+			<li>Russian</li>
+		</ul>
+	</app-card>
 
-		<app-card id="certificates">
-			<h2>Certificates</h2>
-			<ul class="certificates-list">
-				<li>			
-					<a href="https://www.coursera.org/signature/certificate/BQVF8HFT8L" target="_blank">Programming Mobile Applications for Android Handheld Systems</a>
-				</li>
-				<li>
-					<a href="https://www.coursera.org/signature/certificate/RFN9QY4KQG" target="_blank">Pattern-Oriented Software Architectures: Programming Mobile Services for Android Handheld Systems</a>
-				</li>
-				<li>
-					<a href="https://www.coursera.org/signature/certificate/77RMF4244C" target="_blank">Programming Cloud Services for Android Handheld Systems</a>
-				</li>
-				<li>
-					<a href="https://s3.amazonaws.com/edu-cert.10gen.com/downloads/9106231dfefe41388ecee55849be30a3/Certificate.pdf" target="_blank">M101J: MongoDB for Java Developers</a>
-				</li>
-				<li>
-					<a href="https://drive.google.com/file/d/0B3CCkpLWULkUenVRck1jWUNvMFRneWg5dDlBZXFINWF2YldV/edit?usp=sharing" target="_blank">Google AdMob Student App Challenge 2014 Participant</a>
-				</li>
-				<li>
-					<a href="https://drive.google.com/file/d/0B3CCkpLWULkUdnowc282WXpxNzA/view?usp=sharing" target="_blank">Google Analytics Academy: Mobile App Analytics Fundamentals</a>
-				</li>
-			</ul>
-		</app-card>
-
-	</app-layout>
+	<app-card id="certificates">
+		<h2>Certificates</h2>
+		<ul class="certificates-list">
+			<li>			
+				<a href="https://www.coursera.org/signature/certificate/BQVF8HFT8L" target="_blank">Programming Mobile Applications for Android Handheld Systems</a>
+			</li>
+			<li>
+				<a href="https://www.coursera.org/signature/certificate/RFN9QY4KQG" target="_blank">Pattern-Oriented Software Architectures: Programming Mobile Services for Android Handheld Systems</a>
+			</li>
+			<li>
+				<a href="https://www.coursera.org/signature/certificate/77RMF4244C" target="_blank">Programming Cloud Services for Android Handheld Systems</a>
+			</li>
+			<li>
+				<a href="https://s3.amazonaws.com/edu-cert.10gen.com/downloads/9106231dfefe41388ecee55849be30a3/Certificate.pdf" target="_blank">M101J: MongoDB for Java Developers</a>
+			</li>
+			<li>
+				<a href="https://drive.google.com/file/d/0B3CCkpLWULkUenVRck1jWUNvMFRneWg5dDlBZXFINWF2YldV/edit?usp=sharing" target="_blank">Google AdMob Student App Challenge 2014 Participant</a>
+			</li>
+			<li>
+				<a href="https://drive.google.com/file/d/0B3CCkpLWULkUdnowc282WXpxNzA/view?usp=sharing" target="_blank">Google Analytics Academy: Mobile App Analytics Fundamentals</a>
+			</li>
+		</ul>
+	</app-card>
 
 </div>
 
-<script type="text/javascript" src="/js/so-card-widget.js"></script>
+			</div>
+		</app-layout>
 
 		<a href="https://plus.google.com/+YuriyYunikov/" rel="publisher"></a>
 <script>

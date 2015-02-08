@@ -23,6 +23,17 @@ a:hover{
     color: #E54539;
 }
 
+a:focus, a:active, 
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    outline : 0;
+}
+
 p {
 	line-height: 23px;
 }
@@ -137,7 +148,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	margin-top: 20px;
 }
 
-.resume-page #so-card-widget {
+.resume-page /deep/ stackoverflow-card {
 	margin: 0 20px;
 }
 
@@ -258,7 +269,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 		text-align: center;
 	}
 
-	.index-page .about-websites #so-card-widget {
+	.index-page .about-websites /deep/ stackoverflow-card {
 		margin: 20px 20px;
 		width: 210px;
 		display: inline-block;

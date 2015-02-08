@@ -27,7 +27,9 @@
 
 <link rel="import" href="/elements/app-layout.html" />
 <link rel="import" href="/elements/app-card.html" />
+<link rel="import" href="/elements/stackoverflow-card.html" />
 <link rel="import" href="/elements/github-card.html" />
+<link rel="import" href="/elements/github-gist.html">
   		<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
   		<link rel="apple-touch-icon" type="image/png" href="/images/yunikov.57.png"><!-- iPhone -->
 		<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/images/yunikov.72.png"><!-- iPad -->
@@ -36,33 +38,33 @@
 	</head>
 
 	<body id="main" class="default" unresolved>
+		<app-layout
+			mainTitle="Yuriy Yunikov"
+			subTitle="Java/Android Software Engineer"
+			unresolved>
+			<div class="content-container">
+				<div class="blog-categories-page">
 
-		<div class="blog-categories-page">
-	<app-layout
-		mainTitle="Yuriy Yunikov"
-		subTitle="Java/Android Software Engineer"
-		menuItem="3"
-		unresolved>
-
-		<app-card>
-			<h2>Categories</h2>
-			
-			<div class="category">
-				<a href="/blog/category/java" class="post-title">
-					<h4>java (1)</h4>
-				</a>
-			</div>
-			
-			<div class="category">
-				<a href="/blog/category/android" class="post-title">
-					<h4>android (1)</h4>
-				</a>
-			</div>
-			
-		</app-card>
+	<app-card>
+		<h2>Categories</h2>
 		
-	</app-layout>
+		<div class="category">
+			<a href="/blog/category/java" class="post-title">
+				<h4>java (1)</h4>
+			</a>
+		</div>
+		
+		<div class="category">
+			<a href="/blog/category/android" class="post-title">
+				<h4>android (1)</h4>
+			</a>
+		</div>
+		
+	</app-card>
+	
 </div>
+			</div>
+		</app-layout>
 
 		<a href="https://plus.google.com/+YuriyYunikov/" rel="publisher"></a>
 <script>

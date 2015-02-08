@@ -24,6 +24,10 @@
       paper-item {
         padding: 0;
       }
+      
+      paper-item .button-content{
+        padding: 0;
+      }
 
       paper-item /deep/ .button-content{
         padding: 0;
@@ -151,7 +155,7 @@
 
       <core-header-panel navigation flex mode="seamed">
 
-        <a class="home-container" href="/">
+        <a class="home-container" href="/" on-click="{{clearMenuItem}}">
           <div class="home">
             <img src="{{homeIconSrc}}" alt="Yuriy Yunikov"></img>
             <span>Yuriy<br/>Yunikov</span>
@@ -188,7 +192,8 @@
       </div>
       
       <div class="container" layout vertical>
-        <content></content> 
+        <content>
+        </content> 
       </div>
 
     </core-scaffold>
@@ -201,6 +206,7 @@
       mainTitle: 'Title',
       subTitle: 'Sub Title',
       homeIconSrc: '/images/yunikov-icon.png',
+      menuItem: '',
       sections: [
         {title: 'Resume', icon: 'icons:assignment', page: '/resume/'},
         {title: 'Portfolio', icon: 'icons:work', page: '/portfolio/'},
@@ -234,6 +240,9 @@
             this.showSubTitle = false;
           }
         }
+      },
+      clearMenuItem: function(event) {
+        this.menuItem = -1;
       }
     });
   </script>

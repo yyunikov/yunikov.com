@@ -27,7 +27,9 @@
 
 <link rel="import" href="/elements/app-layout.html" />
 <link rel="import" href="/elements/app-card.html" />
+<link rel="import" href="/elements/stackoverflow-card.html" />
 <link rel="import" href="/elements/github-card.html" />
+<link rel="import" href="/elements/github-gist.html">
   		<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
   		<link rel="apple-touch-icon" type="image/png" href="/images/yunikov.57.png"><!-- iPhone -->
 		<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/images/yunikov.72.png"><!-- iPad -->
@@ -36,17 +38,15 @@
 	</head>
 
 	<body id="main" class="default" unresolved>
-
-		<div class="category-page">
-	<app-layout
-		mainTitle="Yuriy Yunikov"
-		subTitle="Java/Android Software Engineer"
-		menuItem="3"
-		unresolved>
-
-		<app-card class="category">
-			
-				<article class="post">
+		<app-layout
+			mainTitle="Yuriy Yunikov"
+			subTitle="Java/Android Software Engineer"
+			unresolved>
+			<div class="content-container">
+				<div class="category-page">
+	<app-card class="category">
+		
+			<article class="post">
   
 <!-- TODO add back to blog and View on Github buttons -->
 
@@ -67,11 +67,12 @@
 	</div>
 
 </article>
-			
-		</app-card>
+		
+	</app-card>
 
-	</app-layout>
 </div>
+			</div>
+		</app-layout>
 
 		<a href="https://plus.google.com/+YuriyYunikov/" rel="publisher"></a>
 <script>
