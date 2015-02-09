@@ -8,7 +8,7 @@ var menuItemMap = {
   'blog' : 3
 };
 
-function fadeInContent(content) {
+function fadeInContent(content, callback) {
     var player = content.animate([
         {opacity: 0.0, transform: "scale(0.5)"},
         {opacity: 1.0, transform: "scale(1)"}
@@ -17,9 +17,15 @@ function fadeInContent(content) {
         duration: FADE_DURATION,
         iterations: 1
     });
+
+    if (typeof callback === "function") {
+      setTimeout(function(){
+        callback();
+      }, FADE_DURATION);
+    }
 }
 
-function fadeOutContent(content) {
+function fadeOutContent(content, callback) {
     var player = content.animate([
         {opacity: 1.0, transform: "scale(1)"},
         {opacity: 0.0, transform: "scale(0.5)"}
@@ -28,6 +34,12 @@ function fadeOutContent(content) {
         duration: FADE_DURATION,
         iterations: 1
     });
+
+    if (typeof callback === "function") {
+      setTimeout(function(){
+        callback();
+      }, FADE_DURATION);
+    }
 }
 
 function replaceScriptTagWithRunnableScript(node) {
@@ -55,46 +67,44 @@ function injectPage(url, opt_addToHistory) {
       return;
     }
 
-    var doc = e.target.response;
+    fadeOutContent(document.querySelector('.content-container'), function(){
+      var doc = e.target.response;
 
-    document.title = doc.title;
+      document.title = doc.title;
 
-    // Update URL history now that title and URL are set.
-    var addToHistory = opt_addToHistory == undefined ? true : opt_addToHistory;
-    if (addToHistory) {
-      history.pushState({url: url}, doc.title, url);
-    }
+      // Update URL history now that title and URL are set.
+      var addToHistory = opt_addToHistory == undefined ? true : opt_addToHistory;
+      if (addToHistory) {
+        history.pushState({url: url}, doc.title, url);
+      }
 
-    var docAppLayout = doc.querySelector('app-layout');
+      var docAppLayout = doc.querySelector('app-layout');
 
-    selectAppLayoutMenuItem(appLayout, url);
+      selectAppLayoutMenuItem(appLayout, url);
 
-    if (docAppLayout) {
-      appLayout.innerHTML = docAppLayout.innerHTML;
-    } else {
-      location.href = url;
-      return;
-    }
+      if (docAppLayout) {
+        appLayout.innerHTML = docAppLayout.innerHTML;
+      } else {
+        location.href = url;
+        return;
+      }
 
-    var CONTAINER_SELECTOR = '.content-container';
-    var container = document.querySelector(CONTAINER_SELECTOR);
-    var newDocContainer = doc.querySelector(CONTAINER_SELECTOR);
-    container.innerHTML = newDocContainer.innerHTML;
+      var CONTAINER_SELECTOR = '.content-container';
+      var container = document.querySelector(CONTAINER_SELECTOR);
+      var newDocContainer = doc.querySelector(CONTAINER_SELECTOR);
+      container.innerHTML = newDocContainer.innerHTML;
 
-    // .innerHTML doesn't eval script. Replace <script> in-page with runnable version.
-    var scripts = container.querySelectorAll('script');
-    Array.prototype.forEach.call(scripts, function(node, i) {
-      replaceScriptTagWithRunnableScript(node);
+      // .innerHTML doesn't eval script. Replace <script> in-page with runnable version.
+      var scripts = container.querySelectorAll('script');
+      Array.prototype.forEach.call(scripts, function(node, i) {
+        replaceScriptTagWithRunnableScript(node);
+      });
+     
+      fadeInContent(document.querySelector('.content-container'));
     });
-
-    
-    fadeInContent(document.querySelector('.content-container'));
   };
 
-  fadeOutContent(document.querySelector('.content-container'));
-  setTimeout(function(){
-    xhr.send();    
-  }, FADE_DURATION - 100);
+  xhr.send();    
 }
 
 function ajaxifySite() {
