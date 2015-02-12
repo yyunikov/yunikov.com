@@ -4,12 +4,16 @@ layout: default
 permalink: /blog/categories/
 ---
 <div class="blog-categories-page">
-
 	<app-card>
 		<h2>Categories</h2>
+		<div class="category">
+			<a href="/blog/categories/all" class="post-title">
+				<h4>All ({{ site.posts | size }})</h4>
+			</a>
+		</div>
 		{% for category in site.categories %}
 		<div class="category">
-			<a href="/blog/category/{{ category | first }}" class="post-title">
+			<a href="/blog/categories/{{ category | first }}" class="post-title">
 				<h4>{{ category | first }} ({{ category | last | size }})</h4>
 			</a>
 		</div>

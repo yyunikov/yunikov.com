@@ -4,10 +4,11 @@ description: "Personal Web-Site"
 exclude: ["node_modules", "Gruntfile.js", "package.json"]
 
 markdown: rdiscount
-permalink: /blog/:categories/:year/:month/:day/:title/
-
-encoding: UTF-8
+permalink: /blog/categories/:categories/:year/:month/:day/:title/
 
 paginate: 5
+paginate_path: "/blog/categories/all/page:num/"
+
+encoding: UTF-8
 
 disqus: yunikovcom

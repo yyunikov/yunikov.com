@@ -13,7 +13,7 @@ module Jekyll
  
         cat_page.data.merge!(
           "title" => "yunikov.com category: #{cat_name}",
-          "permalink" => "blog/category/#{cat_name}/",
+          "permalink" => "blog/categories/#{cat_name}/",
           "category_name" => cat_name)
         cat_page.render(site.layouts, site.site_payload)
  
