@@ -65,7 +65,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 
 .header-link-right {
 	display: inline;
-	padding-bottom: 50px;
+	padding-bottom: 40px;
 }
 
 .header-link-right a {
@@ -73,6 +73,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	float: right;
 	padding-right: 20px;
 	font-weight: 300;
+	color: #D0756E;
 }
 
 .subsection-heading {
