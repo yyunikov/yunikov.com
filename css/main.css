@@ -7,7 +7,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     font-family: 'RobotoDraft', sans-serif;
-    color: #444;
+    color: #717171;
     transition: opacity ease-in 0.2s;
 }
 
@@ -16,7 +16,7 @@ a:link,
 a:visited {
 	font-size: inherit;
 	text-decoration: none;
-	color: #D0756E;
+	color: #646464;
 }
 
 a:hover{
@@ -59,7 +59,7 @@ tr.space-under > td
 }
 
 app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
-	background-color: #33363B;
+	background-color: #4C4A4F;
     color: #fff;
 }
 
@@ -121,6 +121,20 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #888;
 }
 
+.card-header {
+	background-color: #ff7777;
+}
+
+.card-header h1,
+.card-header h2 {
+	color: #FFFFFF;
+	padding: 30px;
+}
+
+.card-content {
+	padding: 0 30px 20px 30px;
+}
+
 /* Index page */
 .index-page .summary-header {
 	text-align: center;
@@ -128,7 +142,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 
 .index-page .summary-table {
 	width: 100%;
-	padding: 10px;
+	padding: 30px;
 }
 
 .index-page .summary-table .summary-table-section div {
@@ -143,6 +157,13 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #656565;
 }
 
+.index-page #recent .card-header {
+	background-color: #FAB885;
+}
+.index-page #summary .card-header {
+	background-color: #BFBEC2;
+}
+
 /* Resume page */
 .resume-page #ghcard-yyunikov-1 {
 	margin-top: 20px;
@@ -150,6 +171,30 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 
 .resume-page /deep/ stackoverflow-card {
 	margin: 0 20px;
+}
+
+.resume-page #general .card-header {
+	background-color: #8E95A6;
+}
+
+.resume-page #about .card-header {
+	background-color: #FCDD84;
+}
+
+.resume-page #experience .card-header {
+	background-color: #B6DFE2;
+}
+
+.resume-page #education .card-header {
+	background-color: #A7DCF7;
+}
+
+.resume-page #languages .card-header {
+	background-color: #B7DAB3;
+}
+
+.resume-page #certificates .card-header {
+	background-color: #C4C1FC;
 }
 
 .resume-page .general-info {
@@ -233,6 +278,10 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	margin-left: 15px;
 }
 
+.applications-page #applications .card-header {
+	background-color: #ADDF8C;
+}
+
 /* Blog categories page */
 .blog-categories-page .category {
 	padding: 10px;
@@ -242,6 +291,10 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	display: block;
 }
 
+.blog-categories-page #categories .card-header {
+	background-color: #FCDD84;
+}
+
 .blog-categories-page .category a.post-title:first-letter {
 	text-transform: uppercase;
 }
@@ -249,6 +302,11 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 /* Category page */
 .category-page .category h2:first-letter {
 	text-transform: uppercase;
+}
+
+.category-page-all #category .card-content,
+.category-page #category .card-content {
+	padding: 30px;
 }
 
 @media screen and (max-width: 460px) {

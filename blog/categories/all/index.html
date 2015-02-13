@@ -4,38 +4,40 @@ layout: default
 ---
 <div class="category-page-all">
 
-	<app-card class="category">
+	<app-card id="category">
+		<div class="card-content">
+			{% for post in paginator.posts %}
+				{% include post-preview.html %}
+			{% endfor %}
 
-		{% for post in paginator.posts %}
-			{% include post-preview.html %}
-		{% endfor %}
+			{% if paginator.total_pages > 1 %}
+			<div class="pagination">
+			  {% if paginator.previous_page %}
+			    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '/index.html', '/' }}">&laquo; Prev</a>
+			  {% else %}
+			    <span>&laquo; Prev</span>
+			  {% endif %}
 
-		{% if paginator.total_pages > 1 %}
-		<div class="pagination">
-		  {% if paginator.previous_page %}
-		    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '/index.html', '/' }}">&laquo; Prev</a>
-		  {% else %}
-		    <span>&laquo; Prev</span>
-		  {% endif %}
+			  {% for page in (1..paginator.total_pages) %}
+			    {% if page == paginator.page %}
+			      <em>{{ page }}</em>
+			    {% elsif page == 1 %}
+			      <a href="{{ '/blog/categories/all' | prepend: site.baseurl | replace: '/index.html', '/' }}">{{ page }}</a>
+			    {% else %}
+			      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '/index.html', '/' | replace: ':num', page }}">{{ page }}</a>
+			    {% endif %}
+			  {% endfor %}
 
-		  {% for page in (1..paginator.total_pages) %}
-		    {% if page == paginator.page %}
-		      <em>{{ page }}</em>
-		    {% elsif page == 1 %}
-		      <a href="{{ '/blog/categories/all' | prepend: site.baseurl | replace: '/index.html', '/' }}">{{ page }}</a>
-		    {% else %}
-		      <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '/index.html', '/' | replace: ':num', page }}">{{ page }}</a>
-		    {% endif %}
-		  {% endfor %}
-
-		  {% if paginator.next_page %}
-		    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '/index.html', '/' }}">Next &raquo;</a>
-		  {% else %}
-		    <span>Next &raquo;</span>
-		  {% endif %}
+			  {% if paginator.next_page %}
+			    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '/index.html', '/' }}">Next &raquo;</a>
+			  {% else %}
+			    <span>Next &raquo;</span>
+			  {% endif %}
+			</div>
+			{% endif %}
+			</div>
 		</div>
-		{% endif %}
-		</div>
+	
 	</app-card>
 	
 </div>
