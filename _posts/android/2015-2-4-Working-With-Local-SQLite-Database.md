@@ -2,6 +2,7 @@
 layout: post
 title: Working with local SQLite database
 category: android
+tags: android database sqlite
 updated: 2015-02-04
 ---
 

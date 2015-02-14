@@ -2,6 +2,7 @@
 layout: post
 title: Handling uncaught exceptions in Java web applications
 category: java
+tags: java
 updated: 2015-02-03
 ---
 
