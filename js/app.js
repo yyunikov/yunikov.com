@@ -21,7 +21,7 @@ function fadeInContent(content, callback) {
     if (typeof callback === "function") {
       setTimeout(function(){
         callback();
-      }, FADE_DURATION);
+      }, FADE_DURATION - 100);
     }
 }
 
@@ -38,7 +38,7 @@ function fadeOutContent(content, callback) {
     if (typeof callback === "function") {
       setTimeout(function(){
         callback();
-      }, FADE_DURATION);
+      }, FADE_DURATION - 100);
     }
 }
 
