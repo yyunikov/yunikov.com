@@ -1,0 +1,4 @@
+User-agent: * 
+Disallow:
+
+Sitemap: yunikov.com/sitemap.xml
