@@ -7,15 +7,14 @@ Personal website with blog containing the short description of me as a developer
 **master** - contains the generated production website
 
 # Local development
-To run website locally you need to have [Node.js](http://nodejs.org/) and [Ruby](https://www.ruby-lang.org/en/) installed.
+To run website locally you need to have [Node.js](http://nodejs.org/) installed.
 
 Run the following commands to start the website:
 
 1. Install `grunt-cli` and `bower` globally with `npm install -g grunt-cli bower`
 2. Run `npm install` (this will run `bower install` for you)
-3. Run `bundle` command
-4. Then build with `grunt build`
-5. And run the server with `jekyll serve --watch`
+3. Then build with `grunt build`
+4. And run the server with `jekyll serve --watch`
 
 After that you can check out the website running on `localhost:4000`
 

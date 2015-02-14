@@ -7,7 +7,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     font-family: 'RobotoDraft', sans-serif;
-    color: #444;
+    color: #717171;
     transition: opacity ease-in 0.2s;
 }
 
@@ -16,7 +16,7 @@ a:link,
 a:visited {
 	font-size: inherit;
 	text-decoration: none;
-	color: #D0756E;
+	color: #646464;
 }
 
 a:hover{
@@ -44,6 +44,10 @@ h2 {
 	font-weight: 500;
 }
 
+h3 {
+	margin: 10px 0px;
+}
+
 h4 {
 	margin: 5px;
 }
@@ -59,8 +63,21 @@ tr.space-under > td
 }
 
 app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar {
-	background-color: #33363B;
+	background-color: #4C4A4F;
     color: #fff;
+}
+
+.header-link-right {
+	display: inline;
+	padding-bottom: 40px;
+}
+
+.header-link-right a {
+	font-size: 20px;
+	float: right;
+	padding-right: 20px;
+	font-weight: 300;
+	color: #D0756E;
 }
 
 .subsection-heading {
@@ -121,6 +138,14 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #888;
 }
 
+.first-letter-uppercase {
+ 	display: inline-block;
+}
+
+.first-letter-uppercase:first-letter {
+ 	text-transform:uppercase;
+}
+
 /* Index page */
 .index-page .summary-header {
 	text-align: center;
@@ -128,7 +153,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 
 .index-page .summary-table {
 	width: 100%;
-	padding: 10px;
+	padding: 30px;
 }
 
 .index-page .summary-table .summary-table-section div {
@@ -206,14 +231,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #353535;
 }
 
-.resume-page .languages-list li {
-	padding: 5px 0;
-}
-
-.resume-page .certificates-list li {
-	padding: 5px 0;
-}
-
 /* Portfolio page */
 .portfolio-page .portfolio-image {
 }
@@ -242,13 +259,10 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	display: block;
 }
 
-.blog-categories-page .category a.post-title:first-letter {
-	text-transform: uppercase;
-}
-
 /* Category page */
-.category-page .category h2:first-letter {
-	text-transform: uppercase;
+.category-page-all #category .card-content,
+.category-page #category .card-content {
+	padding: 30px;
 }
 
 @media screen and (max-width: 460px) {
