@@ -10,7 +10,8 @@ permalink: /blog/categories/
 				<h4>All ({{ site.posts | size }})</h4>
 			</a>
 		</div>
-		{% for category in site.categories %}
+		{% assign sortedcats = site.categories | sort %}
+		{% for category in sortedcats %}
 		<div class="category">
 			<a href="/blog/categories/{{ category | first }}" class="post-title">
 				<h4 class="first-letter-uppercase">{{ category | first }} ({{ category | last | size }})</h4>
