@@ -44,6 +44,10 @@ h2 {
 	font-weight: 500;
 }
 
+h3 {
+	margin: 10px 0px;
+}
+
 h4 {
 	margin: 5px;
 }
@@ -134,18 +138,12 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #888;
 }
 
-.card-header {
-	background-color: #ff7777;
+.first-letter-uppercase {
+ 	display: inline-block;
 }
 
-.card-header h1,
-.card-header h2 {
-	color: #FFFFFF;
-	padding: 30px;
-}
-
-.card-content {
-	padding: 0 30px 20px 30px;
+.first-letter-uppercase:first-letter {
+ 	text-transform:uppercase;
 }
 
 /* Index page */
@@ -170,13 +168,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #656565;
 }
 
-.index-page #recent .card-header {
-	background-color: #FAB885;
-}
-.index-page #summary .card-header {
-	background-color: #BFBEC2;
-}
-
 /* Resume page */
 .resume-page #ghcard-yyunikov-1 {
 	margin-top: 20px;
@@ -184,30 +175,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 
 .resume-page /deep/ stackoverflow-card {
 	margin: 0 20px;
-}
-
-.resume-page #general .card-header {
-	background-color: #8E95A6;
-}
-
-.resume-page #about .card-header {
-	background-color: #FCDD84;
-}
-
-.resume-page #experience .card-header {
-	background-color: #B6DFE2;
-}
-
-.resume-page #education .card-header {
-	background-color: #A7DCF7;
-}
-
-.resume-page #languages .card-header {
-	background-color: #B7DAB3;
-}
-
-.resume-page #certificates .card-header {
-	background-color: #C4C1FC;
 }
 
 .resume-page .general-info {
@@ -264,14 +231,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #353535;
 }
 
-.resume-page .languages-list li {
-	padding: 5px 0;
-}
-
-.resume-page .certificates-list li {
-	padding: 5px 0;
-}
-
 /* Portfolio page */
 .portfolio-page .portfolio-image {
 }
@@ -291,10 +250,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	margin-left: 15px;
 }
 
-.applications-page #applications .card-header {
-	background-color: #ADDF8C;
-}
-
 /* Blog categories page */
 .blog-categories-page .category {
 	padding: 10px;
@@ -304,19 +259,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	display: block;
 }
 
-.blog-categories-page #categories .card-header {
-	background-color: #FCDD84;
-}
-
-.blog-categories-page .category a.post-title:first-letter {
-	text-transform: uppercase;
-}
-
 /* Category page */
-.category-page .category h2:first-letter {
-	text-transform: uppercase;
-}
-
 .category-page-all #category .card-content,
 .category-page #category .card-content {
 	padding: 30px;

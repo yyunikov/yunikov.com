@@ -4,11 +4,8 @@ layout: default
 permalink: /resume/
 ---
 <div class="resume-page">
-	<app-card id="general">
-		<div class="card-header">
-			<h2>General</h2>
-		</div>
-		<div horizontal layout flex class="general-info card-content">
+	<app-card id="general" headerText="General" headerColor="#8E95A6">
+		<div horizontal layout flex class="general-info">
 			<div>
 				<table class="contact">
 					<tr class="space-under">
@@ -39,30 +36,21 @@ permalink: /resume/
 		</div>
 	</app-card>
 
-	<app-card id="about">
-		<div class="card-header">
-			<h2>About Me</h2>
-		</div>
-		<div class="card-content">
-			<p>I'm a Java software engineer and Android enthusiast interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.
-			Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.
-			</p>
-			<p>
-			Some of the plans for the future are to make a few open source projects, learn Python and algorithms.
-			</p>
-			<div horizontal layout flex class="about-websites" style="justify-content: center;">
-				<github-card user="yyunikov"></github-card>
-				<stackoverflow-card userid="1889928"></stackoverflow-card>
-			</div>
+	<app-card id="about" headerText="About Me" headerColor="#EDC75A">
+		<p>I'm a Java software engineer and Android enthusiast interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.
+		Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.
+		</p>
+		<p>
+		Some of the plans for the future are to make a few open source projects, learn Python and algorithms.
+		</p>
+		<div horizontal layout flex class="about-websites" style="justify-content: center;">
+			<github-card user="yyunikov"></github-card>
+			<stackoverflow-card userid="1889928"></stackoverflow-card>
 		</div>
 	</app-card>
 
-	<app-card id="experience">
-		<div class="card-header">
-			<h2>Experience</h2>
-		</div>
-		<div class="card-content">
-			<div class="subsection-heading">
+	<app-card id="experience" headerText="Experience" headerColor="#7DD5DB">
+		<div class="subsection-heading">
 			<a href="http://www.n-ix.com" target="_blank">Java Software Engineer at N-iX</a>
 			<div class="subsection-heading-subtitle2">August 2013 - Present</div>
 		</div>
@@ -102,77 +90,61 @@ permalink: /resume/
 		</div>
 	</app-card>
 
-	<app-card id="education">
-		<div class="card-header">
-			<h2>Education</h2>
+	<app-card id="education" headerText="Education" headerColor="#7CC1E4">
+		<div class="subsection-heading">
+			<div>
+				<a href="http://www.lp.edu.ua/en" target="_blank">State University 'Lviv Polytechnics'</a>
+			 </div>
+			<div class="subsection-heading-subtitle1">Master's degree with Distinction - Computer Sciences (Artificial Intelligence Systems)</div>
+			<div class="subsection-heading-subtitle2">2009 - 2014</div>
 		</div>
-		<div class="card-content">
-			<div class="subsection-heading">
-				<div>
-					<a href="http://www.lp.edu.ua/en" target="_blank">State University 'Lviv Polytechnics'</a>
-				 </div>
-				<div class="subsection-heading-subtitle1">Master's degree with Distinction - Computer Sciences (Artificial Intelligence Systems)</div>
-				<div class="subsection-heading-subtitle2">2009 - 2014</div>
-			</div>
-			<div class="subsection-content">
-				Learning computer sciences, programming languages, databases, information systems, algorithms, networking, operation systems and other.
-			</div>
+		<div class="subsection-content">
+			Learning computer sciences, programming languages, databases, information systems, algorithms, networking, operation systems and other.
+		</div>
 
-			<div class="subsection-heading">
-				<a href="http://academy.eleks.com/" target="_blank">Eleks Software Academy</a>
-				<div class="subsection-heading-subtitle1">Java</div>
-				<div class="subsection-heading-subtitle2">June 2013 - July 2013</div>
-			</div>
+		<div class="subsection-heading">
+			<a href="http://academy.eleks.com/" target="_blank">Eleks Software Academy</a>
+			<div class="subsection-heading-subtitle1">Java</div>
+			<div class="subsection-heading-subtitle2">June 2013 - July 2013</div>
+		</div>
 
-			<div class="subsection-heading">
-				<div>Lviv Linguistic Gymnasium</div>
-				<div class="subsection-heading-subtitle1">Basic Education, English specialized</div>
-				<div class="subsection-heading-subtitle2">1999 - 2009</div>
-			</div>
+		<div class="subsection-heading">
+			<div>Lviv Linguistic Gymnasium</div>
+			<div class="subsection-heading-subtitle1">Basic Education, English specialized</div>
+			<div class="subsection-heading-subtitle2">1999 - 2009</div>
 		</div>
 	</app-card>
 
 
-	<app-card id="languages">
-		<div class="card-header">
-			<h2>Languages</h2>
-		</div>
-		<div class="card-content">
-			<ul class="languages-list">
-				<li>English	</li>
-				<li>Ukrainian</li>
-				<li>Russian</li>
-			</ul>
-		</div>
+	<app-card id="languages" headerText="Languages" headerColor="#8DC287">
+		<ul class="languages-list">
+			<li>English	</li>
+			<li>Ukrainian</li>
+			<li>Russian</li>
+		</ul>
 	</app-card>
 
-	<app-card id="certificates">
-		<div class="card-header">
-			<h2>Certificates</h2>
-		</div>
-		<div class="card-content">
-			<ul class="certificates-list">
-				<li>			
-					<a href="https://www.coursera.org/signature/certificate/BQVF8HFT8L" target="_blank">Programming Mobile Applications for Android Handheld Systems</a>
-				</li>
-				<li>
-					<a href="https://www.coursera.org/signature/certificate/RFN9QY4KQG" target="_blank">Pattern-Oriented Software Architectures: Programming Mobile Services for Android Handheld Systems</a>
-				</li>
-				<li>
-					<a href="https://www.coursera.org/signature/certificate/77RMF4244C" target="_blank">Programming Cloud Services for Android Handheld Systems</a>
-				</li>
-				<li>
-					<a href="https://s3.amazonaws.com/edu-cert.10gen.com/downloads/9106231dfefe41388ecee55849be30a3/Certificate.pdf" target="_blank">M101J: MongoDB for Java Developers</a>
-				</li>
-				<li>
-					<a href="https://drive.google.com/file/d/0B3CCkpLWULkUenVRck1jWUNvMFRneWg5dDlBZXFINWF2YldV/edit?usp=sharing" target="_blank">Google AdMob Student App Challenge 2014 Participant</a>
-				</li>
-				<li>
-					<a href="https://drive.google.com/file/d/0B3CCkpLWULkUdnowc282WXpxNzA/view?usp=sharing" target="_blank">Google Analytics Academy: Mobile App Analytics Fundamentals</a>
-				</li>
-			</ul>
-		</div>
-
+	<app-card id="certificates" headerText="Certificates" headerColor="#9792E5">
+		<ul class="certificates-list">
+			<li>			
+				<a href="https://www.coursera.org/signature/certificate/BQVF8HFT8L" target="_blank">Programming Mobile Applications for Android Handheld Systems</a>
+			</li>
+			<li>
+				<a href="https://www.coursera.org/signature/certificate/RFN9QY4KQG" target="_blank">Pattern-Oriented Software Architectures: Programming Mobile Services for Android Handheld Systems</a>
+			</li>
+			<li>
+				<a href="https://www.coursera.org/signature/certificate/77RMF4244C" target="_blank">Programming Cloud Services for Android Handheld Systems</a>
+			</li>
+			<li>
+				<a href="https://s3.amazonaws.com/edu-cert.10gen.com/downloads/9106231dfefe41388ecee55849be30a3/Certificate.pdf" target="_blank">M101J: MongoDB for Java Developers</a>
+			</li>
+			<li>
+				<a href="https://drive.google.com/file/d/0B3CCkpLWULkUenVRck1jWUNvMFRneWg5dDlBZXFINWF2YldV/edit?usp=sharing" target="_blank">Google AdMob Student App Challenge 2014 Participant</a>
+			</li>
+			<li>
+				<a href="https://drive.google.com/file/d/0B3CCkpLWULkUdnowc282WXpxNzA/view?usp=sharing" target="_blank">Google Analytics Academy: Mobile App Analytics Fundamentals</a>
+			</li>
+		</ul>
 	</app-card>
 
 </div>

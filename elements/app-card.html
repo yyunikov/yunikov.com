@@ -1,4 +1,4 @@
-<polymer-element name="app-card" noscript>
+<polymer-element name="app-card" attributes="headerText headerColor" noscript>
   <template>
     <style>
     paper-shadow {
@@ -9,19 +9,48 @@
       font-weight: 300;
       margin-bottom: 20px;
     }
+
+    ::content li {
+      padding: 5px 0;
+    }
+
     .card-header {
       margin-bottom: 10px;
     }
-    polyfill-next-selector { content: '.card-header h2'; }
-    .card-header ::content h2 {
+
+    .card-header {
+      background-color: #ff7777;
+    }
+
+    .card-header h1,
+    .card-header h2 {
+      color: #FFFFFF;
+      padding: 30px;
       margin: 0;
-      font-size: 18px;
-      font-weight: 200;
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .card-content {
+      padding: 10px 30px 20px 30px;
+    }
+
+    .first-letter-uppercase {
+     display: inline-block;
+    }
+
+    .first-letter-uppercase:first-letter {
+     text-transform:uppercase;
     }
     </style>
 
     <paper-shadow z="1" class=".card-header">
-      <content></content>
+      <div class="card-header" style="background-color: {{headerColor}};">
+        <h2 class="first-letter-uppercase">{{headerText}}</h2>
+      </div>
+      <div class="card-content">
+        <content></content>
+      </div>
     </paper-shadow>
 
   </template>

@@ -3,15 +3,10 @@ layout: default
 ---
 <article class="post">
 
-	<app-card class="entry">
-		<div class="card-header">
-			<h1>{{ page.title }}</h1>
-		</div>
-		<div class="card-content">
-			{{ content }}
-			<div class="post-date">
-			Posted on {{ page.date | date: "%B %e, %Y" }}
-			</div>
+	<app-card class="entry" headerText="{{ page.title }}">
+		{{ content }}
+		<div class="post-date">
+		Posted on {{ page.date | date: "%B %e, %Y" }}
 		</div>
 	</app-card>
 
