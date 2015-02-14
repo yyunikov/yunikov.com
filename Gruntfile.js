@@ -31,9 +31,8 @@ module.exports = function(grunt) {
           branch: 'master'
         }
       }
-    }
-// TODO restore vulcanization when 'Already registered' issues will be fixed
-/*    vulcanize: {
+    },
+    vulcanize: {
       options: {
         strip: true,
         csp: true,
@@ -43,24 +42,21 @@ module.exports = function(grunt) {
         options: {
           excludes: {
             imports: [
-              "polymer.html"
+              "polymer.html$"
             ]
           }
         },
         files: {
-          'elements/app-layout.vulcanized.html': 'elements/app-layout.html'
+          'elements/common-elements.vulcanized.html': 'elements/common-elements.html'
         }
       }
-    }*/
+    }
 
   });
 
   // Plugin and grunt tasks.
   require('load-grunt-tasks')(grunt);
 
-  // Task to run vulcanize and build the jekyll site
-  //grunt.registerTask('default', ['vulcanize', 'jekyll:build']);
-
-  grunt.registerTask('build', ['jekyll:build']);
-  grunt.registerTask('deploy', ['jekyll:build', 'buildcontrol:pages']);
+  grunt.registerTask('build', ['vulcanize', 'jekyll:build']);
+  grunt.registerTask('deploy', ['vulcanize', 'jekyll:build', 'buildcontrol:pages']);
 };
