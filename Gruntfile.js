@@ -1,6 +1,8 @@
 module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-build-control');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Project configuration.
   grunt.initConfig({
@@ -50,13 +52,27 @@ module.exports = function(grunt) {
           'elements/common-elements.vulcanized.html': 'elements/common-elements.html'
         }
       }
+    },
+    cssmin: {
+      dist: {
+        src: [
+            'css/main.css'
+        ],
+        dest: 'css/main.min.css'
+      }
+    },
+    uglify: {
+      my_target: {
+        files: {
+          'js/app.min.js': ['js/app.js']
+        }
+      }
     }
-
   });
 
   // Plugin and grunt tasks.
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('build', ['vulcanize', 'jekyll:build']);
-  grunt.registerTask('deploy', ['vulcanize', 'jekyll:build', 'buildcontrol:pages']);
+  grunt.registerTask('build', ['vulcanize', 'uglify', 'cssmin','jekyll:build']);
+  grunt.registerTask('deploy', ['vulcanize', 'uglify', 'cssmin', 'jekyll:build', 'buildcontrol:pages']);
 };
