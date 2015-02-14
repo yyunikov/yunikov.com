@@ -1,5 +1,7 @@
 name: "Yuriy Yunikov | Java and Android Software Engineer"
 description: "Personal Web-Site"
+url: yunikov.com
+author: Yuriy Yunikov
 
 include: ['_pages']
 exclude: ["node_modules", "Gruntfile.js", "package.json"]

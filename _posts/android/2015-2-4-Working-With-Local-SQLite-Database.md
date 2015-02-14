@@ -2,6 +2,7 @@
 layout: post
 title: Working with local SQLite database
 category: android
+updated: 2015-02-04
 ---
 
 While creating Android apps, we often use SQLite database to store some data. Sometimes we just need to reuse the existing database stored locally on the device. One of the ways is just to store your local SQLite database in <code>/res/assets</code> folder. Let's consider this example and look at one of the approaches for using it in code.

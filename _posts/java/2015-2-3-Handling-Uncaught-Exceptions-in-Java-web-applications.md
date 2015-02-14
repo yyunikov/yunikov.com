@@ -2,6 +2,7 @@
 layout: post
 title: Handling uncaught exceptions in Java web applications
 category: java
+updated: 2015-02-03
 ---
 
 In Java web applications we have to be sure we are handling all exceptions and log them in the right way. One common approach that I've used on a few projects is a creation of <a href="http://docs.oracle.com/javaee/5/api/javax/servlet/Filter.html">Filter</a> for every request which will handle that. Here is a very basic example how it may look like.
