@@ -232,9 +232,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 }
 
 /* Portfolio page */
-.portfolio-page .portfolio-image {
-}
-
 .portfolio-page .portfolio-list {
 	padding: 0;
 	list-style: none;
@@ -265,7 +262,31 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	padding: 30px;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width:  550px) {
+	.index-page .summary-table {
+		padding: 0;
+		table-layout: fixed;
+	}
+
+	.index-page .summary-table th core-icon{
+		width: 100%;
+	}
+
+	.index-page .summary-table .summary-table-section div span {
+		font-size: 13px;
+		text-align: center;
+	}
+
+	.resume-page .contact td {
+		white-space: nowrap;
+		padding-right: 0;
+	}
+
+	.resume-page .about-websites {
+		display: block!important;
+		text-align: center;
+	}
+
 	.resume-page .general-info {
 	  	display: block!important;
 	}
@@ -275,18 +296,17 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 		display: block;
 		padding: 10px;
 	}
-}
 
-@media screen and (max-width:  550px) {
-	.index-page .about-websites {
-		display: block!important;
-		text-align: center;
-	}
-
-	.index-page .about-websites /deep/ stackoverflow-card {
+	.resume-page .about-websites stackoverflow-card {
 		margin: 20px 20px;
 		width: 210px;
 		display: inline-block;
+	}
+}
+
+@media screen and (max-width:  650px) {
+	.portfolio-page .portfolio-image {
+		width: 100%;
 	}
 }
 
