@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="http://yunikov.com/css/main.min.css" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Yuriy Yunikov | Java and Android Software Engineer</title>
 	<link href="http://yunikov.com/blog/feed.atom" rel="self" />
 	<link href="http://yunikov.com/" />
-	<link rel="stylesheet" href="http://yunikov.com/css/main.min.css" shim-shadowdom />
-	<script type="text/javascript" src="http://yunikov.com/components/webcomponentsjs/webcomponents.min.js"></script>
-	<link rel="import" href="http://yunikov.com/components/polymer/polymer.html"/>
-	<link rel="import" href="http://yunikov.com/elements/common-elements.vulcanized.html"/>
 	<id>http://yunikov.com/</id>
 	<author>
 		<name>Yuriy Yunikov</name>
 	</author>
-	<updated>2015-02-15T15:22:00+02:00</updated>
+	<updated>2015-02-15T15:28:29+02:00</updated>
 
 	<entry>
 		<title type="text">Working with local SQLite database</title>
