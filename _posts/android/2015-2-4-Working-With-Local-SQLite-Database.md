@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Working with local SQLite database
+description: Example of working with local SQLite database using DAO approach with code samples
+topic: Working with local SQLite database
+title: Working with local SQLite database | Yuriy Yunikov
 category: android
 tags: android database sqlite
 updated: 2015-02-04

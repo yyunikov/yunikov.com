@@ -10,9 +10,8 @@ module Jekyll
       site.categories.each do |cat|
         cat_page = main_cat_page.clone
         cat_name = cat.first.gsub(/\s+/, '-')
- 
+
         cat_page.data.merge!(
-          "title" => "yunikov.com category: #{cat_name}",
           "permalink" => "blog/categories/#{cat_name}/",
           "category_name" => cat_name)
         cat_page.render(site.layouts, site.site_payload)

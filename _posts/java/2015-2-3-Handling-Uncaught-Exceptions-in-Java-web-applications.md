@@ -1,6 +1,8 @@
 ---
 layout: post
-title: Handling uncaught exceptions in Java web applications
+description: One of the popular approaches of handling uncaught exceptions using standard Filter and Servlet classes. This is a standard approach and can be even applied to a lot of popular frameworks like Spring.
+topic: Handling uncaught exceptions in Java web applications
+title: Handling uncaught exceptions in Java web applications | Yuriy Yunikov
 category: java
 tags: java
 updated: 2015-02-03
