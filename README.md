@@ -8,7 +8,9 @@ Personal website with blog containing the short description of me as a developer
 
 # Tasks
 `grunt dev` - builds development version of files
+
 `grunt prod` - builds production version of files (minified css, uglified js, etc.)
+
 `grunt deploy` - deploys website to production
 
 # Local development
