@@ -13,6 +13,7 @@ layout: null
       {% endif %}
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+      <mobile:mobile/>
     </url>
   {% endfor %}
   {% for page in site.pages %}
@@ -22,6 +23,7 @@ layout: null
         <lastmod>{{ page.sitemap.lastmod }}</lastmod>
         <changefreq>{{ page.sitemap.changefreq }}</changefreq>
         <priority>{{ page.sitemap.priority }}</priority>
+        <mobile:mobile/>
        </url>
     {% endif %}
   {% endfor %}
