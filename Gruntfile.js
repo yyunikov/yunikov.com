@@ -99,5 +99,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('dev', ['env:dev', 'preprocess:dev', 'jekyll:build']);
   grunt.registerTask('prod', ['vulcanize', 'uglify', 'cssmin', 'env:prod', 'preprocess:prod', 'jekyll:build']);
-  grunt.registerTask('deploy', ['vulcanize', 'uglify', 'cssmin', 'env:prod', 'preprocess:prod', 'jekyll:build', 'buildcontrol:pages']);
+  grunt.registerTask('deploy', ['vulcanize', 'uglify', 'cssmin', 'env:prod', 'preprocess:prod', 'jekyll:build', 'buildcontrol:pages', 'dev']);
 };
