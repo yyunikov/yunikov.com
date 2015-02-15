@@ -3,6 +3,5 @@
 _site/
 components/
 node_modules/
-*.processed.html
 *.vulcanized.html
 *.vulcanized.js
