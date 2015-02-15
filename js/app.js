@@ -42,6 +42,29 @@ function fadeOutContent(content, callback) {
     }
 }
 
+function getDocumentDescription(document){
+  var metas = document.getElementsByTagName('meta');
+  for(var i=0;i<metas.length;i++){
+    if (metas[i].getAttribute('name')) {
+      if(metas[i].getAttribute('name').toLowerCase() == 'description'){
+        return metas[i].getAttribute('content');
+      }
+    }
+  }
+  return null;
+}
+
+function setDocumentDescription(document, description){
+  var metas = document.getElementsByTagName('meta');
+  for(var i=0;i<metas.length;i++){
+    if (metas[i].getAttribute('name')) {
+      if(metas[i].getAttribute('name').toLowerCase() == 'description'){
+        metas[i].content = description;
+      }
+    }
+  }
+}
+
 function replaceScriptTagWithRunnableScript(node) {
   var script  = document.createElement('script');
   script.text = node.innerHTML;
@@ -71,6 +94,8 @@ function injectPage(url, opt_addToHistory) {
       var doc = e.target.response;
 
       document.title = doc.title;
+      setDocumentDescription(document, getDocumentDescription(doc));
+
 
       // Update URL history now that title and URL are set.
       var addToHistory = opt_addToHistory == undefined ? true : opt_addToHistory;

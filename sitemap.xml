@@ -2,48 +2,53 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
-      <loc>http://yunikov.com/blog/categories/android/2015/02/04/Working-With-Local-SQLite-Database/</loc>
+      <loc>http://yunikov.com/blog/android/2015/02/04/Working-With-Local-SQLite-Database/</loc>
       
         <lastmod>2015-02-04</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+      <mobile:mobile/>
     </url>
   
     <url>
-      <loc>http://yunikov.com/blog/categories/java/2015/02/03/Handling-Uncaught-Exceptions-in-Java-web-applications/</loc>
+      <loc>http://yunikov.com/blog/java/2015/02/03/Handling-Uncaught-Exceptions-in-Java-web-applications/</loc>
       
         <lastmod>2015-02-03</lastmod>
       
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
+      <mobile:mobile/>
     </url>
   
   
     
       <url>
-        <loc>http://yunikov.com/blog/categories/android/</loc>
+        <loc>http://yunikov.com/blog/android/</loc>
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+        <mobile:mobile/>
        </url>
     
   
     
       <url>
-        <loc>http://yunikov.com/blog/categories/all/index.html</loc>
+        <loc>http://yunikov.com/blog/all/index.html</loc>
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+        <mobile:mobile/>
        </url>
     
   
     
       <url>
-        <loc>http://yunikov.com/blog/categories/</loc>
+        <loc>http://yunikov.com/blog/</loc>
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+        <mobile:mobile/>
        </url>
     
   
@@ -53,6 +58,7 @@
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+        <mobile:mobile/>
        </url>
     
   
@@ -62,6 +68,7 @@
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <mobile:mobile/>
        </url>
     
   
@@ -71,6 +78,7 @@
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+        <mobile:mobile/>
        </url>
     
   
@@ -80,6 +88,7 @@
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+        <mobile:mobile/>
        </url>
     
   
@@ -91,19 +100,21 @@
   
     
       <url>
-        <loc>http://yunikov.com/blog/categories/java/</loc>
+        <loc>http://yunikov.com/blog/java/</loc>
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+        <mobile:mobile/>
        </url>
     
   
     
       <url>
-        <loc>http://yunikov.com/blog/categories/android/</loc>
+        <loc>http://yunikov.com/blog/android/</loc>
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+        <mobile:mobile/>
        </url>
     
   
