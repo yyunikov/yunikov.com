@@ -5,3 +5,4 @@ components/
 node_modules/
 *.vulcanized.html
 *.vulcanized.js
+*.processed.html
