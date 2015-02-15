@@ -165,7 +165,7 @@
         <core-selector id="mainMenu" selectedAttribute="" selected="{{menuItem}}">
           <template repeat="{{section,i in sections}}">
             <paper-item id="menuItem{{i}}" noink>
-              <a class="page-link" href="{{section.page}}">
+              <a class="page-link" href="{{section.page}}" on-click="{{selectMenuItem}}">
                 <core-icon icon="{{section.icon}}"></core-icon>
                 <span>{{section.title}}</span>
               </a>
@@ -246,6 +246,10 @@
       },
       clearMenuItem: function(event) {
         this.menuItem = -1;
+        this.$.scaffold.$.drawerPanel.closeDrawer();
+      },
+      selectMenuItem: function(event) {
+        this.$.scaffold.$.drawerPanel.closeDrawer();
       }
     });
   </script>
