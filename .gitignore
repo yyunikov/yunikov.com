@@ -3,6 +3,7 @@
 _site/
 components/
 node_modules/
+*.min.css
 *.vulcanized.html
 *.vulcanized.js
 *.processed.html
