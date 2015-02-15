@@ -6,6 +6,11 @@ Personal website with blog containing the short description of me as a developer
 
 **master** - contains the generated production website
 
+# Tasks
+`grunt dev` - builds development version of files
+`grunt prod` - builds production version of files (minified css, uglified js, etc.)
+`grunt deploy` - deploys website to production
+
 # Local development
 To run website locally you need to have [Node.js](http://nodejs.org/) installed.
 
