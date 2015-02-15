@@ -3,6 +3,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-build-control');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-preprocess');
+  grunt.loadNpmTasks('grunt-env');
 
   // Project configuration.
   grunt.initConfig({
@@ -67,12 +69,35 @@ module.exports = function(grunt) {
           'js/app.min.js': ['js/app.js']
         }
       }
+    },
+    env: {
+      dev: {
+        NODE_ENV: 'DEVELOPMENT',
+      },
+      prod: {     
+        NODE_ENV: 'PRODUCTION',        
+      },
+    },
+    preprocess : {
+      dev : {
+        files : {
+          '_includes/header.processed.html' : 'templates/header.html',
+          '_includes/footer.processed.html' : 'templates/footer.html'
+        }
+      },
+      prod : {
+          files : {
+            '_includes/header.processed.html' : 'templates/header.html',
+            '_includes/footer.processed.html' : 'templates/footer.html'
+          }
+      }
     }
   });
 
   // Plugin and grunt tasks.
   require('load-grunt-tasks')(grunt);
 
-  grunt.registerTask('build', ['vulcanize', 'uglify', 'cssmin','jekyll:build']);
-  grunt.registerTask('deploy', ['vulcanize', 'uglify', 'cssmin', 'jekyll:build', 'buildcontrol:pages']);
+  grunt.registerTask('dev', ['env:dev', 'preprocess:dev', 'jekyll:build']);
+  grunt.registerTask('prod', ['vulcanize', 'uglify', 'cssmin', 'env:prod', 'preprocess:prod', 'jekyll:build']);
+  grunt.registerTask('deploy', ['vulcanize', 'uglify', 'cssmin', 'env:prod', 'preprocess:prod', 'jekyll:build', 'buildcontrol:pages']);
 };
