@@ -2,7 +2,7 @@
 title: Blog Categories | Yuriy Yunikov
 description: List of software engineering categories of Yuriy Yunikov's personal blog. Select a category you would like to read about.
 layout: default
-permalink: /blog/categories/
+permalink: /blog/
 sitemap:
     priority: 0.5
     changefreq: 'monthly'
@@ -11,14 +11,14 @@ sitemap:
 <div class="blog-categories-page">
 	<app-card id="categories" headerText="Categories" headerColor="#DBBA5A">
 		<div class="category">
-			<a href="/blog/categories/all" class="post-title">
+			<a href="/blog/all" class="post-title">
 				<h4>All ({{ site.posts | size }})</h4>
 			</a>
 		</div>
 		{% assign sortedcats = site.categories | sort %}
 		{% for category in sortedcats %}
 		<div class="category">
-			<a href="/blog/categories/{{ category | first }}" class="post-title">
+			<a href="/blog/{{ category | first }}" class="post-title">
 				<h4 class="first-letter-uppercase">{{ category | first }} ({{ category | last | size }})</h4>
 			</a>
 		</div>

@@ -12,7 +12,7 @@ module Jekyll
         cat_name = cat.first.gsub(/\s+/, '-')
 
         cat_page.data.merge!(
-          "permalink" => "blog/categories/#{cat_name}/",
+          "permalink" => "blog/#{cat_name}/",
           "category_name" => cat_name)
         cat_page.render(site.layouts, site.site_payload)
  

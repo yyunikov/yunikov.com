@@ -7,11 +7,11 @@ include: ['_pages']
 exclude: ["node_modules", "Gruntfile.js", "package.json"]
 
 markdown: rdiscount
-permalink: /blog/categories/:categories/:year/:month/:day/:title/
+permalink: /blog/:categories/:year/:month/:day/:title/
 relative_permalinks: false
 
 paginate: 5
-paginate_path: "/blog/categories/all/page:num/"
+paginate_path: "/blog/all/page:num/"
 
 encoding: UTF-8
 
