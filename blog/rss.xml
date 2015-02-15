@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/css" href="http://yunikov.com/css/main.min.css" ?>
+<?xml-stylesheet type="text/css" href="http://yunikov.com/css/rss.css" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yuriy Yunikov | Java and Android Software Engineer</title>
@@ -7,8 +7,8 @@
     <atom:link href="http://yunikov.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>Personal Web-Site</description>
     <language>en-us</language>
-    <pubDate>Sun, 15 Feb 2015 15:40:32 +0200</pubDate>
-    <lastBuildDate>Sun, 15 Feb 2015 15:40:32 +0200</lastBuildDate>
+    <pubDate>Sun, 15 Feb 2015 15:54:53 +0200</pubDate>
+    <lastBuildDate>Sun, 15 Feb 2015 15:54:53 +0200</lastBuildDate>
 
     
     <item>
