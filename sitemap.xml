@@ -30,6 +30,13 @@
     
   
     
+      <url>
+        <loc>http://yunikov.com/blog/categories/all/index.html</loc>
+        <lastmod>2015-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+       </url>
+    
   
     
       <url>
@@ -42,28 +49,19 @@
   
     
       <url>
-        <loc>http://yunikov.com/index.html</loc>
-        <lastmod>2015-03-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-       </url>
-    
-  
-    
-      <url>
-        <loc>http://yunikov.com/blog/categories/all/index.html</loc>
-        <lastmod>2015-03-14</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-       </url>
-    
-  
-    
-      <url>
         <loc>http://yunikov.com/applications/</loc>
         <lastmod>2015-03-14</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
+       </url>
+    
+  
+    
+      <url>
+        <loc>http://yunikov.com/index.html</loc>
+        <lastmod>2015-03-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
        </url>
     
   
@@ -83,6 +81,8 @@
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
        </url>
+    
+  
     
   
     
