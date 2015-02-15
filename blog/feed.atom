@@ -1,14 +1,11 @@
 ---
 ---
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="{{ site.url }}/css/main.min.css" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>{{ site.name | xml_escape }}</title>
 	<link href="{{ site.url }}{{ page.url }}" rel="self" />
 	<link href="{{ site.url }}/" />
-	<link rel="stylesheet" href="{{ site.url }}/css/main.min.css" shim-shadowdom />
-	<script type="text/javascript" src="{{ site.url }}/components/webcomponentsjs/webcomponents.min.js"></script>
-	<link rel="import" href="{{ site.url }}/components/polymer/polymer.html"/>
-	<link rel="import" href="{{ site.url }}/elements/common-elements.vulcanized.html"/>
 	<id>{{ site.url }}/</id>
 	<author>
 		<name>{{ site.author | xml_escape }}</name>
