@@ -230,10 +230,11 @@
         return Object.keys(input);
       },
       scrollHandler: function(event) {
-        var isTallToolbar = $('core-scaffold /deep/ core-drawer-panel core-header-panel core-toolbar').hasClass('tall');
-        
         if (screen.width > 620) {
           var scroller = event.detail.target;
+          var toolbar = $(this.$.scaffold.$.drawerPanel).find('core-toolbar');
+          var isTallToolbar = toolbar ? toolbar.hasClass('tall') : scroller.scrollTop == 0;
+
           if (isTallToolbar) {
             $(this.$.mainTitle)[0].style.fontSize='45px';
             this.showSubTitle = true;
