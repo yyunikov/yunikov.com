@@ -13,7 +13,7 @@ Run the following commands to start the website:
 
 1. Install `grunt-cli` and `bower` globally with `npm install -g grunt-cli bower`
 2. Run `npm install` (this will run `bower install` for you)
-3. Then build with `grunt build`
+3. Then build with `grunt dev`
 4. And run the server with `jekyll serve --watch`
 
 After that you can check out the website running on `localhost:4000`
