@@ -87,10 +87,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	font-size: 18px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
