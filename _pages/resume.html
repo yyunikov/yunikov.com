@@ -8,7 +8,7 @@ sitemap:
     changefreq: 'monthly'
     lastmod: 2015-03-14
 ---
-<div class="resume-page">
+<div class="resume-page" itemscope itemtype="http://data-vocabulary.org/Person">
 	<app-card id="general" headerText="General" headerColor="#8E95A6">
 		<div horizontal layout flex class="general-info">
 			<div>
@@ -29,7 +29,8 @@ sitemap:
 							<span class="contact-title">Location:</span>
 						</td>
 						<td>
-							<span>Lviv, Ukraine</span>
+							<span itemprop="address" itemscope
+      itemtype="http://data-vocabulary.org/Address">Lviv, Ukraine</span>
 						</td>
 					</tr>
 				</table>
@@ -42,9 +43,11 @@ sitemap:
 	</app-card>
 
 	<app-card id="about" headerText="About Me" headerColor="#EDC75A">
-		<p>I'm a Java software engineer and Android enthusiast interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.
-		Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.
+		<div>
+			<p>My name is <span itemprop="name">Yuriy Yunikov</span>. I'm a Java <span itemprop="title">software engineer</span> and Android enthusiast interested in software design and development. Like to work with web and mobile technologies, always seek for a new knowledge and curious about new technologies.
+			Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.
 		</p>
+		</div>
 		<p>
 		Some of the plans for the future are to make a few open source projects, learn Python and algorithms.
 		</p>
