@@ -143,47 +143,47 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 }
 
 /* Index page */
-.index-page .summary-header {
-	text-align: center;
-}
-
-.index-page .summary-table {
-	width: 100%;
-	padding: 30px;
-}
-
-.index-page .summary-table .summary-table-section div {
-	padding: 5px;
-}
-
-.index-page .summary-table .summary-table-section div span {
-	font-weight: 300;
-}
-
-.index-page .icon {
-	color: #656565;
-}
-
-/* Resume page */
-.resume-page #ghcard-yyunikov-1 {
-	margin-top: 20px;
-}
-
-.resume-page /deep/ stackoverflow-card {
-	margin: 0 20px;
-}
-
-.resume-page .general-info {
+.index-page .general-info {
   -webkit-flex-align: center;
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
 }
 
-.resume-page .general-info img{
+.index-page .general-info img{
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
+}
+
+/* Resume page */
+.resume-page .summary-header {
+	text-align: center;
+}
+
+.resume-page .summary-table {
+	width: 100%;
+	padding: 30px;
+}
+
+.resume-page .summary-table .summary-table-section div {
+	padding: 5px;
+}
+
+.resume-page .summary-table .summary-table-section div span {
+	font-weight: 300;
+}
+
+.resume-page .icon {
+	color: #656565;
+}
+
+.resume-page #ghcard-yyunikov-1 {
+	margin-top: 20px;
+}
+
+.resume-page /deep/ stackoverflow-card {
+	margin: 0 20px;
 }
 
 .resume-page .contact td {
@@ -198,7 +198,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	color: #656565;
 }
 
-.resume-page .photo {
+.index-page .photo {
 	margin: 0 0 0 auto;
 	padding-right: 20px;
 }
