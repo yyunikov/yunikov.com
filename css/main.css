@@ -151,9 +151,19 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 }
 
 .index-page .general-info img{
+	width: 160px;
 	border-radius: 100px;
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
+}
+
+.index-page .general-info .second-col {
+	padding-left: 20px;
+}
+
+.index-page .photo {
+	margin: 0 0 0 auto;
+	padding-right: 20px;
 }
 
 /* Resume page */
@@ -196,11 +206,6 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 
 .resume-page .icon {
 	color: #656565;
-}
-
-.index-page .photo {
-	margin: 0 0 0 auto;
-	padding-right: 20px;
 }
 
 .resume-page .contact .contact-title {
