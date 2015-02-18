@@ -176,11 +176,11 @@
       </core-header-panel>
 
       <div tool vertical layout flex class="middle header-text">
-        <h1 fit id="mainTitle" class="maintitle">{{mainTitle}}</h1>
+        <h1 fit id="mainTitle" class="maintitle" itemprop="name">{{mainTitle}}</h1>
       </div>
 
       <div tool horizontal layout flex class="bottom header-text">
-        <div id="subTitle" class="subtitle" hidden?="{{!showSubTitle}}">{{subTitle}}</div>
+        <div id="subTitle" class="subtitle" hidden?="{{!showSubTitle}}" itemprop="role">{{subTitle}}</div>
 
         <div id="social" class="social-images">
           <template repeat="{{i in social}}">
@@ -203,8 +203,8 @@
 
   <script>
     Polymer('app-layout', {
-      mainTitle: 'Title',
-      subTitle: 'Sub Title',
+      mainTitle: 'Yuriy Yunikov',
+      subTitle: 'Java/Android Software Engineer',
       homeIconSrc: '/images/yunikov-icon.png',
       menuItem: '',
       sections: [
