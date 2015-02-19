@@ -25,44 +25,46 @@
 		<link rel="icon" type="image/png" href="/images/yunikov.144.png">
 	</head>
 
-	<body id="main" class="default" unresolved itemscope itemtype="http://data-vocabulary.org/Person">
+	<body id="main" class="default" unresolved>
 		<app-layout
+			mainTitle="Yuriy Yunikov"
+			subTitle="Java/Android Software Engineer"
 			unresolved>
 			<div class="header-link-right">
 				<a href="https://github.com/yyunikov/yyunikov.github.io" target="_blank">View on GitHub</a>
 			</div>
 			<div class="content-container">
 				<div class="resume-page">
+	<app-card id="general" headerText="General" headerColor="#8E95A6">
+		<div horizontal layout flex class="general-info">
+			<div>
+				<table class="contact">
+					<tr class="space-under">
+						<td>
+							<core-icon icon="icons:mail" class="icon"></core-icon>
+							<span class="contact-title">Email:</span>
+						</td>
+						<td>
+							<span>yyunikov[at]gmail[dot]com</span>
+						</td>
+					</tr>
 
-	<app-card id="summary" headerText="Summary" headerColor="#8E95A6">
-		<table class="summary-table card-content">
-			<tr>
-				<th class="summary-table-section border-right">
-					<div>2+ years</div>
-					<div>
-						<core-icon class="icon" icon="icons:work"></core-icon>
-						<span>Development Experience</span>
-					</div>
-				</th>
-
-				<th class="summary-table-section border-right">
-					<div>3</div>
-					<div>
-						<core-icon class="icon" icon="hardware:computer"></core-icon>
-						<span>Java Web Projects</span>
-					</div>
-				</th>
-
-				<th class="summary-table-section">
-					<div>3</div>
-					<div>
-						<core-icon class="icon" icon="icons:android"></core-icon>
-						<span>Android Applications</span>
-					</div>
-				</th>
-			</tr>
-
-		</table>
+					<tr>
+						<td>
+							<core-icon icon="icons:room" class="icon"></core-icon>
+							<span class="contact-title">Location:</span>
+						</td>
+						<td>
+							<span>Lviv, Ukraine</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="photo">
+				<img src="/images/photo.jpeg" alt="Yuriy Yunikov">
+			</div>
+		</div>
 	</app-card>
 
 	<app-card id="about" headerText="About Me" headerColor="#EDC75A">
