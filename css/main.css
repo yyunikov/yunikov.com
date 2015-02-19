@@ -54,7 +54,7 @@ h4 {
 
 tr.space-under > td
 {
-  	padding-bottom: 25px;
+  	padding-bottom: 1em;
 }
 
 .icon {
@@ -143,56 +143,47 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 }
 
 /* Index page */
-.index-page .general-info {
-  -webkit-flex-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.index-page .general-info img{
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-}
-
-.index-page .general-info .second-col {
-	padding-left: 20px;
-}
-
-.index-page .photo {
-	margin: 0 0 0 auto;
-	padding-right: 20px;
-}
-
-/* Resume page */
-.resume-page .summary-header {
+.index-page .summary-header {
 	text-align: center;
 }
 
-.resume-page .summary-table {
+.index-page .summary-table {
 	width: 100%;
 	padding: 30px;
 }
 
-.resume-page .summary-table .summary-table-section div {
+.index-page .summary-table .summary-table-section div {
 	padding: 5px;
 }
 
-.resume-page .summary-table .summary-table-section div span {
+.index-page .summary-table .summary-table-section div span {
 	font-weight: 300;
 }
 
-.resume-page .icon {
+.index-page .icon {
 	color: #656565;
 }
 
+/* Resume page */
 .resume-page #ghcard-yyunikov-1 {
 	margin-top: 20px;
 }
 
 .resume-page /deep/ stackoverflow-card {
 	margin: 0 20px;
+}
+
+.resume-page .general-info {
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.resume-page .general-info img{
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
 }
 
 .resume-page .contact td {
@@ -205,6 +196,11 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 
 .resume-page .icon {
 	color: #656565;
+}
+
+.resume-page .photo {
+	margin: 0 0 0 auto;
+	padding-right: 20px;
 }
 
 .resume-page .contact .contact-title {
@@ -263,16 +259,16 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 }
 
 @media screen and (max-width:  550px) {
-	.resume-page .summary-table {
+	.index-page .summary-table {
 		padding: 0;
 		table-layout: fixed;
 	}
 
-	.resume-page .summary-table th core-icon{
+	.index-page .summary-table th core-icon{
 		width: 100%;
 	}
 
-	.resume-page .summary-table .summary-table-section div span {
+	.index-page .summary-table .summary-table-section div span {
 		font-size: 13px;
 		text-align: center;
 	}
@@ -287,11 +283,11 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 		text-align: center;
 	}
 
-	.index-page .general-info {
+	.resume-page .general-info {
 	  	display: block!important;
 	}
 
-	.index-page .general-info .photo img {
+	.resume-page .general-info .photo img {
 	  	margin: auto;
 		display: block;
 		padding: 10px;
