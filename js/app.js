@@ -1,5 +1,5 @@
 (function(exports) {
-var FADE_DURATION = 250;
+var FADE_DURATION = 400;
 var appLayout = null;
 var menuItemMap = {
   'resume' : 0,
