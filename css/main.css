@@ -233,6 +233,10 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	list-style: none;
 }
 
+.portfolio-page .portfolio-image {
+	display: inline-block;
+}
+
 /* Applications page */
 .applications-page .app-icon {
 	width: 48px;
@@ -301,7 +305,7 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 }
 
 @media screen and (max-width:  650px) {
-	.portfolio-page .portfolio-image {
+	.portfolio-page .portfolio-image img {
 		width: 100%;
 	}
 }
