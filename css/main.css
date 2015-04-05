@@ -169,6 +169,18 @@ app-layout /deep/ core-scaffold /deep/ core-drawer-panel core-header-panel core-
 	margin-top: 20px;
 }
 
+.resume-page .download-btn {
+	padding-bottom: 40px;
+}
+
+.resume-page .download-btn a {
+	font-size: 20px;
+	float: right;
+	padding-right: 20px;
+	font-weight: 300;
+	color: #D0756E;
+}
+
 .resume-page /deep/ stackoverflow-card {
 	margin: 0 20px;
 }
