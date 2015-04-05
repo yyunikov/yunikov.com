@@ -7,14 +7,14 @@
     <atom:link href="http://yunikov.com/blog/rss.xml" rel="self" type="application/rss+xml" />
     <description>Personal Web-Site</description>
     <language>en-us</language>
-    <pubDate>Sun, 15 Mar 2015 01:30:56 +0200</pubDate>
-    <lastBuildDate>Sun, 15 Mar 2015 01:30:56 +0200</lastBuildDate>
+    <pubDate>Sun, 05 Apr 2015 17:11:37 +0200</pubDate>
+    <lastBuildDate>Sun, 05 Apr 2015 17:11:37 +0200</lastBuildDate>
 
     
     <item>
       <title>Working with local SQLite database | Yuriy Yunikov</title>
       <link>http://yunikov.com//blog/rss.xml</link>
-      <pubDate>Wed, 04 Feb 2015 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 04 Feb 2015 00:00:00 +0100</pubDate>
       <author>Yuriy Yunikov</author>
       <guid>http://yunikov.com//blog/android/2015/02/04/Working-With-Local-SQLite-Database</guid>
       <description>&lt;p&gt;While creating Android apps, we often use SQLite database to store some data. Sometimes we just need to reuse the existing database stored locally on the device. One of the ways is just to store your local SQLite database in &lt;code&gt;/res/assets&lt;/code&gt; folder. Let's consider this example and look at one of the approaches for using it in code.&lt;/p&gt;
@@ -66,7 +66,7 @@ To make easier creating of &lt;code&gt;DAO&lt;/code&gt; classes we can create a 
     <item>
       <title>Handling uncaught exceptions in Java web applications | Yuriy Yunikov</title>
       <link>http://yunikov.com//blog/rss.xml</link>
-      <pubDate>Tue, 03 Feb 2015 00:00:00 +0200</pubDate>
+      <pubDate>Tue, 03 Feb 2015 00:00:00 +0100</pubDate>
       <author>Yuriy Yunikov</author>
       <guid>http://yunikov.com//blog/java/2015/02/03/Handling-Uncaught-Exceptions-in-Java-web-applications</guid>
       <description>&lt;p&gt;In Java web applications we have to be sure we are handling all exceptions and log them in the right way. One common approach that I've used on a few projects is a creation of &lt;a href=&quot;http://docs.oracle.com/javaee/5/api/javax/servlet/Filter.html&quot;&gt;Filter&lt;/a&gt; for every request which will handle that. Here is a very basic example how it may look like.
