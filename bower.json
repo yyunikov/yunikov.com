@@ -20,8 +20,8 @@
     "bower_components"
   ],
   "dependencies": {
-    "polymer-ajax": "Polymer/polymer-ajax#latest",
-    "core-elements": "Polymer/core-elements#latest",
-    "paper-elements": "Polymer/paper-elements#latest"
+    "polymer": "polymer/polymer#^1.0.0",
+    "iron-elements": "polymerelements/iron-elements#^1.0.0",
+    "paper-elements": "polymerelements/paper-elements#^1.0.0"
   }
 }
