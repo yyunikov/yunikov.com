@@ -6,19 +6,6 @@ layout: null
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
-  {% for post in site.posts %}
-    <url>
-      <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.updated == null %}
-        <lastmod>{{ post.date }}</lastmod>
-      {% else %}
-        <lastmod>{{ post.updated }}</lastmod>
-      {% endif %}
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-      <mobile:mobile/>
-    </url>
-  {% endfor %}
   {% for page in site.pages %}
     {% if page.sitemap != null and page.sitemap != empty %}
       <url>
