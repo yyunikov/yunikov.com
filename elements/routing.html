@@ -2,10 +2,6 @@
 <script>
   window.addEventListener('WebComponentsReady', function() {
 
-    // We use Page.js for routing. This is a Micro
-    // client-side router inspired by the Express router
-    // More info: https://visionmedia.github.io/page.js/
-
     // Middleware
     function scrollToTop(ctx, next) {
       app.scrollPageToTop();
@@ -17,17 +13,21 @@
       app.route = 'home';
     });
 
-    page('/users', scrollToTop, function() {
-      app.route = 'users';
+    page('/portfolio', scrollToTop, function() {
+      app.route = 'portfolio';
     });
 
-    page('/users/:name', scrollToTop, function(data) {
-      app.route = 'user-info';
+    page('/applications', scrollToTop, function() {
+      app.route = 'applications';
+    });
+
+    page('/applications/:name', scrollToTop, function(data) {
+      app.route = 'application-info';
       app.params = data.params;
     });
 
-    page('/contact', scrollToTop, function() {
-      app.route = 'contact';
+    page('/presentations', scrollToTop, function() {
+      app.route = 'presentations';
     });
 
     // add #! before urls

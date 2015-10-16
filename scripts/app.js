@@ -4,7 +4,7 @@
   var app = document.querySelector('#app');
 
   app.addEventListener('dom-change', function() {
-    console.log('Dom change event');
+    // console.log('Dom change event');
   });
 
   window.addEventListener('WebComponentsReady', function() {
