@@ -51,22 +51,22 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          'elements/common-elements.vulcanized.html': 'elements/common-elements.html'
+          'elements/elements.vulcanized.html': 'elements/elements.html'
         }
       }
     },
     cssmin: {
       dist: {
         src: [
-            'css/main.css'
+            'styles/main.css'
         ],
-        dest: 'css/main.min.css'
+        dest: 'styles/main.min.css'
       }
     },
     uglify: {
       my_target: {
         files: {
-          'js/app.min.js': ['js/app.js']
+          'scripts/app.min.js': ['scripts/app.js']
         }
       }
     },

@@ -1,24 +1,37 @@
 <title>{{page.title}}</title>
 
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-<meta name="keywords" content="yunikov, software, java, android, developer, development, engineer">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
 <meta name="description" content="{{page.description}}">
 <meta name="author" content="Yuriy Yunikov">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- TODO enable if one day RSS will ever be ready link rel="alternate" type="application/rss+xml" title="{{ site.name }} — Feed" href="{{ site.url }}/blog/rss.xml" -->
+<!-- Chrome for Android theme color -->
+<meta name="theme-color" content="#2E3AA1">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Yunikov">
+<link rel="icon" sizes="144x144" href="images/yunikov.144.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Yunikov">
+<link rel="apple-touch-icon" href="images/yunikov.144.png">
+
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta name="keywords" content="yunikov, software, java, android, developer, development, engineer">
 
 <!-- @if NODE_ENV == 'DEVELOPMENT' -->
-<link rel="stylesheet" href="/css/main.css" shim-shadowdom >
-<script type="text/javascript" src="/components/webcomponentsjs/webcomponents-lite.js"></script>
-<link rel="import" href="/components/polymer/polymer.html">
-<link rel="import" href="/elements/common-elements.html">
+<link rel="stylesheet" href="styles/main.css">
+<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="elements/elements.html">
 <!-- @endif -->
 
 <!-- @if NODE_ENV == 'PRODUCTION' -->
-<link rel="stylesheet" href="/css/main.min.css" shim-shadowdom >
-<script type="text/javascript" src="/components/webcomponentsjs/webcomponents-lite.min.js"></script>
-<link rel="import" href="/components/polymer/polymer.html">
-<link rel="import" href="/elements/common-elements.vulcanized.html">
+<link rel="stylesheet" href="styles/main.min.css">
+<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+<link rel="import" href="bower_components/polymer/polymer.html">
+<link rel="import" href="elements/elements.vulcanized.html">
 <!-- @endif -->
