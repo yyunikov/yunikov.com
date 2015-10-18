@@ -1,0 +1,30 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="paper-icon-button-list">
+  <template>
+    <template is="dom-repeat" items="{{getKeys(list)}}">
+      <a href="{{item.link}}" target="_blank">
+        <paper-icon-button src="{{item.img}}" alt="{{item.alt}}"></paper-icon-button>
+      </a>
+    </template>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+      
+      Polymer({
+        is: 'paper-icon-button-list',
+
+        properties: {
+          list: Object
+        },
+
+        getKeys : function(o){
+          return o;
+        }
+      });
+    })();
+  </script>
+
+</dom-module>

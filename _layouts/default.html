@@ -49,9 +49,12 @@
 		        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
 		        <span class="flex"></span>
 
-		        <!-- Toolbar icons -->
-		        <paper-icon-button icon="refresh"></paper-icon-button>
-		        <paper-icon-button icon="search"></paper-icon-button>
+		        <div id="mainToolbarAdditionalInfo" class="vertical layout">
+							<a href="https://github.com/yyunikov/yyunikov.github.io" target="_blank">
+		          	<iron-icon src="/images/github-small-white.png"></iron-icon>
+								<span>View On GitHub</span>
+							</a>
+		        </div>
 
 		        <!-- Application name -->
 		        <div class="middle middle-container center horizontal layout">
@@ -60,7 +63,7 @@
 
 		        <!-- Application sub title -->
 		        <div class="bottom bottom-container center horizontal layout">
-		          <div class="bottom-title paper-font-subhead">Java Software Engineer</div>
+		          <div class="bottom-title paper-font-subhead">Java/Android Software Engineer</div>
 		        </div>
 
 		      </paper-toolbar>
@@ -73,6 +76,17 @@
 		  </paper-drawer-panel>
 
 		</template>
+
+		<script>
+	    (function() {
+	      'use strict';
+	      
+	      Polymer({
+	        is: 'default-layout',
+	        social: [{link :"https://plus.google.com/u/0/+YuriyYunikov/",img : "/images/googleplus.png",alt : "Google+"}, {link :"http://ua.linkedin.com/in/yyunikov/",img : "/images/linkedin.png",alt : "LinkedIn"}, {link :"https://twitter.com/yyunikov",img : "/images/twitter.png",alt : "Twitter"}, {link :"http://careers.stackoverflow.com/yyunikov",img : "/images/stackoverflow.png",alt : "StackOverflow Careers"}]
+	      });
+	    })();
+		</script>
 
 		{% include footer.processed.html %}
 	</body>
