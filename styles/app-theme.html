@@ -38,6 +38,11 @@
     height: 100%;
   }
 
+  paper-card {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
   paper-material {
     border-radius: 2px;
     height: 100%;
@@ -103,15 +108,32 @@
     transform-origin: left center;
   }
 
-  #mainToolbarAdditionalInfo > a {
+  .github-link {
+    margin: 4px;  
+  }
+
+  .unstyled-link {
     text-decoration: none;
     color: inherit;
-    margin: 4px;
   }
 
   /* Height of the scroll area */
   .content {
     height: 900px;
+  }
+
+  /* Cards */
+  .card-content {
+    margin: 8px;
+  }
+  
+  .card-actions {}
+  
+  #generalCard {
+    --paper-card-header-color: #FFFFFF;
+    --paper-card-header: {
+      background-color: #8E95A6;
+    }
   }
 
   /* Small */
