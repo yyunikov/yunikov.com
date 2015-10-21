@@ -3,8 +3,8 @@
   /* Application theme */
 
   :root {
-    --dark-primary-color: #478bad;
-    --default-primary-color: #4F9DC4;
+    --dark-primary-color: #dd6158;
+    --default-primary-color: #EC675E;
     --light-primary-color: #C5CAE9;
     --text-primary-color: #ffffff; /*text/icons*/
     --accent-color: #FF4081;
@@ -39,10 +39,10 @@
   }
 
   paper-card {
-    width: 100%;
+    width: 90%;
     margin-bottom: 16px;
   }
-  
+
   paper-material {
     border-radius: 2px;
     height: 100%;
@@ -120,6 +120,8 @@
   /* Height of the scroll area */
   .content {
     height: 900px;
+    width: 90%;
+    margin: 0 auto;
   }
 
   /* Cards */
@@ -128,12 +130,26 @@
   }
   
   .card-actions {}
-  
-  #generalCard {
+
+  .home-page #aboutCard {
     --paper-card-header-color: #FFFFFF;
     --paper-card-header: {
+      padding: 8px;
       background-color: #8E95A6;
     }
+  }
+
+  .home-page .text-left {
+    line-height: 24px;
+    width: 80%;
+    padding: 8px;
+  }
+
+  .home-page .round-image {
+    margin: 0 48px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
   }
 
   /* Small */
