@@ -97,7 +97,7 @@
           <a href="{{profileUrl}}" target="_blank" class="so-profile-link"></a>
           <div class="so-header"><span class="so-logo"><img src="{{logoUrl}}" alt=""></span>
             <div class="so-profile-picture-container"><img src="{{profileImage}}" alt=""></div>
-            <h4 class="so-display-name">{{displayNam}}</h4></div>
+            <h4 class="so-display-name">{{displayName}}</h4></div>
           <div class="so-content">
             <p class="so-reputation">{{reputation}}</p>
             <small class="so-reputation-label">Stackoverflow reputation</small>
@@ -142,19 +142,19 @@
             },
             profileImage: {
               type: String,
-              observer: 'onDataReceived'
+              notify: true
             },
             displayName: {
               type: String,
-              observer: 'onDataReceived'
+              notify: true
             },
             reputation: {
               type: Number,
-              observer: 'onDataReceived'
+              notify: true
             },
             badgeCounts: {
               type: Object,
-              observer: 'onDataReceived'
+              notify: true
             }
           },
           ready: function() {
@@ -176,7 +176,6 @@
             request.send();
           },
           onDataReceived: function(self, data) {
-            <!-- TODO too much updates here -->
             if (data) {
               self.profileImage = data.profile_image;
               self.displayName = data.display_name;
