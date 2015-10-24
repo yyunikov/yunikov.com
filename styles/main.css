@@ -3,3 +3,15 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
+
+a,
+a:link,
+a:visited {
+	font-size: inherit;
+	text-decoration: none;
+	color: #C57676;
+}
+
+a:hover{
+    color: #E54539;
+}

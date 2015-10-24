@@ -11,8 +11,6 @@ layout: null
       <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
         <lastmod>{{ page.sitemap.lastmod }}</lastmod>
-        <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-        <priority>{{ page.sitemap.priority }}</priority>
         <mobile:mobile/>
        </url>
     {% endif %}

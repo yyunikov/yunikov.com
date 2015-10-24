@@ -4,8 +4,6 @@ description: Java software engineer and Android enthusiast with 2+ years of expe
 layout: default
 sitemap:
     priority: 0.8
-    changefreq: 'monthly'
-    lastmod: 2015-03-14
 ---
 <div class="home-page">
 <iron-pages attr-for-selected="data-route" selected="[[route]]">
@@ -22,6 +20,9 @@ sitemap:
   </section>
 -->
   <section data-route="applications">
+    <div class="applications-page">
+      {% include applications.html %}
+    </div>
     <paper-material elevation="1">
       <h2 class="page-title">Applications</h2>
       <p>This is the applications section</p>

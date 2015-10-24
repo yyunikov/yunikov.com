@@ -128,8 +128,47 @@
   
   .card-actions {}
 
+  .subsection-heading {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #f3f3f3;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size: 18px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
+  .subsection-heading > div {
+    display: inline-flex;
+  }
+
+  .subsection-content {
+    padding: 15px;
+    border: 1px solid #dedede;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .subsection-content ul {
+    padding-left: 25px;
+    margin: 0;
+  }
+
+  .subsection-heading-subtitle1 {
+    font-size: 14px;
+    padding-top: 10px;
+    color: #353535;
+  }
+
+  .subsection-heading-subtitle2 {
+    font-size: 12px;
+    padding-top: 10px;
+    color: #6F6F6F;
+  }
+
   /* Home page */
-  .home-page .homeCard {
+  .home-page .defaultCard {
     --paper-card-header-color: #FFFFFF;
     --paper-card-header: {
       padding: 4px;
@@ -203,6 +242,16 @@
   }
   #appMenu {
     margin-top: 30px;
+  }
+
+  /* Applications */
+  .applications-page .app-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .applications-page .app-title {
+    margin-left: 15px;
   }
 
   /* Small */
