@@ -6,6 +6,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-preprocess');
   grunt.loadNpmTasks('grunt-env');
 
+  preprocessMap = {
+    '_includes/header.processed.html' : 'templates/header.html',
+    '_includes/footer.processed.html' : 'templates/footer.html'
+  };
+
   // Project configuration.
   grunt.initConfig({
 
@@ -80,16 +85,10 @@ module.exports = function(grunt) {
     },
     preprocess : {
       dev : {
-        files : {
-          '_includes/header.processed.html' : 'templates/header.html',
-          '_includes/footer.processed.html' : 'templates/footer.html'
-        }
+        files : preprocessMap
       },
       prod : {
-          files : {
-            '_includes/header.processed.html' : 'templates/header.html',
-            '_includes/footer.processed.html' : 'templates/footer.html'
-          }
+          files : preprocessMap
       }
     }
   });

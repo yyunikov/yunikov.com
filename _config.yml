@@ -2,6 +2,7 @@ name: "Yuriy Yunikov | Java and Android Software Engineer"
 description: "Personal Web-Site"
 url: http://yunikov.com
 author: Yuriy Yunikov
+person: Yuriy Yunikov
 
 include: ['_pages']
 exclude: ["node_modules", "gulpfile.js", "package.json"]

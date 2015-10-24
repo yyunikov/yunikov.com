@@ -27,13 +27,6 @@
   }
 
   /* General styles */
-
-  #drawerToolbar {
-    color: var(--secondary-text-color);
-    background-color: var(--drawer-menu-color);
-    border-bottom: var(--drawer-toolbar-border-color);
-  }
-
   paper-scroll-header-panel {
     height: 100%;
   }
@@ -91,6 +84,10 @@
     transform-origin: left center;
   }
 
+  #drawerToolbar::shadow #topBar {
+    padding-left: 0;
+  }
+
   #mainToolbar .middle-container  {
     height: 100%;
     margin-left: 48px;
@@ -131,12 +128,14 @@
   
   .card-actions {}
 
-  .home-page #aboutCard {
+  /* Home page */
+  .home-page .homeCard {
     --paper-card-header-color: #FFFFFF;
     --paper-card-header: {
-      padding: 8px;
-      background-color: #8E95A6;
+      padding: 4px;
+      background-color: #90A4AE;
     }
+    margin-bottom: 50px;
   }
 
   .home-page .text-left {
@@ -156,6 +155,54 @@
 
   .home-page github-card {
     margin-right: 80px;
+  }
+
+  .home-page #social-cards {
+    margin-top: 20px;
+  }
+
+  .home-page #social-icons {
+    margin-top: 30px;
+  }
+
+  .home-page #social-icons a {
+    margin: 15px;
+  }
+
+  .home-page #social-icons img {
+    padding: 0 4px;
+  }
+
+  .home-container, 
+  .home-container:link,
+  .home-container:visited
+  {
+    color: #7C7C7C;
+    display: block;
+    padding-bottom: 30px;
+  }
+  .home {
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .home > img {
+    width: 68px;
+  }
+  .home > span {
+    float: right;
+    margin: 24px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  #drawerToolbar {
+    color: var(--secondary-text-color);
+    background-color: var(--drawer-menu-color);
+    border-bottom: var(--drawer-toolbar-border-color);
+    margin-top: 30px;
+  }
+  #appMenu {
+    margin-top: 30px;
   }
 
   /* Small */

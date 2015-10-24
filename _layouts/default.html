@@ -3,6 +3,7 @@
 
 	<head>
 		{% include header.processed.html %}
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 	</head>
 
 	<body unresolved class="fullbleed layout vertical">
@@ -14,11 +15,16 @@
 
 		      <!-- Drawer Toolbar -->
 		      <paper-toolbar id="drawerToolbar">
-		        <span class="paper-font-title">Menu</span>
+		        <a class="home-container" href="/" on-click="{{selectFirst}}">
+		          <div class="home">
+		            <img src="images/yunikov-icon.png" alt="{{site.person}}"></img>
+		            <span>Menu</span>
+		          </div>
+		        </a>
 		      </paper-toolbar>
 
 		      <!-- Drawer Content -->
-		      <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
+		      <paper-menu id="appMenu" class="list" attr-for-selected="data-route" selected="[[route]]">
 		        <a data-route="home" href="/" on-click="onDataRouteClick">
 		          <iron-icon icon="home"></iron-icon>
 		          <span>Home</span>
@@ -59,7 +65,7 @@
 
 		        <!-- Application name -->
 		        <div class="middle middle-container center horizontal layout">
-		          <div class="app-name">Yuriy Yunikov</div>
+		          <div class="app-name">{{site.person}}</div>
 		        </div>
 
 		        <!-- Application sub title -->
@@ -84,7 +90,12 @@
 	      
 	      Polymer({
 	        is: 'default-layout',
-	        social: [{link :"https://plus.google.com/u/0/+YuriyYunikov/",img : "/images/googleplus.png",alt : "Google+"}, {link :"http://ua.linkedin.com/in/yyunikov/",img : "/images/linkedin.png",alt : "LinkedIn"}, {link :"https://twitter.com/yyunikov",img : "/images/twitter.png",alt : "Twitter"}, {link :"http://careers.stackoverflow.com/yyunikov",img : "/images/stackoverflow.png",alt : "StackOverflow Careers"}]
+	        ready: function() {
+	        	this.$.appMenu.select(0);
+	        },
+	        selectFirst: function(event) {
+		        this.$.appMenu.select(0);
+		      },
 	      });
 	    })();
 		</script>
