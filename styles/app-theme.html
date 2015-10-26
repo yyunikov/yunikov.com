@@ -27,6 +27,10 @@
   }
 
   /* General styles */
+  iron-pages {
+    padding: 48px 62px;
+  }
+
   paper-scroll-header-panel {
     height: 100%;
   }
@@ -167,7 +171,21 @@
     color: #6F6F6F;
   }
 
+  .defaultCard .card-content {
+    @apply(--layout-horizontal);
+  }
+
   /* Home page */
+  .home-page .defaultCard .social {
+    @apply(--layout-horizontal);
+  }
+
+  .home-page .defaultCard .social-container {
+    width: 100%;
+    @apply(--layout-vertical);
+    @apply(--layout-center);
+  }
+
   .home-page .defaultCard {
     --paper-card-header-color: #FFFFFF;
     --paper-card-header: {
@@ -245,6 +263,10 @@
   }
 
   /* Applications Page */
+  .applications-page .defaultCard .card-content {
+    @apply(--layout-vertical);
+  }
+
   .applications-page .app-icon {
     width: 48px;
     height: 48px;
@@ -256,6 +278,9 @@
 
   /* Small */
   @media (max-width: 600px) {
+    iron-pages {
+      padding: 0;
+    }
 
     paper-material {
       --menu-container-display: none;
@@ -273,18 +298,32 @@
       margin-left: 16px;
     }
 
-    #overlay {
-      min-width: 360px;
+    .defaultCard .card-content {
+      @apply(--layout-vertical);
     }
 
-    .bg {
-      background: white;
+    /* Home page */
+    .home-page .defaultCard .social {
+      @apply(--layout-vertical);
     }
 
+    .home-page .defaultCard .social-container {
+      width: 100%;
+      @apply(--layout-vertical);
+      @apply(--layout-center);
+    }
+
+    .home-page github-card {
+      margin: 20px;
+    }
+
+    .defaultCard {
+      margin-top: 30px;
+    }
   }
 
   /* Tablet+ */
-  @media (min-width: 601px) {
+  @media (min-width: 601px) and (max-width: 1280px) {
 
     paper-material {
       width: calc(98% - 46px);
@@ -298,8 +337,15 @@
     }
 
     iron-pages {
-      padding: 48px 62px;
+      padding: 48px 0;
     }
 
+    .defaultCard .card-content {
+      @apply(--layout-vertical);
+    }
+
+    .home-page github-card {
+      margin-right: 10px;
+    }
   }
 </style>
