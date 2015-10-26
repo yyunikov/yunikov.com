@@ -162,7 +162,7 @@
             var callback = this.onDataReceived;
             var container = this.$.soCardWidget,
                 request = new XMLHttpRequest(),
-                request_url = "//api.stackexchange.com/2.2/users/" + this.userId + '/?site=stackoverflow';
+                requestUrl = "//api.stackexchange.com/2.2/users/" + this.userId + '/?site=stackoverflow';
             request.onreadystatechange = function() {
                 var data;
                 if (request.readyState === 4) {
@@ -172,7 +172,7 @@
                     }
                 }
             };
-            request.open('GET', request_url, true);
+            request.open('GET', requestUrl, true);
             request.send();
           },
           onDataReceived: function(self, data) {
