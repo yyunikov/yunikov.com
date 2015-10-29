@@ -42,18 +42,12 @@ module.exports = function(grunt) {
       }
     },
     vulcanize: {
-      options: {
-        strip: true,
-        csp: true,
-        inline: true
-      },
-      elements: {
+      default: {
         options: {
-          excludes: {
-            imports: [
-              "polymer.html$"
-            ]
-          }
+          excludes: ["bower_components/polymer/polymer.html"],
+          inlineScripts: true,
+          inlineCss: true,
+          stripComments: true,
         },
         files: {
           'elements/elements.vulcanized.html': 'elements/elements.html'
