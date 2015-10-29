@@ -4,111 +4,280 @@
 	<head>
 		<title>Yuriy Yunikov | Java and Android Software Engineer</title>
 
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+<meta charset="utf-8">
+<meta name="description" content="Java software engineer and Android enthusiast interested in software design and development. Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.">
+<meta name="author" content="Yuriy Yunikov">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Chrome for Android theme color -->
+<meta name="theme-color" content="#dd6158">
+
+<!-- Add to homescreen for Chrome on Android -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Yunikov">
+<link rel="icon" sizes="144x144" href="images/yunikov.144.png">
+
+<!-- Add to homescreen for Safari on iOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Yunikov">
+<link rel="apple-touch-icon" type="image/png" href="images/yunikov.57.png"><!-- iPhone -->
+<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="images/yunikov.72.png"><!-- iPad -->
+<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="images/yunikov.114.png"><!-- iPhone4 -->
+<link rel="icon" type="image/png" href="images/yunikov.144.png">
+
 <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 <meta name="keywords" content="yunikov, software, java, android, developer, development, engineer">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Java software engineer and Android enthusiast with 2+ years of experience interested in software design and development.">
-<meta name="author" content="Yuriy Yunikov">
 
-<!-- TODO enable if one day RSS will ever be ready link rel="alternate" type="application/rss+xml" title="Yuriy Yunikov | Java and Android Software Engineer — Feed" href="http://yunikov.com/blog/rss.xml" -->
+<link rel="import" href="bower_components/polymer/polymer.html">
 
-<link rel="stylesheet" href="/css/main.min.css" shim-shadowdom >
-<script type="text/javascript" src="/components/webcomponentsjs/webcomponents.min.js"></script>
-<link rel="import" href="/components/polymer/polymer.html">
-<link rel="import" href="/elements/common-elements.vulcanized.html">
+<link rel="stylesheet" href="styles/main.min.css">
+<script type="text/javascript" src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+<link rel="import" href="elements/elements.vulcanized.html">
 
-  		<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
-  		<link rel="apple-touch-icon" type="image/png" href="/images/yunikov.57.png"><!-- iPhone -->
-		<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/images/yunikov.72.png"><!-- iPad -->
-		<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="/images/yunikov.114.png"><!-- iPhone4 -->
-		<link rel="icon" type="image/png" href="/images/yunikov.144.png">
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 	</head>
 
-	<body id="main" class="default" unresolved>
-		<app-layout
-			mainTitle="Yuriy Yunikov"
-			subTitle="Java/Android Software Engineer"
-			unresolved>
-			<div class="header-link-right">
-				<a href="https://github.com/yyunikov/yyunikov.github.io" target="_blank">View on GitHub</a>
+	<body unresolved class="fullbleed layout vertical">
+		<template is="dom-bind" id="app">
+
+		  <paper-drawer-panel id="paperDrawerPanel">
+		    <!-- Drawer Scroll Header Panel -->
+		    <paper-scroll-header-panel drawer fixed>
+
+		      <!-- Drawer Toolbar -->
+		      <paper-toolbar id="drawerToolbar">
+		        <a class="home-container" href="/" on-click="">
+		          <div class="home">
+		            <img src="images/yunikov-icon.png" alt="Yuriy Yunikov"></img>
+		            <span>Menu</span>
+		          </div>
+		        </a>
+		      </paper-toolbar>
+
+		      <!-- Drawer Content -->
+		      <paper-menu id="appMenu" class="list" attr-for-selected="data-route" selected="[[route]]">
+		        <a data-route="home" href="/" on-click="onDataRouteClick">
+		          <iron-icon icon="home"></iron-icon>
+		          <span>Home</span>
+		        </a>
+<!--
+		        <a data-route="portfolio" href="/portfolio" on-click="onDataRouteClick">
+		          <iron-icon icon="work"></iron-icon>
+		          <span>Porfolio</span>
+		        </a>
+-->
+		        <a data-route="applications" href="/applications" on-click="onDataRouteClick">
+		          <iron-icon icon="hardware:phone-android"></iron-icon>
+		          <span>Applications</span>
+		        </a>
+<!--
+		        <a data-route="presentations" href="/presentations" on-click="onDataRouteClick">
+		          <iron-icon icon="hardware:computer"></iron-icon>
+		          <span>Presentations</span>
+		        </a>
+-->		        
+		      </paper-menu>
+		    </paper-scroll-header-panel>
+
+		    <!-- Main Area -->
+		    <paper-scroll-header-panel main condenses keep-condensed-header>
+
+		      <!-- Main Toolbar -->
+		      <paper-toolbar id="mainToolbar" class="tall">
+		        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+		        <span class="flex"></span>
+
+		        <div class="vertical layout">
+					<a href="https://github.com/yyunikov/yyunikov.github.io" target="_blank" class="github-link unstyled-link">
+          				<iron-icon src="/images/github-small-white.png"></iron-icon>
+						<span>View On GitHub</span>
+					</a>
+		        </div>
+
+		        <!-- Application name -->
+		        <div class="middle middle-container center horizontal layout">
+		          <h1 class="app-name">Yuriy Yunikov</h1>
+		        </div>
+
+		        <!-- Application sub title -->
+		        <div class="bottom bottom-container center horizontal layout">
+		          <div class="bottom-title paper-font-subhead">Java/Android Software Engineer</div>
+		        </div>
+
+		      </paper-toolbar>
+
+		      <!-- Main Content -->
+		      <div class="content">
+		        <div class="home-page">
+<iron-pages attr-for-selected="data-route" selected="[[route]]">
+
+  <section data-route="home">
+    <paper-card heading="About Me" id="aboutCard" class="defaultCard">
+  <div class="card-content">
+      <span class="text-left">Java software engineer and Android enthusiast interested in software design and development. Like to work with web and mobile, always seek for a new knowledge and curious about modern technologies. Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.</span>
+      <img src="http://www.gravatar.com/avatar/c6b04157e65ab1a1e0e61d220d06341d?s=128" alt="Yuriy Yunikov" class="round-image"/>
+  </div>
+  <div class="card-actions">
+    <a href="https://docs.google.com/document/d/1-fDBLkXxlqsv5dZFmcOa1YN3M8tb5sLHwNSkAkNj9W4/edit?usp=sharing" target="_blank" class="unstyled-link">
+      <paper-button>View Resume</paper-button>
+    </a>
+  </div>
+</paper-card>
+<paper-card heading="Social" id="socialCard" class="defaultCard">
+  <div class="card-content">
+    <div class="social-container">
+      <div id="social-cards" class="social">
+        <github-card user="yyunikov"></github-card>
+        <stackoverflow-card user-id="1889928"></stackoverflow-card>
+      </div>
+      <div id="social-icons" class="social">
+        <a href="https://plus.google.com/u/0/+YuriyYunikov/" target="_blank">
+          <img src="images/googleplus.png" alt="Google+ - Yuriy Yunikov">
+        </a>
+        <a href="http://ua.linkedin.com/in/yyunikov/" target="_blank">
+          <img src="images/linkedin.png" alt="LinkedIn - Yuriy Yunikov">
+        </a>
+        <a href="https://twitter.com/yyunikov" target="_blank">
+          <img src="images/twitter.png" alt="Twitter - Yuriy Yunikov">
+        </a>
+        <a href="http://careers.stackoverflow.com/yyunikov" target="_blank">
+          <img src="images/stackoverflow.png" alt="StackOverflow Careers - Yuriy Yunikov">
+        </a>
+        <a href="https://play.google.com/store/apps/dev?id=6972910091202284868" target="_blank">
+          <img src="images/google_play.png" alt="Google Play - Yuriy Yunikov">
+        </a>
+      </div>
+    </div>
+  </div>
+</paper-card>
+  </section>
+<!--
+  <section data-route="portfolio">
+    <paper-material elevation="1">
+      <h2 class="page-title">Portfolio</h2>
+      <p>This is the porfolio section</p>
+    </paper-material>
+  </section>
+-->
+  <section data-route="applications">
+    <div class="applications-page">
+      <paper-card heading="Applications" class="defaultCard" id="applicationsCard">
+  <div class="card-content">
+		<div class="subsection-heading">
+			<div horizontal layout>
+				<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc" target="_blank">
+					<img src="images/fitcalc.png" class="app-icon" alt="FitCalc: Fitness Calculator" />
+				</a>
+				<div class="app-title">
+					<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc" target="_blank">FitCalc: Fitness Calculator</a>
+					<div class="subsection-heading-subtitle2">June 2014 - September 2015</div>
+				</div>
 			</div>
-			<div class="content-container">
-				<div class="index-page">
+		</div>
+		<div class="subsection-content">
+			FitCalc is a free fitness app that helps users to optimize their body and health. Improved version of Fitness Calculator app.
+		</div>
 
-	<app-card id="summary" headerText="Summary" headerColor="#A9A7AD">
-		<table class="summary-table card-content">
-			<tr>
-				<th class="summary-table-section border-right">
-					<div>2+ years</div>
-					<div>
-						<core-icon class="icon" icon="icons:work"></core-icon>
-						<span>Development Experience</span>
-					</div>
-				</th>
+		<div class="subsection-heading">
+			<div horizontal layout>
+				<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc.pro" target="_blank">
+					<img src="images/fitcalc_pro.png" class="app-icon" alt="FitCalc Pro: Fitness Calculator" />
+				</a>
+				<div class="app-title">
+					<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc.pro" target="_blank">FitCalc Pro: Fitness Calculator</a>
+					<div class="subsection-heading-subtitle2">June 2014 - September 2015</div>
+				</div>
+			</div>
+		</div>
+		<div class="subsection-content">
+			Pro ad-free version of FitCalc containing extra features like themes and daily reminders.
+		</div>
 
-				<th class="summary-table-section border-right">
-					<div>3</div>
-					<div>
-						<core-icon class="icon" icon="hardware:computer"></core-icon>
-						<span>Java Web Projects</span>
-					</div>
-				</th>
+		<div class="subsection-heading">
+			<div horizontal layout>
+				<a href="https://play.google.com/store/apps/details?id=com.yyunikov.dimblock" target="_blank">
+					<img src="images/dimblock.png" class="app-icon" alt="Dim Block" />
+				</a>
+				<div class="app-title">
+					<a href="https://play.google.com/store/apps/details?id=com.yyunikov.dimblock" target="_blank">Dim Block</a>
+					<div class="subsection-heading-subtitle2">December 2013 - January 2014</div>
+				</div>
+			</div>
+		</div>
+		<div class="subsection-content">
+			Dim Block is an open-source Android application that stops device screen from dimming with one click.
+			Available on Google Play (1,000+ downloads).
+		</div>
 
-				<th class="summary-table-section">
-					<div>3</div>
-					<div>
-						<core-icon class="icon" icon="icons:android"></core-icon>
-						<span>Android Applications</span>
-					</div>
-				</th>
-			</tr>
+		<div class="subsection-heading">
+			<div horizontal layout>
+				<a href="https://play.google.com/store/apps/details?id=com.fitness.calculator" target="_blank">
+					<img src="images/fitnesscalculator.png" class="app-icon" alt="Fitness Calculator" />
+				</a>
+				<div class="app-title">
+					<a href="https://play.google.com/store/apps/details?id=com.fitness.calculator" target="_blank">Fitness Calculator</a>
+					<div class="subsection-heading-subtitle2">February 2013 - July 2013</div>
+				</div>
+			</div>
+		</div>
+		<div class="subsection-content">
+			Android application that helps users in calculating optimal parameters for healthy life and good body shape, includes calorie counter, one rep-max and body fat calculator.
+			Available on Google Play (100,000+ downloads).
+		</div>
+  </div>
+</paper-card>
+    </div>
+    <!--
+    <paper-material elevation="1">
+      <h2 class="page-title">Applications</h2>
+      <p>This is the applications section</p>
+      <a href="/applications/fitcalc">FitCalc - Fitness Calculator</a>
+    </paper-material>
+  -->
+  </section>
 
-		</table>
-	</app-card>
-
-	<app-card id="recent" headerText="Recent Posts" headerColor="#EFA770">
-		
-			<article class="post">
-	<a href="/blog/android/2015/02/04/Working-With-Local-SQLite-Database/">
-		<h3>Working with local SQLite database</h3>
-	</a>
-
-	<div class="post-date">
-		Posted on February  4, 2015
-	</div>
-
-	<div class="post-entry">
-	<p>While creating Android apps, we often use SQLite database to store some data. Sometimes we just need to reuse the existing database stored locally on the device. One of the...
-	</div>
-
-	<div class="post-read-more">
-		<a href="/blog/android/2015/02/04/Working-With-Local-SQLite-Database/" >Read More</a>
-	</div>
-</article>
-		
-			<article class="post">
-	<a href="/blog/java/2015/02/03/Handling-Uncaught-Exceptions-in-Java-web-applications/">
-		<h3>Handling uncaught exceptions in Java web applications</h3>
-	</a>
-
-	<div class="post-date">
-		Posted on February  3, 2015
-	</div>
-
-	<div class="post-entry">
-	<p>In Java web applications we have to be sure we are handling all exceptions and log them in the right way. One common approach that I've used on a few...
-	</div>
-
-	<div class="post-read-more">
-		<a href="/blog/java/2015/02/03/Handling-Uncaught-Exceptions-in-Java-web-applications/" >Read More</a>
-	</div>
-</article>
-		
-	</app-card>
+  <section data-route="application-info">
+    <!--
+    <paper-material elevation="1">
+      <h2 class="page-title">
+      Application: <span>[[params.name]]</span>
+      </h2>
+      <div>This is <span>[[params.name]]</span>'s section</div>
+    </paper-material>
+    -->
+  </section>
+<!--
+  <section data-route="presentations">
+    <paper-material elevation="1">
+      <h2 class="page-title">Presentations</h2>
+      <p>This is the presentation section</p>
+    </paper-material>
+  </section>
+-->
+</iron-pages>
 </div>
-			</div>
-		</app-layout>
+		      </div>
+		    </paper-scroll-header-panel>
+		  </paper-drawer-panel>
+
+		</template>
+
+		<script>
+	    (function() {
+	      'use strict';
+	      
+	      Polymer({
+	        is: 'default-layout',
+	        ready: function() {
+	        	this.$.appMenu.select(0);
+	        },
+	        selectFirst: function(event) {
+		        this.$.appMenu.select(0);
+		      },
+	      });
+	    })();
+		</script>
 
 		<a href="https://plus.google.com/+YuriyYunikov/" rel="publisher"></a>
 <script>
@@ -119,8 +288,7 @@
   ga('create', 'UA-41878921-5', 'auto');
   ga('send', 'pageview');
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="/js/app.min.js"></script>
+<script src="scripts/app.min.js"></script>
 
 	</body>
 

@@ -1,5 +1,5 @@
 # yyunikov.github.io
-Personal website with blog containing the short description of me as a developer and my blog posts. Website is built using [Polymer](https://www.polymer-project.org/) framework, [Grunt](http://gruntjs.com/), [Jekyll](http://jekyllrb.com/) and [Github Pages](https://pages.github.com/).
+Personal website. Is built using [Polymer](https://www.polymer-project.org/) framework, [Grunt](http://gruntjs.com/), [Jekyll](http://jekyllrb.com/) and [Github Pages](https://pages.github.com/).
 
 # Branches
 **dev** - contains the source files for the website
@@ -14,7 +14,7 @@ Personal website with blog containing the short description of me as a developer
 `grunt deploy` - deploys website to production
 
 # Local development
-To run website locally you need to have [Node.js](http://nodejs.org/) installed.
+To run website locally you need to have [Node.js](http://nodejs.org/) and [Ruby](https://www.ruby-lang.org/) installed.
 
 Run the following commands to start the website:
 
