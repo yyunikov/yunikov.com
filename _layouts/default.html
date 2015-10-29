@@ -3,25 +3,102 @@
 
 	<head>
 		{% include header.processed.html %}
-  		<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
-  		<link rel="apple-touch-icon" type="image/png" href="/images/yunikov.57.png"><!-- iPhone -->
-		<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/images/yunikov.72.png"><!-- iPad -->
-		<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="/images/yunikov.114.png"><!-- iPhone4 -->
-		<link rel="icon" type="image/png" href="/images/yunikov.144.png">
+		<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 	</head>
 
-	<body id="main" class="default" unresolved>
-		<app-layout
-			mainTitle="Yuriy Yunikov"
-			subTitle="Java/Android Software Engineer"
-			unresolved>
-			<div class="header-link-right">
-				<a href="https://github.com/yyunikov/yyunikov.github.io" target="_blank">View on GitHub</a>
-			</div>
-			<div class="content-container">
-				{{content}}
-			</div>
-		</app-layout>
+	<body unresolved class="fullbleed layout vertical">
+		<template is="dom-bind" id="app">
+
+		  <paper-drawer-panel id="paperDrawerPanel">
+		    <!-- Drawer Scroll Header Panel -->
+		    <paper-scroll-header-panel drawer fixed>
+
+		      <!-- Drawer Toolbar -->
+		      <paper-toolbar id="drawerToolbar">
+		        <a class="home-container" href="/" on-click="{{selectFirst}}">
+		          <div class="home">
+		            <img src="images/yunikov-icon.png" alt="{{site.person}}"></img>
+		            <span>Menu</span>
+		          </div>
+		        </a>
+		      </paper-toolbar>
+
+		      <!-- Drawer Content -->
+		      <paper-menu id="appMenu" class="list" attr-for-selected="data-route" selected="[[route]]">
+		        <a data-route="home" href="/" on-click="onDataRouteClick">
+		          <iron-icon icon="home"></iron-icon>
+		          <span>Home</span>
+		        </a>
+<!--
+		        <a data-route="portfolio" href="/portfolio" on-click="onDataRouteClick">
+		          <iron-icon icon="work"></iron-icon>
+		          <span>Porfolio</span>
+		        </a>
+-->
+		        <a data-route="applications" href="/applications" on-click="onDataRouteClick">
+		          <iron-icon icon="hardware:phone-android"></iron-icon>
+		          <span>Applications</span>
+		        </a>
+<!--
+		        <a data-route="presentations" href="/presentations" on-click="onDataRouteClick">
+		          <iron-icon icon="hardware:computer"></iron-icon>
+		          <span>Presentations</span>
+		        </a>
+-->		        
+		      </paper-menu>
+		    </paper-scroll-header-panel>
+
+		    <!-- Main Area -->
+		    <paper-scroll-header-panel main condenses keep-condensed-header>
+
+		      <!-- Main Toolbar -->
+		      <paper-toolbar id="mainToolbar" class="tall">
+		        <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
+		        <span class="flex"></span>
+
+		        <div class="vertical layout">
+					<a href="https://github.com/yyunikov/yyunikov.github.io" target="_blank" class="github-link unstyled-link">
+          				<iron-icon src="/images/github-small-white.png"></iron-icon>
+						<span>View On GitHub</span>
+					</a>
+		        </div>
+
+		        <!-- Application name -->
+		        <div class="middle middle-container center horizontal layout">
+		          <h1 class="app-name">{{site.person}}</h1>
+		        </div>
+
+		        <!-- Application sub title -->
+		        <div class="bottom bottom-container center horizontal layout">
+		          <div class="bottom-title paper-font-subhead">Java/Android Software Engineer</div>
+		        </div>
+
+		      </paper-toolbar>
+
+		      <!-- Main Content -->
+		      <div class="content">
+		        {{content}}
+		      </div>
+		    </paper-scroll-header-panel>
+		  </paper-drawer-panel>
+
+		</template>
+
+		<script>
+	    (function() {
+	      'use strict';
+	      
+	      Polymer({
+	        is: 'default-layout',
+	        ready: function() {
+	        	this.$.appMenu.select(0);
+	        },
+	        selectFirst: function(event) {
+		        this.$.appMenu.select(0);
+		      },
+	      });
+	    })();
+		</script>
 
 		{% include footer.processed.html %}
 	</body>

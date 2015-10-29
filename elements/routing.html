@@ -1,0 +1,39 @@
+<script src="../bower_components/page/page.js"></script>
+<script>
+  window.addEventListener('WebComponentsReady', function() {
+
+    // Middleware
+    function scrollToTop(ctx, next) {
+      app.scrollPageToTop();
+      next();
+    }
+
+    // Routes
+    page('/', scrollToTop, function() {
+      app.route = 'home';
+    });
+
+    page('/portfolio', scrollToTop, function() {
+      app.route = 'portfolio';
+    });
+
+    page('/applications', scrollToTop, function() {
+      app.route = 'applications';
+    });
+
+    page('/applications/:name', scrollToTop, function(data) {
+      app.route = 'application-info';
+      app.params = data.params;
+    });
+
+    page('/presentations', scrollToTop, function() {
+      app.route = 'presentations';
+    });
+
+    // add #! before urls
+    page({
+      hashbang: true
+    });
+
+  });
+</script>

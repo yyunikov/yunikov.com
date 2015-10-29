@@ -6,6 +6,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-preprocess');
   grunt.loadNpmTasks('grunt-env');
 
+  preprocessMap = {
+    '_includes/header.processed.html' : 'templates/header.html',
+    '_includes/footer.processed.html' : 'templates/footer.html'
+  };
+
   // Project configuration.
   grunt.initConfig({
 
@@ -51,22 +56,22 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          'elements/common-elements.vulcanized.html': 'elements/common-elements.html'
+          'elements/elements.vulcanized.html': 'elements/elements.html'
         }
       }
     },
     cssmin: {
       dist: {
         src: [
-            'css/main.css'
+            'styles/main.css'
         ],
-        dest: 'css/main.min.css'
+        dest: 'styles/main.min.css'
       }
     },
     uglify: {
       my_target: {
         files: {
-          'js/app.min.js': ['js/app.js']
+          'scripts/app.min.js': ['scripts/app.js']
         }
       }
     },
@@ -80,16 +85,10 @@ module.exports = function(grunt) {
     },
     preprocess : {
       dev : {
-        files : {
-          '_includes/header.processed.html' : 'templates/header.html',
-          '_includes/footer.processed.html' : 'templates/footer.html'
-        }
+        files : preprocessMap
       },
       prod : {
-          files : {
-            '_includes/header.processed.html' : 'templates/header.html',
-            '_includes/footer.processed.html' : 'templates/footer.html'
-          }
+          files : preprocessMap
       }
     }
   });

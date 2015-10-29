@@ -1,48 +1,54 @@
 ---
 title: Yuriy Yunikov | Java and Android Software Engineer
-description: Java software engineer and Android enthusiast with 2+ years of experience interested in software design and development.
+description: Java software engineer and Android enthusiast interested in software design and development. Big fan of Open Source, GitHub, StackOverflow, Material Design and Android.
 layout: default
 sitemap:
     priority: 0.8
-    changefreq: 'monthly'
-    lastmod: 2015-03-14
 ---
-<div class="index-page">
+<div class="home-page">
+<iron-pages attr-for-selected="data-route" selected="[[route]]">
 
-	<app-card id="summary" headerText="Summary" headerColor="#A9A7AD">
-		<table class="summary-table card-content">
-			<tr>
-				<th class="summary-table-section border-right">
-					<div>2+ years</div>
-					<div>
-						<core-icon class="icon" icon="icons:work"></core-icon>
-						<span>Development Experience</span>
-					</div>
-				</th>
+  <section data-route="home">
+    {% include home.html %}
+  </section>
+<!--
+  <section data-route="portfolio">
+    <paper-material elevation="1">
+      <h2 class="page-title">Portfolio</h2>
+      <p>This is the porfolio section</p>
+    </paper-material>
+  </section>
+-->
+  <section data-route="applications">
+    <div class="applications-page">
+      {% include applications.html %}
+    </div>
+    <!--
+    <paper-material elevation="1">
+      <h2 class="page-title">Applications</h2>
+      <p>This is the applications section</p>
+      <a href="/applications/fitcalc">FitCalc - Fitness Calculator</a>
+    </paper-material>
+  -->
+  </section>
 
-				<th class="summary-table-section border-right">
-					<div>3</div>
-					<div>
-						<core-icon class="icon" icon="hardware:computer"></core-icon>
-						<span>Java Web Projects</span>
-					</div>
-				</th>
-
-				<th class="summary-table-section">
-					<div>3</div>
-					<div>
-						<core-icon class="icon" icon="icons:android"></core-icon>
-						<span>Android Applications</span>
-					</div>
-				</th>
-			</tr>
-
-		</table>
-	</app-card>
-
-	<app-card id="recent" headerText="Recent Posts" headerColor="#EFA770">
-		{% for post in site.posts limit: 3 %}
-			{% include post-preview.html %}
-		{% endfor %}
-	</app-card>
+  <section data-route="application-info">
+    <!--
+    <paper-material elevation="1">
+      <h2 class="page-title">
+      Application: <span>[[params.name]]</span>
+      </h2>
+      <div>This is <span>[[params.name]]</span>'s section</div>
+    </paper-material>
+    -->
+  </section>
+<!--
+  <section data-route="presentations">
+    <paper-material elevation="1">
+      <h2 class="page-title">Presentations</h2>
+      <p>This is the presentation section</p>
+    </paper-material>
+  </section>
+-->
+</iron-pages>
 </div>
