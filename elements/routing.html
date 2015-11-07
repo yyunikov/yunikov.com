@@ -30,6 +30,18 @@
       app.route = 'presentations';
     });
 
+    page('/presentations/:name', scrollToTop, function(data) {
+      app.route = 'presentation-info';
+      app.pres = app.presentations[data.params.name];
+      // create iframe obj
+      var iframeHtml = document.createElement('iframe');
+      iframeHtml.innerHTML = app.pres.iframe;
+      app.pres.slides = iframeHtml;
+
+      var card = document.querySelectorAll('#presentationsInfoCard .card-content')[0]
+      card.appendChild(iframeHtml);
+    });
+
     // add #! before urls
     page({
       hashbang: true

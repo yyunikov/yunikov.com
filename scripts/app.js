@@ -3,11 +3,18 @@
 
   var app = document.querySelector('#app');
 
+  app.presentations = {
+    'android-development-introduction' : {
+      'name': 'Introduction to Android Development',
+      'iframe': '<iframe src="https://docs.google.com/presentation/d/1ppqDYupWzhecq-MLxKXEKM-iw4RdMeo1OVrHzhbbi3g/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>'
+    }
+  }
+
   app.addEventListener('dom-change', function() {
-    // console.log('Dom change event');
   });
 
   window.addEventListener('WebComponentsReady', function() {
+    // TODO re-render #presentationsInfoCard .card-content
     // imports are loaded and elements have been registered
   });
 

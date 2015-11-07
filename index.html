@@ -42,13 +42,18 @@ sitemap:
     </paper-material>
     -->
   </section>
-<!--
+
   <section data-route="presentations">
-    <paper-material elevation="1">
-      <h2 class="page-title">Presentations</h2>
-      <p>This is the presentation section</p>
-    </paper-material>
+    <div class="presentations-page">
+      {% include presentations.html %}
+    </div>
   </section>
--->
+
+  <section data-route="presentation-info">
+    <div class="presentation-info-page">
+      {% include presentation-info.html %}
+    </div>
+  </section>
+
 </iron-pages>
 </div>
