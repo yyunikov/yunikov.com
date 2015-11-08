@@ -22,7 +22,7 @@ layout: null
 
   {% for presentation in site.data.presentations %}
     <url>
-      <loc>{{ site.url }}/#!/{{ presentation.url }}</loc>
+      <loc>{{ site.url }}/#!/presentations/{{ presentation.url }}</loc>
       <priority>0.8</priority>
       <mobile:mobile/>
     </url>
