@@ -71,12 +71,12 @@
 		          <iron-icon icon="hardware:phone-android"></iron-icon>
 		          <span>Applications</span>
 		        </a>
-<!--
+
 		        <a data-route="presentations" href="/presentations" on-click="onDataRouteClick">
 		          <iron-icon icon="hardware:computer"></iron-icon>
 		          <span>Presentations</span>
 		        </a>
--->		        
+		       
 		      </paper-menu>
 		    </paper-scroll-header-panel>
 
@@ -247,14 +247,29 @@
     </paper-material>
     -->
   </section>
-<!--
+
   <section data-route="presentations">
-    <paper-material elevation="1">
-      <h2 class="page-title">Presentations</h2>
-      <p>This is the presentation section</p>
-    </paper-material>
+    <div class="presentations-page">
+      <paper-card heading="Presentations" class="defaultCard" id="presentationsCard">
+  
+    <div class="card-content">
+      <a href="/presentations/android-development-introduction">Introduction to Android Development</a>
+    </div>
+  
+</paper-card>
+    </div>
   </section>
--->
+
+  <section data-route="presentation-info">
+    <div class="presentation-info-page">
+      <paper-card heading="[[pres.name]]" class="defaultCard" id="presentationsInfoCard">
+  <div class="card-content">
+    <iframe id="presentationIframe" src="[[pres.src]]" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+  </div>
+</paper-card>
+    </div>
+  </section>
+
 </iron-pages>
 </div>
 		      </div>

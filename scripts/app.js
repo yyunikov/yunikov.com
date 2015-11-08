@@ -4,11 +4,9 @@
   var app = document.querySelector('#app');
 
   app.addEventListener('dom-change', function() {
-    // console.log('Dom change event');
   });
 
   window.addEventListener('WebComponentsReady', function() {
-    // imports are loaded and elements have been registered
   });
 
   addEventListener('paper-header-transform', function(e) {

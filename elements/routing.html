@@ -30,6 +30,21 @@
       app.route = 'presentations';
     });
 
+    page('/presentations/:name', scrollToTop, function(data) {
+      app.route = 'presentation-info';
+
+      presentations = [{"url":"android-development-introduction","name":"Introduction to Android Development","src":"https://docs.google.com/presentation/d/1ppqDYupWzhecq-MLxKXEKM-iw4RdMeo1OVrHzhbbi3g/embed?start=false&loop=false&delayms=3000"}];
+
+      for (var i = 0; i < presentations.length; i++) {
+        if (presentations[i].url === data.params.name) {
+          app.pres = presentations[i];
+          presIframe = document.getElementById('#presentationIframe');
+          presIframe = presentations[i].src;
+          break;
+        }
+      }
+    });
+
     // add #! before urls
     page({
       hashbang: true

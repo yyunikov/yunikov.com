@@ -44,7 +44,7 @@ module.exports = function(grunt) {
     vulcanize: {
       default: {
         options: {
-          excludes: ["bower_components/polymer/polymer.html"],
+          excludes: ["bower_components/polymer/polymer.html", "elements/routing.html"],
           inlineScripts: true,
           inlineCss: true,
           stripComments: true,
