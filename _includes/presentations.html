@@ -1,5 +1,7 @@
 <paper-card heading="Presentations" class="defaultCard" id="presentationsCard">
-  <div class="card-content">
-		<a href="/presentations/android-development-introduction">Introduction to Android Development</a>
-  </div>
+  {% for presentation in site.data.presentations %}
+    <div class="card-content">
+      <a href="/presentations/{{ presentation.url }}">{{ presentation.name }}</a>
+    </div>
+  {% endfor %}
 </paper-card>

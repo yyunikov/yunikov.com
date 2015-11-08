@@ -1,3 +1,5 @@
+---
+---
 <script src="../bower_components/page/page.js"></script>
 <script>
   window.addEventListener('WebComponentsReady', function() {
@@ -32,9 +34,17 @@
 
     page('/presentations/:name', scrollToTop, function(data) {
       app.route = 'presentation-info';
-      app.pres = app.presentations[data.params.name];
-      presIframe = document.getElementById('#presentationIframe');
-      presIframe = app.pres.src;
+
+      presentations = {{ site.data.presentations | jsonify }};
+
+      for (var i = 0; i < presentations.length; i++) {
+        if (presentations[i].url === data.params.name) {
+          app.pres = presentations[i];
+          presIframe = document.getElementById('#presentationIframe');
+          presIframe = presentations[i].src;
+          break;
+        }
+      }
     });
 
     // add #! before urls

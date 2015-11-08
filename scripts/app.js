@@ -3,19 +3,10 @@
 
   var app = document.querySelector('#app');
 
-  app.presentations = {
-    'android-development-introduction' : {
-      'name': 'Introduction to Android Development',
-      'src': 'https://docs.google.com/presentation/d/1ppqDYupWzhecq-MLxKXEKM-iw4RdMeo1OVrHzhbbi3g/embed?start=false&loop=false&delayms=3000'
-    }
-  }
-
   app.addEventListener('dom-change', function() {
   });
 
   window.addEventListener('WebComponentsReady', function() {
-    // TODO re-render #presentationsInfoCard .card-content
-    // imports are loaded and elements have been registered
   });
 
   addEventListener('paper-header-transform', function(e) {
