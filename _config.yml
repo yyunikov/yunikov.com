@@ -9,4 +9,5 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 encoding: UTF-8
 
-gems: - jekyll-sitemap
+gems:
+  - jekyll-sitemap
