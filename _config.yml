@@ -9,4 +9,4 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 encoding: UTF-8
 
-disqus: yunikovcom
+gems: - jekyll-sitemap
