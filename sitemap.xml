@@ -15,7 +15,7 @@ layout: null
   {% for dynamicPage in site.dynamicPages %}
     <url>
       <loc>{{ site.url }}/#!/{{ dynamicPage }}</loc>
-      <priority>0.9</priority>
+      <priority>0.8</priority>
       <mobile:mobile/>
     </url>
   {% endfor %}
@@ -23,7 +23,15 @@ layout: null
   {% for presentation in site.data.presentations %}
     <url>
       <loc>{{ site.url }}/#!/presentations/{{ presentation.url }}</loc>
-      <priority>0.8</priority>
+      <priority>0.7</priority>
+      <mobile:mobile/>
+    </url>
+  {% endfor %}
+
+  {% for application in site.data.applications %}
+    <url>
+      <loc>{{ site.url }}/#!/applications/{{ application.url }}</loc>
+      <priority>0.9</priority>
       <mobile:mobile/>
     </url>
   {% endfor %}

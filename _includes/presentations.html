@@ -1,7 +1,7 @@
 <paper-card heading="Presentations" class="defaultCard" id="presentationsCard">
   {% for presentation in site.data.presentations %}
     <div class="card-content">
-      <a href="/presentations/{{ presentation.url }}">{{ presentation.name }}</a>
+      <a data-route="presentations/{{ presentation.url }}" href="#!/presentations/{{ presentation.url }}">{{ presentation.name }}</a>
     </div>
   {% endfor %}
 </paper-card>

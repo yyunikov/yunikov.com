@@ -1,65 +1,20 @@
 <paper-card heading="Applications" class="defaultCard" id="applicationsCard">
   <div class="card-content">
-		<div class="subsection-heading">
+	  {% for application in site.data.applications %}
+	    <div class="subsection-heading">
 			<div horizontal layout>
-				<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc" target="_blank">
-					<img src="images/fitcalc.png" class="app-icon" alt="FitCalc: Fitness Calculator" />
+				<a data-route="applications/{{ application.url }}" href="#!/applications/{{ application.url }}">
+					<img src="{{ application.small_img_src }}" class="app-icon" alt="{{ application.name }}" />
 				</a>
 				<div class="app-title">
-					<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc" target="_blank">FitCalc: Fitness Calculator</a>
-					<div class="subsection-heading-subtitle2">June 2014 - September 2015</div>
+					<a data-route="applications/{{ application.url }}" href="#!/applications/{{ application.url }}">{{ application.name }}</a>
+					<div class="subsection-heading-subtitle2">{{ application.release_date }}</div>
 				</div>
 			</div>
-		</div>
-		<div class="subsection-content">
-			FitCalc is a free fitness app that helps users to optimize their body and health. Improved version of Fitness Calculator app.
-		</div>
-
-		<div class="subsection-heading">
-			<div horizontal layout>
-				<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc.pro" target="_blank">
-					<img src="images/fitcalc_pro.png" class="app-icon" alt="FitCalc Pro: Fitness Calculator" />
-				</a>
-				<div class="app-title">
-					<a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc.pro" target="_blank">FitCalc Pro: Fitness Calculator</a>
-					<div class="subsection-heading-subtitle2">June 2014 - September 2015</div>
-				</div>
 			</div>
-		</div>
-		<div class="subsection-content">
-			Pro ad-free version of FitCalc containing extra features like themes and daily reminders.
-		</div>
-
-		<div class="subsection-heading">
-			<div horizontal layout>
-				<a href="https://play.google.com/store/apps/details?id=com.yyunikov.dimblock" target="_blank">
-					<img src="images/dimblock.png" class="app-icon" alt="Dim Block" />
-				</a>
-				<div class="app-title">
-					<a href="https://play.google.com/store/apps/details?id=com.yyunikov.dimblock" target="_blank">Dim Block</a>
-					<div class="subsection-heading-subtitle2">December 2013 - January 2014</div>
-				</div>
+			<div class="subsection-content">
+				{{ application.short_desc }}
 			</div>
-		</div>
-		<div class="subsection-content">
-			Dim Block is an open-source Android application that stops device screen from dimming with one click.
-			Available on Google Play (1,000+ downloads).
-		</div>
-
-		<div class="subsection-heading">
-			<div horizontal layout>
-				<a href="https://play.google.com/store/apps/details?id=com.fitness.calculator" target="_blank">
-					<img src="images/fitnesscalculator.png" class="app-icon" alt="Fitness Calculator" />
-				</a>
-				<div class="app-title">
-					<a href="https://play.google.com/store/apps/details?id=com.fitness.calculator" target="_blank">Fitness Calculator</a>
-					<div class="subsection-heading-subtitle2">February 2013 - July 2013</div>
-				</div>
-			</div>
-		</div>
-		<div class="subsection-content">
-			Android application that helps users in calculating optimal parameters for healthy life and good body shape, includes calorie counter, one rep-max and body fat calculator.
-			Available on Google Play (100,000+ downloads).
-		</div>
+	  {% endfor %}
   </div>
 </paper-card>

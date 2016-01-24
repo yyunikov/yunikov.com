@@ -4,6 +4,17 @@
 <script>
   window.addEventListener('WebComponentsReady', function() {
 
+    // Workaround for https://github.com/visionmedia/page.js/issues/276
+    function redirectLink(e) {
+       page.redirect('/' + this.getAttribute('data-route'));
+       e.preventDefault();
+    }
+
+    var routerLinks = document.querySelectorAll('a[href^="#!"]');
+    for (var i = 0; i < routerLinks.length; i++) {
+       routerLinks[i].addEventListener('click', redirectLink, false);
+    }
+
     // Middleware
     function scrollToTop(ctx, next) {
       app.scrollPageToTop();
@@ -25,7 +36,9 @@
 
     page('/applications/:name', scrollToTop, function(data) {
       app.route = 'application-info';
-      app.params = data.params;
+
+      applications = {{ site.data.applications | jsonify }};
+      app.app = findJsonItem(applications, data);
     });
 
     page('/presentations', scrollToTop, function() {
@@ -36,15 +49,7 @@
       app.route = 'presentation-info';
 
       presentations = {{ site.data.presentations | jsonify }};
-
-      for (var i = 0; i < presentations.length; i++) {
-        if (presentations[i].url === data.params.name) {
-          app.pres = presentations[i];
-          presIframe = document.getElementById('#presentationIframe');
-          presIframe = presentations[i].src;
-          break;
-        }
-      }
+      app.pres = findJsonItem(presentations, data);
     });
 
     // add #! before urls
@@ -52,5 +57,12 @@
       hashbang: true
     });
 
+    function findJsonItem(jsonItems, data) {
+      for (var i = 0; i < jsonItems.length; i++) {
+        if (jsonItems[i].url === data.params.name) {
+          return jsonItems[i];
+        }
+      } 
+    }
   });
 </script>

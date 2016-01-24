@@ -1,0 +1,34 @@
+[
+  {
+    "url": "fitcalc",
+    "name": "FitCalc: Fitness Calculator",
+    "package": "ua.yyunikov.fc",
+    "small_img_src": "images/fitcalc.png",
+    "short_desc" : "FitCalc is a free fitness app that helps users to optimize their body and health. Improved version of Fitness Calculator app.",
+    "release_date" : "June 2014"
+  },
+  {
+    "url": "fitcalc-pro",
+    "name": "FitCalc: Fitness Calculator PRO",
+    "package": "ua.yyunikov.fc.pro",
+    "small_img_src": "images/fitcalc_pro.png",
+    "short_desc" : "Pro ad-free version of FitCalc containing extra features like themes and daily reminders.",
+    "release_date" : "June 2014"
+  },
+  {
+    "url": "dimblock",
+    "name": "Dim Block",
+    "package": "com.yyunikov.dimblock",
+    "small_img_src": "images/dimblock.png",
+    "short_desc" : "Dim Block is an open-source Android application that stops device screen from dimming with one click.",
+    "release_date" : "December 2013"
+  },
+  {
+    "url": "fitness-calculator",
+    "name": "Fitness Calculator 1.0",
+    "package": "com.fitness.calculator",
+    "small_img_src": "images/fitnesscalculator.png",
+    "short_desc" : "Android application that helps users in calculating optimal parameters for healthy life and good body shape, includes calorie counter, one rep-max and body fat calculator (150,000+ downloads).",
+    "release_date" : "February 2013"
+  }
+]
