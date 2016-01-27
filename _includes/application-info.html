@@ -1,5 +1,9 @@
 <paper-card heading="[[app.name]]" class="defaultCard" id="applicationsInfoCard">
   <div class="card-content">
-    
+    <img src="[[app.mid_img_src]]" class="app-icon" alt="[[app.name]]"></img>
+    <div horizontal layout class="title-desc-container">
+      <h2 class="app-title">[[app.name]]</h2>
+      <html-string html="[[app.desc]]" class="app-description"></html-string>
+    </div>
   </div>
 </paper-card>

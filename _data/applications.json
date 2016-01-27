@@ -4,7 +4,11 @@
     "name": "FitCalc: Fitness Calculator",
     "package": "ua.yyunikov.fc",
     "small_img_src": "images/fitcalc.png",
+    "mid_img_src": "images/fitcalc.224.png",
     "short_desc" : "FitCalc is a free fitness app that helps users to optimize their body and health. Improved version of Fitness Calculator app.",
+    "desc" : "<p>Living a healthy way of life, prefer sport & fitness or just would like to know more about your health and body? In this case, this app is for you!<p/>
+    <p>FitCalc is a second version of popular app - <a href=\"/applications/fitness-calculator\">Fitness Calculator 1.0</a>. It is a FREE offline fitness app that helps to optimize your body, health and nutrition.</p>
+    <p><a href=\"/applications/fitcalc-pro\">PRO version</a></p>",
     "release_date" : "June 2014"
   },
   {
@@ -12,7 +16,11 @@
     "name": "FitCalc: Fitness Calculator PRO",
     "package": "ua.yyunikov.fc.pro",
     "small_img_src": "images/fitcalc_pro.png",
+    "mid_img_src": "images/fitcalc_pro.224.png",
     "short_desc" : "Pro ad-free version of FitCalc containing extra features like themes and daily reminders.",
+    "desc" : "<p>Living a healthy way of life, prefer sport & fitness or just would like to know more about your health and body? In this case, this app is for you!</p>
+    <p>FitCalc is a second version of popular app - <a href=\"/applications/fitness-calculator\">Fitness Calculator 1.0</a>. It is a FREE offline fitness app that helps to optimize your body, health and nutrition.</p>
+    <p><b>Special in Pro version:</b><br/>✓ Ad free;<br/>✓ Dark and light themes;<br/>✓ Daily reminders for water intake, food intake and workouts;</p>",
     "release_date" : "June 2014"
   },
   {
@@ -20,7 +28,10 @@
     "name": "Dim Block",
     "package": "com.yyunikov.dimblock",
     "small_img_src": "images/dimblock.png",
+    "mid_img_src": "images/dimblock.224.png",
     "short_desc" : "Dim Block is an open-source Android application that stops device screen from dimming with one click.",
+    "desc" : "<p>Dim Block is a simple application that stops your screen from dimming with one click. It is very easy to use and has a features for stop blocking dim on low battery and one-click opening of display settings.</p>
+    <p>The application really helps a lot while reading, watching images, photos or just while you showing something on your device for a few minutes. And it is totally free!</p>",
     "release_date" : "December 2013"
   },
   {
@@ -28,7 +39,11 @@
     "name": "Fitness Calculator 1.0",
     "package": "com.fitness.calculator",
     "small_img_src": "images/fitnesscalculator.png",
+    "mid_img_src": "images/fitnesscalculator.224.png",
     "short_desc" : "Android application that helps users in calculating optimal parameters for healthy life and good body shape, includes calorie counter, one rep-max and body fat calculator (150,000+ downloads).",
+    "desc" : "<p>Fitness Calculator is a free fitness app that helps you to optimize your body and health.</p>
+    <p>Application provides tips and forecasts about your weight to help you achieve a perfect healthy body.</p>
+    <p><b>DEPRECATION:</b> This application is deprecated. Please download the new version of <a href=\"/applications/fitcalc\">FitCalc</a> app.</p>",
     "release_date" : "February 2013"
   }
 ]
