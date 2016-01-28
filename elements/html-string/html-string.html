@@ -1,0 +1,27 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="html-string">
+
+  <template>
+  </template>
+
+</dom-module>
+
+<script>
+    (function() {
+      'use strict';
+
+      Polymer({
+          is: 'html-string',
+          properties: {
+            html: {
+              type: String,
+              observer: '_htmlChanged'
+            }
+          },
+          _htmlChanged: function(htmlStr) {
+            this.innerHTML = htmlStr;
+          }
+        });
+    })();
+</script>

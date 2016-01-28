@@ -2,6 +2,17 @@
 <script>
   window.addEventListener('WebComponentsReady', function() {
 
+    // Workaround for https://github.com/visionmedia/page.js/issues/276
+    function redirectLink(e) {
+       page.redirect('/' + this.getAttribute('data-route'));
+       e.preventDefault();
+    }
+
+    var routerLinks = document.querySelectorAll('a[href^="#!"]');
+    for (var i = 0; i < routerLinks.length; i++) {
+       routerLinks[i].addEventListener('click', redirectLink, false);
+    }
+
     // Middleware
     function scrollToTop(ctx, next) {
       app.scrollPageToTop();
@@ -23,7 +34,9 @@
 
     page('/applications/:name', scrollToTop, function(data) {
       app.route = 'application-info';
-      app.params = data.params;
+
+      applications = [{"url":"fitcalc","name":"FitCalc: Fitness Calculator","package":"ua.yyunikov.fc","amazon_id":"B00PG8A9WU","opera_id":"fitcalc_fitness_calculations","small_img_src":"images/fitcalc.png","mid_img_src":"images/fitcalc.224.png","short_desc":"FitCalc is a free fitness app that helps users to optimize their body and health. Improved version of Fitness Calculator app.","desc":"<p>Living a healthy way of life, prefer sport & fitness or just would like to know more about your health and body? In this case, this app is for you!<p/> <p>FitCalc is a second version of popular app - <a href=\"/applications/fitness-calculator\">Fitness Calculator 1.0</a>. It is a FREE offline fitness app that helps to optimize your body, health and nutrition.</p> <p><a href=\"/applications/fitcalc-pro\">PRO VERSION</a></p>","release_date":"June 2014"},{"url":"fitcalc-pro","name":"FitCalc: Fitness Calculator PRO","package":"ua.yyunikov.fc.pro","amazon_id":"B018ZTM3BG","opera_id":"fitcalc_fitness_calculator_pro","small_img_src":"images/fitcalc_pro.png","mid_img_src":"images/fitcalc_pro.224.png","short_desc":"Pro ad-free version of FitCalc containing extra features like themes and daily reminders.","desc":"<p>Living a healthy way of life, prefer sport & fitness or just would like to know more about your health and body? In this case, this app is for you!</p> <p>FitCalc is a second version of popular app - <a href=\"/applications/fitness-calculator\">Fitness Calculator 1.0</a>. It is a FREE offline fitness app that helps to optimize your body, health and nutrition.</p> <p><b>Special in Pro version:</b><br/>✓ Ad free;<br/>✓ Dark and light themes;<br/>✓ Daily reminders for water intake, food intake and workouts;</p>","release_date":"June 2014"},{"url":"dimblock","name":"Dim Block","package":"com.yyunikov.dimblock","amazon_id":"B01A7HKZL4","opera_id":"dim_block","small_img_src":"images/dimblock.png","mid_img_src":"images/dimblock.224.png","short_desc":"Dim Block is an open-source Android application that stops device screen from dimming with one click.","desc":"<p>Dim Block is a simple application that stops your screen from dimming with one click. It is very easy to use and has a features for stop blocking dim on low battery and one-click opening of display settings.</p> <p>The application really helps a lot while reading, watching images, photos or just while you showing something on your device for a few minutes. And it is totally free!</p>","release_date":"December 2013"},{"url":"fitness-calculator","name":"Fitness Calculator 1.0","package":"com.fitness.calculator","amazon_id":"B00DQDONJC","opera_id":"fitness_calculator","small_img_src":"images/fitnesscalculator.png","mid_img_src":"images/fitnesscalculator.224.png","short_desc":"Android application that helps users in calculating optimal parameters for healthy life and good body shape, includes calorie counter, one rep-max and body fat calculator (150,000+ downloads).","desc":"<p>Fitness Calculator is a free fitness app that helps you to optimize your body and health.</p> <p>Application provides tips and forecasts about your weight to help you achieve a perfect healthy body.</p> <p><b>DEPRECATION:</b> This application is deprecated. Please download the new version of <a href=\"/applications/fitcalc\">FitCalc</a> app.</p>","release_date":"February 2013"}];
+      app.app = findJsonItem(applications, data);
     });
 
     page('/presentations', scrollToTop, function() {
@@ -34,15 +47,7 @@
       app.route = 'presentation-info';
 
       presentations = [{"url":"android-development-introduction","name":"Introduction to Android Development","src":"https://docs.google.com/presentation/d/1ppqDYupWzhecq-MLxKXEKM-iw4RdMeo1OVrHzhbbi3g/embed?start=false&loop=false&delayms=3000"}];
-
-      for (var i = 0; i < presentations.length; i++) {
-        if (presentations[i].url === data.params.name) {
-          app.pres = presentations[i];
-          presIframe = document.getElementById('#presentationIframe');
-          presIframe = presentations[i].src;
-          break;
-        }
-      }
+      app.pres = findJsonItem(presentations, data);
     });
 
     // add #! before urls
@@ -50,5 +55,12 @@
       hashbang: true
     });
 
+    function findJsonItem(jsonItems, data) {
+      for (var i = 0; i < jsonItems.length; i++) {
+        if (jsonItems[i].url === data.params.name) {
+          return jsonItems[i];
+        }
+      } 
+    }
   });
 </script>

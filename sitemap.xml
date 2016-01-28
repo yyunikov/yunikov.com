@@ -12,13 +12,13 @@
   
     <url>
       <loc>http://yunikov.com/#!/applications</loc>
-      <priority>0.9</priority>
+      <priority>0.8</priority>
       <mobile:mobile/>
     </url>
   
     <url>
       <loc>http://yunikov.com/#!/presentations</loc>
-      <priority>0.9</priority>
+      <priority>0.8</priority>
       <mobile:mobile/>
     </url>
   
@@ -26,7 +26,33 @@
   
     <url>
       <loc>http://yunikov.com/#!/presentations/android-development-introduction</loc>
-      <priority>0.8</priority>
+      <priority>0.7</priority>
+      <mobile:mobile/>
+    </url>
+  
+
+  
+    <url>
+      <loc>http://yunikov.com/#!/applications/fitcalc</loc>
+      <priority>0.9</priority>
+      <mobile:mobile/>
+    </url>
+  
+    <url>
+      <loc>http://yunikov.com/#!/applications/fitcalc-pro</loc>
+      <priority>0.9</priority>
+      <mobile:mobile/>
+    </url>
+  
+    <url>
+      <loc>http://yunikov.com/#!/applications/dimblock</loc>
+      <priority>0.9</priority>
+      <mobile:mobile/>
+    </url>
+  
+    <url>
+      <loc>http://yunikov.com/#!/applications/fitness-calculator</loc>
+      <priority>0.9</priority>
       <mobile:mobile/>
     </url>
   

@@ -4601,6 +4601,14 @@ styles. All other styles should exist as single lines."
     margin-left: 15px;
   }
 
+  .application-info-page .title-desc-container {
+    padding: 0 24px;
+  }
+
+  .application-info-page .app-download-section {
+    padding: 24px 0;
+  }
+
   /* Small */
   @media (max-width: 600px) {
     iron-pages {
@@ -9197,6 +9205,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       this.$.element.className = this.$.element.className.replace(/spinner/, '');
     }
   });
+</script><dom-module id="html-string" assetpath="html-string/">
+
+  <template>
+  </template>
+
+</dom-module>
+
+<script>
+    (function() {
+      'use strict';
+
+      Polymer({
+          is: 'html-string',
+          properties: {
+            html: {
+              type: String,
+              observer: '_htmlChanged'
+            }
+          },
+          _htmlChanged: function(htmlStr) {
+            this.innerHTML = htmlStr;
+          }
+        });
+    })();
 </script><dom-module id="stackoverflow-card" assetpath="stackoverflow-card/">
 
   <template>
@@ -9328,7 +9360,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       Polymer({
           is: 'stackoverflow-card',
           properties: {
-            useriuserIdd: String,
+            userId: String,
             profileUrl: {
               type: String,
               computed: 'computeProfileUrl(userId)'
