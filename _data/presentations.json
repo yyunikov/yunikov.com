@@ -3,5 +3,10 @@
     "url": "android-development-introduction",
     "name": "Introduction to Android Development",
     "src": "https://docs.google.com/presentation/d/1ppqDYupWzhecq-MLxKXEKM-iw4RdMeo1OVrHzhbbi3g/embed?start=false&loop=false&delayms=3000"
+  },
+  {
+    "url": "make-your-code-reactive",
+    "name": "Make your code reactive! RxJava",
+    "src": "https://docs.google.com/presentation/d/13OpgbMbagGdVBEtPYervSvMybc15QJcEv7Q4AYK2umc/embed?start=false&loop=false&delayms=3000"
   }
 ]
