@@ -30,6 +30,12 @@
       <mobile:mobile/>
     </url>
   
+    <url>
+      <loc>http://yunikov.com/#!/presentations/make-your-code-reactive</loc>
+      <priority>0.7</priority>
+      <mobile:mobile/>
+    </url>
+  
 
   
     <url>
