@@ -8,5 +8,10 @@
     "url": "make-your-code-reactive",
     "name": "Make your code reactive! RxJava",
     "src": "https://docs.google.com/presentation/d/13OpgbMbagGdVBEtPYervSvMybc15QJcEv7Q4AYK2umc/embed?start=false&loop=false&delayms=3000"
+  },
+  {
+    "url": "developing-for-android-auto",
+    "name": "Developing for Android Auto",
+    "src": "https://docs.google.com/presentation/d/1G2VB_2BFuX-8dNFIwiTmoRfpNddXYyZILhRZARDtuC8/embed?start=false&loop=false&delayms=3000"
   }
 ]
