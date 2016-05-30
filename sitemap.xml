@@ -36,6 +36,12 @@
       <mobile:mobile/>
     </url>
   
+    <url>
+      <loc>http://yunikov.com/#!/presentations/developing-for-android-auto</loc>
+      <priority>0.7</priority>
+      <mobile:mobile/>
+    </url>
+  
 
   
     <url>
