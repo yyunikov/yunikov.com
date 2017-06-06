@@ -1,4 +1,16 @@
 [
+    {
+    "url": "media-vk",
+    "name": "Media VK",
+    "package": "com.yunikov.mediavk",
+    "small_img_src": "images/media_vk.png",
+    "mid_img_src": "images/media_vk.224.png",
+    "short_desc" : "VK client on your Android TV.",
+    "desc" : "<p>Would like to watch videos from VK on your TV? Now it’s easy with Media VK.</p>
+    <p>Application provides access to all videos from VK, flexible search with voice search, ability to watch your own videos added to your library</p>",
+    "release_date" : "June 2017",
+    "screenshot" : "images/media_vk_screenshot.png"
+  },
   {
     "url": "fitcalc",
     "name": "FitCalc: Fitness Calculator",
@@ -51,7 +63,7 @@
     "opera_id" : "fitness_calculator",
     "small_img_src": "images/fitnesscalculator.png",
     "mid_img_src": "images/fitnesscalculator.224.png",
-    "short_desc" : "Android application that helps users in calculating optimal parameters for healthy life and good body shape, includes calorie counter, one rep-max and body fat calculator (150,000+ downloads).",
+    "short_desc" : "Android application that helps users in calculating optimal parameters for healthy life and good body shape, includes calorie counter, one rep-max and body fat calculator (200,000+ downloads).",
     "desc" : "<p>Fitness Calculator is a free fitness app that helps you to optimize your body and health.</p>
     <p>Application provides tips and forecasts about your weight to help you achieve a perfect healthy body.</p>
     <p><b>DEPRECATION:</b> This application is deprecated. Please download the new version of <a href=\"/applications/fitcalc\">FitCalc</a> app.</p>",

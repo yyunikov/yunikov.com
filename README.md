@@ -22,7 +22,8 @@ Run the following commands to start the website:
 2. Run `npm install`
 3. Run `bower install`
 4. Then build with `grunt dev`
-5. And run the server with `jekyll serve --watch`
+5. Run `gem install jekyll`
+6. And run the server with `jekyll serve --watch`
 
 After that you can check out the website running on `localhost:4000`
 
@@ -43,7 +44,7 @@ Then run `grunt deploy` command to deploy generated website to the specified bra
 License
 =================
 
-   Copyright 2016 Yuriy Yunikov
+   Copyright 2017 Yuriy Yunikov
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
