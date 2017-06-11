@@ -15,5 +15,8 @@
   "scripts": {
     "postinstall": "bower install",
     "start": "grunt"
+  },
+  "dependencies": {
+    "jekyll": "^3.0.0-beta1"
   }
 }

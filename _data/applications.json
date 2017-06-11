@@ -5,7 +5,7 @@
     "package": "com.yunikov.mediavk",
     "small_img_src": "images/media_vk.png",
     "mid_img_src": "images/media_vk.224.png",
-    "short_desc" : "VK client on your Android TV.",
+    "short_desc" : "VK client for Android TV.",
     "desc" : "<p>Would like to watch videos from VK on your TV? Now it’s easy with Media VK.</p>
     <p>Application provides access to all videos from VK, flexible search with voice search, ability to watch your own videos added to your library</p>",
     "release_date" : "June 2017",
