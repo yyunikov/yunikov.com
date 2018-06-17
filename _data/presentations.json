@@ -13,5 +13,10 @@
     "url": "developing-for-android-auto",
     "name": "Developing for Android Auto",
     "src": "https://docs.google.com/presentation/d/1G2VB_2BFuX-8dNFIwiTmoRfpNddXYyZILhRZARDtuC8/embed?start=false&loop=false&delayms=3000"
+  },
+  {
+    "url": "why-kotlin-is-a-better-java",
+    "name": "Why Kotlin is a better Java",
+    "src": "https://docs.google.com/presentation/d/1YFmhh7l45AdcPMavCyVm6QA_JVeo60hnXfPj7yJeMZM/embed?start=false&loop=false&delayms=3000"
   }
 ]
