@@ -1,49 +1,18 @@
-# yyunikov.github.io
-Personal website. Is built using [Polymer](https://www.polymer-project.org/) framework, [Grunt](http://gruntjs.com/), [Jekyll](http://jekyllrb.com/) and [Github Pages](https://pages.github.com/).
+# yunikov.com
 
-# Branches
-**dev** - contains the source files for the website
+Personal website built with [Github Pages](https://pages.github.com/) and [Jekyll](http://jekyllrb.com/).
 
-**master** - contains the generated production website
+## Local development
 
-# Tasks
-`grunt dev` - builds development version of files
+- [Prerequisites](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
+- `bundle exec jekyll serve`
+- open http://localhost:4000
 
-`grunt prod` - builds production version of files (minified css, uglified js, etc.)
-
-`grunt deploy` - deploys website to production
-
-# Local development
-To run website locally you need to have [Node.js](http://nodejs.org/) and [Ruby](https://www.ruby-lang.org/) installed.
-
-Run the following commands to start the website:
-
-1. Install `grunt-cli` and `bower` globally with `npm install -g grunt-cli bower`
-2. Run `npm install`
-3. Run `bower install`
-4. Then build with `grunt dev`
-5. And run the server with `jekyll serve --watch`
-
-After that you can check out the website running on `localhost:4000`
-
-# Deployment
-Deployment is done using [grunt build control](https://www.npmjs.com/package/grunt-build-control).
-
-Check out the Gruntfile.js and change the following lines to your remote and branch:
-```javascript
-      pages: {
-        options: {
-          remote: 'git@github.com:yyunikov/yyunikov.github.io.git',
-          branch: 'master'
-        }
-      }
-```
-Then run `grunt deploy` command to deploy generated website to the specified branch.
 
 License
 =================
 
-   Copyright 2016 Yuriy Yunikov
+   Copyright 2020 Yuriy Yunikov
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
