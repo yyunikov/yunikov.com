@@ -23,3 +23,31 @@ Big fan of Open Source, Kotlin, Kubernetes, MongoDb, Git and StackOverflow. Inte
 <a href="https://play.google.com/store/apps/dev?id=6972910091202284868" style="margin-left: 1em" target="_blank">
     <img src="images/google_play.svg" width="64px" height="64px" alt="Google Play - Yuriy Yunikov">
 </a>
+
+### Blog Posts
+
+* <a href="https://www.verygoodsecurity.com/blog/posts/building-a-fine-grained-permission-system-in-a-distributed-environment/" target="_blank">
+    Building a fine-grained permission system in a distributed environment: Architecture
+</a>
+
+### Presentations
+
+* <a href="https://docs.google.com/presentation/d/e/2PACX-1vRvex2nL8qr-zgJFffpXcSQ2dDPAu8PJKyHkOOUF-dag-uLXcS2LYYnlc2YLGMw6zsR0aqpFnB7skhh/embed?start=false&loop=false&delayms=3000" target="_blank">
+    OAuth 2.0 / OpenID Connect - 101
+</a>
+
+* <a href="https://docs.google.com/presentation/d/1YFmhh7l45AdcPMavCyVm6QA_JVeo60hnXfPj7yJeMZM/embed?start=false&loop=false&delayms=3000" target="_blank">
+    Why Kotlin is a better Java
+</a>
+
+* <a href="https://docs.google.com/presentation/d/1G2VB_2BFuX-8dNFIwiTmoRfpNddXYyZILhRZARDtuC8/embed?start=false&loop=false&delayms=3000" target="_blank">
+    Developing for Android Auto
+</a>
+
+* <a href="https://docs.google.com/presentation/d/13OpgbMbagGdVBEtPYervSvMybc15QJcEv7Q4AYK2umc/embed?start=false&loop=false&delayms=3000" target="_blank">
+    Make your code reactive! RxJava
+</a>
+
+* <a href="https://docs.google.com/presentation/d/1ppqDYupWzhecq-MLxKXEKM-iw4RdMeo1OVrHzhbbi3g/embed?start=false&loop=false&delayms=3000" target="_blank">
+    Introduction to Android Development
+</a>
