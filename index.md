@@ -51,3 +51,25 @@ Big fan of Open Source, Kotlin, Kubernetes, MongoDb, Git and StackOverflow. Inte
 * <a href="https://docs.google.com/presentation/d/1ppqDYupWzhecq-MLxKXEKM-iw4RdMeo1OVrHzhbbi3g/embed?start=false&loop=false&delayms=3000" target="_blank">
     Introduction to Android Development
 </a>
+
+### Android Apps
+
+* <a href="https://play.google.com/store/apps/details?id=com.yunikov.mediavk" target="_blank">
+    Media VK
+</a>
+
+* <a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc" target="_blank">
+    FitCalc
+</a>
+
+* <a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc.pro" target="_blank">
+    FitCalc PRO
+</a>
+
+* <a href="https://play.google.com/store/apps/details?id=com.yyunikov.dimblock" target="_blank">
+    Dim Block
+</a>
+
+* <a href="https://play.google.com/store/apps/details?id=com.fitness.calculator" target="_blank">
+    Fitness Calculator 1.0
+</a>
