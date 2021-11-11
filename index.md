@@ -2,11 +2,11 @@
 layout: default
 ---
 
-Launched multiple products and production systems from scratch, developed few Android apps, have experience and skillset for managing engineering teams.
+Built and launched multiple products and production systems, developed few Android apps, have experience and skillset for managing engineering teams.
 
-Specialized in software design, architecture, security, backend systems and product development. Have a strong professional expertise in integrating identity and access management solutions and building public API's.
+Specialized in software design, architecture, security, backend systems and product development. Have a strong professional expertise in identity, access management, designing and building public API's.
 
-Big fan of Open Source, Kotlin, Kubernetes, MongoDb, Git and StackOverflow. Interested in products and startups which can change the world in a better way.
+Interested in products and startups which can change the world for the better.
 
 <a href="https://github.com/yyunikov/" target="_blank">
     <img src="images/github.svg" width="64px" height="64px" alt="GitHub - yyunikov">

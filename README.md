@@ -12,7 +12,7 @@ Personal website built with [Github Pages](https://pages.github.com/) and [Jekyl
 License
 =================
 
-   Copyright 2020 Yuriy Yunikov
+   Copyright 2021 Yuriy Yunikov
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
