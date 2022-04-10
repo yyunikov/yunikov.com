@@ -2,9 +2,9 @@
 layout: default
 ---
 
-Built and launched multiple products and production systems, developed few Android apps, have experience and skillset for managing engineering teams.
+Engineer, leader, consultant, software professional and tech enthusiast. Led technical design, architecture, security and implementation of various production systems. Built and launched multiple successful products, developed a few Android apps, have experience and skills in leading engineering teams. 
 
-Specialized in software design, architecture, security, backend systems and product development. Have a strong professional expertise in identity, access management, designing and building public API's.
+Have a strong professional expertise in identity & access management, design & implementation of public APIs, CLI’s and building great developer experience.
 
 Interested in products and startups which can change the world for the better.
 
@@ -14,14 +14,14 @@ Interested in products and startups which can change the world for the better.
 <a href="https://stackoverflow.com/users/1889928/yuriy-yunikov" style="margin-left: 1em" target="_blank">
     <img src="images/stackoverflow.svg" width="64px" height="64px" alt="StackOverflow - yyunikov">
 </a>
-<a href="https://ua.linkedin.com/in/yyunikov/" style="margin-left: 1em" target="_blank">
-    <img src="images/linkedin.svg" width="64px" height="64px" alt="LinkedIn - Yuriy Yunikov">
+<a href="https://linkedin.com/in/yyunikov/" style="margin-left: 1em" target="_blank">
+    <img src="images/linkedin.svg" width="64px" height="64px" alt="LinkedIn - Yurii Yunikov">
 </a>
 <a href="https://twitter.com/yyunikov" style="margin-left: 1em" target="_blank">
     <img src="images/twitter.svg" width="64px" height="64px" alt="Twitter - yyunikov">
 </a>
 <a href="https://play.google.com/store/apps/dev?id=6972910091202284868" style="margin-left: 1em" target="_blank">
-    <img src="images/google_play.svg" width="64px" height="64px" alt="Google Play - Yuriy Yunikov">
+    <img src="images/google_play.svg" width="64px" height="64px" alt="Google Play - Yurii Yunikov">
 </a>
 
 ### Blog Posts
