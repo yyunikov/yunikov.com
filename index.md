@@ -2,7 +2,7 @@
 layout: default
 ---
 
-Software engineer, leader, and consultant with 9+ years of experience. Led technical design, architecture, security, and implementation of various production systems. Built and launched multiple successful products, developed a few Android apps, and have experience and skills in managing engineering teams. 
+Software engineer, leader, and consultant. Led technical design, architecture, security, and implementation of various production systems. Built and launched multiple successful products, developed a few Android apps, and have experience and skills in managing engineering teams. 
 
 Have professional expertise in identity & access management, payments optimization, design & implementation of public APIs, CLIs and building excellent developer experience. 
 
