@@ -6,8 +6,6 @@ Software engineer, leader, and consultant. Led technical design, architecture, s
 
 Have professional expertise in identity & access management, payments optimization, design & implementation of public APIs, CLIs and building excellent developer experience. 
 
-Interested in products and startups which can change the world for the better.
-
 <a href="https://github.com/yyunikov/" target="_blank">
     <img src="images/github.svg" width="64px" height="64px" alt="GitHub - yyunikov">
 </a>
