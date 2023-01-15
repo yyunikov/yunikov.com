@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Presentations
+title: Yuriy Yunikov - Presentations
 permalink: /presentations/
 ---
 <p>Public presentations made and presented by Yuriy Yunikov.<br />
