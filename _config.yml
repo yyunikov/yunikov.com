@@ -12,10 +12,12 @@ remote_theme: matthiaslischka/jekyll-uno
 author:
   name: 'Yuriy Yunikov'
   email: hello@yunikov.com
+  stackoverflow_username: 1889928/yyunikov
   twitter_username: yyunikov
   # facebook_username: joshgerdes
   github_username: yyunikov
   linkedin_username: yyunikov
+  google_play_link: https://play.google.com/store/apps/dev?id=6972910091202284868
   
 defaults:
   - scope:

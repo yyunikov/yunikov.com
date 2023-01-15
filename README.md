@@ -4,10 +4,8 @@ Personal website built with [Github Pages](https://pages.github.com/). Based on 
 
 ## Local development
 
-- [Prerequisites](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll)
-- `bundle exec jekyll serve`
+- `docker compose up`
 - open http://localhost:4000
-
 
 License
 =================

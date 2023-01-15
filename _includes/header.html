@@ -29,7 +29,15 @@
               </li>
             {% endif %}
 
-            <!-- TODO Add Stackoverflow -->
+            {% if site.author.stackoverflow_username %}
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://stackoverflow.com/users/{{ site.author.stackoverflow_username }}" title="{{ site.title }} on GitHub" target="_blank">
+                  <i class="icon icon-social-stack-overflow"></i>
+                  <span class="label">StackOverflow</span>
+                </a>
+              </li>
+            {% endif %}
 
             {% if site.author.linkedin_username %}
               <!-- LinkedIn -->
