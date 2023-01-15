@@ -7,5 +7,15 @@
     <loc>https://yunikov.com</loc>
     <priority>1.0</priority>
     <mobile:mobile/>
-  </url>  
+  </url>
+  <url>
+    <loc>https://yunikov.com/presentations</loc>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
+  <url>
+    <loc>https://yunikov.com/apps</loc>
+    <priority>0.5</priority>
+    <mobile:mobile/>
+  </url>
 </urlset>

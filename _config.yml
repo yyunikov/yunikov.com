@@ -1,4 +1,49 @@
-theme: jekyll-theme-midnight
+# Site settings
 title: Yurii Yunikov
-description: Engineer. Leader. Consultant. Software professional and tech enthusiast.
+head-title: Yurii Yunikov - Engineer, leader, consultant. Software professional and tech enthusiast.
+description: 'Engineer. Leader. Consultant. Software professional and tech enthusiast.'
+url: 'https://yunikov.com'
+baseurl: ''
+
 google_analytics: UA-41878921-5
+
+remote_theme: matthiaslischka/jekyll-uno
+
+author:
+  name: 'Yuriy Yunikov'
+  email: hello@yunikov.com
+  twitter_username: yyunikov
+  # facebook_username: joshgerdes
+  github_username: yyunikov
+  linkedin_username: yyunikov
+  
+defaults:
+  - scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:month/:day/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins:
+  - jekyll-paginate
+  - jekyll-remote-theme
+  - jekyll-include-cache
+  
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'vendor']
