@@ -1,4 +1,4 @@
 User-agent: * 
 Disallow:
 
-Sitemap: https://yunikov.com/sitemap.xml
+Sitemap: https://www.yunikov.com/sitemap.xml

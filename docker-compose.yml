@@ -1,10 +1,16 @@
-version: '3'
-
 services:
   jekyll:
-    image: jekyll/jekyll:latest
-    command: jekyll serve --watch --force_polling --verbose
+    image: ruby:4.0.9 # keep in sync with .ruby-version
+    working_dir: /srv/jekyll
+    command: sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling"
+    environment:
+      BUNDLE_PATH: /usr/local/bundle
     ports:
       - 4000:4000
+      - 35729:35729
     volumes:
       - .:/srv/jekyll
+      - bundle:/usr/local/bundle
+
+volumes:
+  bundle:
