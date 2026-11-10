@@ -4,27 +4,27 @@ title: Yuriy Yunikov - Apps
 permalink: /apps/
 ---
 
-<p><a href="{{ site.author.google_play_link }}" style="font-weight:bold" title="{{ site.title }} on Google Play" target="_blank">Google Play Profile</a></p>
+<p><a href="{{ site.author.google_play_link }}" style="font-weight:bold" title="{{ site.title }} on Google Play" target="_blank" rel="noopener">Google Play Profile</a></p>
 
 <p>Here is a list of Android apps built by Yuriy Yunikov a while ago. Most of these are not supported anymore.<br />
 </p>
 
-* <a href="https://play.google.com/store/apps/details?id=com.yunikov.mediavk" target="_blank">
+* <a href="https://play.google.com/store/apps/details?id=com.yunikov.mediavk" target="_blank" rel="noopener">
     Media VK
 </a>
 
-* <a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc" target="_blank">
+* <a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc" target="_blank" rel="noopener">
     FitCalc
 </a>
 
-* <a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc.pro" target="_blank">
+* <a href="https://play.google.com/store/apps/details?id=ua.yyunikov.fc.pro" target="_blank" rel="noopener">
     FitCalc PRO
 </a>
 
-* <a href="https://play.google.com/store/apps/details?id=com.yyunikov.dimblock" target="_blank">
+* <a href="https://play.google.com/store/apps/details?id=com.yyunikov.dimblock" target="_blank" rel="noopener">
     Dim Block
 </a>
 
-* <a href="https://play.google.com/store/apps/details?id=com.fitness.calculator" target="_blank">
+* <a href="https://play.google.com/store/apps/details?id=com.fitness.calculator" target="_blank" rel="noopener">
     Fitness Calculator 1.0
 </a>

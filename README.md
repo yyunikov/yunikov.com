@@ -1,16 +1,23 @@
 # yunikov.com
 
-Personal website built with [Github Pages](https://pages.github.com/). Based on [Jekyll](https://jekyllrb.com/) and the [Jekyll-Uno theme](https://github.com/joshgerdes/jekyll-uno) linked via [jekyll-remote-theme](https://github.com/benbalter/jekyll-remote-theme).
+Personal website built with [Jekyll](https://jekyllrb.com/) 4 and deployed to [GitHub Pages](https://pages.github.com/) by the GitHub Actions workflow in `.github/workflows/pages.yml`. The layouts and styles come from the [Jekyll-Uno theme](https://github.com/joshgerdes/jekyll-uno) (via the [matthiaslischka fork](https://github.com/matthiaslischka/jekyll-uno)), copied into this repo. See `LICENSE-jekyll-uno` for the theme's license.
 
 ## Local development
+
+With Docker:
 
 - `docker compose up`
 - open http://localhost:4000
 
+Without Docker, install the Ruby version in `.ruby-version`, then:
+
+- `bundle install`
+- `bundle exec jekyll serve --livereload`
+
 License
 =================
 
-   Copyright (c) 2023 Yuriy Yunikov
+   Copyright (c) 2026 Yuriy Yunikov
    
    Permission is hereby granted, free of charge, to any person obtaining a copy
    of this software and associated documentation files (the "Software"), to deal

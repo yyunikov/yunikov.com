@@ -1,0 +1,48 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.robots %}
+  <meta name="robots" content="{{ page.robots }}">
+  {% endif %}
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.head-title }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | strip }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author.name }}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | strip }}{% else %}{{ site.description }}{% endif %}">
+  {% if site.author.twitter_username %}
+  <meta name="twitter:creator" content="@{{ site.author.twitter_username }}">
+  {% endif %}
+  <meta name="twitter:image" content="{{ '/assets/images/profile.png' | absolute_url }}">
+
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | strip }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/images/profile.png' | absolute_url }}">
+
+  <link rel="icon" href="{{ site.baseurl }}/images/favicons/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" href="{{ site.baseurl }}/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="manifest" href="{{ site.baseurl }}/images/favicons/site.webmanifest">
+  <meta name="msapplication-config" content="{{ site.baseurl }}/images/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css?{{site.time | date: '%s%N'}}">
+  <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | replace:'index.html','' | absolute_url }}{% endif %}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
+
+  {% if site.google_analytics and jekyll.environment == "production" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+</head>

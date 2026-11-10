@@ -2,12 +2,10 @@
 title: Yuriy Yunikov
 head-title: Yuriy Yunikov - Engineering leader focused on building high-performing teams and scalable software.
 description: 'Engineering leader focused on building high-performing teams and scalable software.'
-url: 'https://yunikov.com'
+url: 'https://www.yunikov.com'
 baseurl: ''
 
-google_analytics: UA-41878921-5
-
-remote_theme: matthiaslischka/jekyll-uno
+google_analytics: G-FZ2RNCGZL3
 
 author:
   name: 'Yuriy Yunikov'
@@ -36,6 +34,7 @@ highlighter: rouge
 sass:
     sass_dir: _sass
     style: compressed
+    sourcemap: never
 
 kramdown:
   # use Github Flavored Markdown
@@ -45,7 +44,6 @@ kramdown:
 
 plugins:
   - jekyll-paginate
-  - jekyll-remote-theme
-  - jekyll-include-cache
-  
-exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'vendor']
+  - jekyll-sitemap
+
+exclude: ['README.md', 'CLAUDE.md', 'LICENSE-jekyll-uno', 'Gemfile', 'Gemfile.lock', 'docker-compose.yml', 'vendor', '.ruby-version']
