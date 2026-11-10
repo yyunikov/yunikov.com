@@ -12,9 +12,6 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | strip }}{% else %}{{ site.description }}{% endif %}">
-  {% if site.author.twitter_username %}
-  <meta name="twitter:creator" content="@{{ site.author.twitter_username }}">
-  {% endif %}
   <meta name="twitter:image" content="{{ '/assets/images/profile.png' | absolute_url }}">
 
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
